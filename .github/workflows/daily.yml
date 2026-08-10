@@ -1,0 +1,92 @@
+name: Daily collect & deploy
+
+on:
+  schedule:
+    # 매일 07:00 UTC = CDT(여름) 02:00 / CST(겨울) 01:00.
+    # GitHub Actions 크론은 UTC만 받으므로 미국 중부 야간에 고정하려면 UTC로 적는다.
+    - cron: '0 7 * * *'
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      skip_collect:
+        description: '수집을 건너뛰고 현재 데이터로 배포만 수행'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write # 수집 결과(public/data)를 저장소에 커밋
+  pages: write
+  id-token: write
+
+# 배포는 항상 마지막 실행만 살린다. 진행 중인 수집은 끊지 않는다.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: 타입 검사
+        run: npm run typecheck
+
+      - name: 릴리즈 정보 수집
+        # push 이벤트(코드 변경 배포)에서는 수집하지 않는다 — 외부 API를 아낀다
+        if: github.event_name != 'push' && inputs.skip_collect != true
+        env:
+          # GitHub Releases API 레이트리밋을 60/h → 5000/h로 올린다
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run collect
+
+      - name: 수집 결과 커밋
+        if: github.event_name != 'push' && inputs.skip_collect != true
+        run: |
+          if [ -z "$(git status --porcelain public/data public/icons)" ]; then
+            echo "변경 없음 — 커밋 생략"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data public/icons
+          git commit -m "chore(data): 릴리즈 스냅샷 갱신 $(date -u '+%Y-%m-%d')"
+          git push
+
+      - name: 배포 경로 결정
+        id: base
+        run: |
+          # 사용자/조직 페이지(<owner>.github.io)는 루트, 그 외 프로젝트 페이지는 /<repo>/
+          if [ "${{ github.event.repository.name }}" = "${{ github.repository_owner }}.github.io" ]; then
+            echo "path=/" >> "$GITHUB_OUTPUT"
+          else
+            echo "path=/${{ github.event.repository.name }}/" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: 빌드
+        env:
+          VITE_BASE: ${{ steps.base.outputs.path }}
+        run: npm run build
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

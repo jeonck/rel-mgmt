@@ -1,0 +1,30 @@
+{
+  "name": "rel-mgmt",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "DevOps Release Management Board - 데브옵스 소프트웨어 릴리즈 Go/NoGo 대시보드",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "collect": "tsx scripts/collect.ts",
+    "collect:dry": "tsx scripts/collect.ts --dry-run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.14",
+    "@types/node": "^24.7.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.0.4",
+    "tailwindcss": "^4.1.14",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.9"
+  }
+}
