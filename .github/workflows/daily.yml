@@ -64,8 +64,9 @@ jobs:
       - name: 배포 경로 결정
         id: base
         run: |
-          # 사용자/조직 페이지(<owner>.github.io)는 루트, 그 외 프로젝트 페이지는 /<repo>/
-          if [ "${{ github.event.repository.name }}" = "${{ github.repository_owner }}.github.io" ]; then
+          # 커스텀 도메인(public/CNAME)이나 사용자/조직 페이지는 사이트 루트에 붙는다.
+          # 그 외 프로젝트 페이지는 https://<owner>.github.io/<repo>/ 하위라 base가 필요하다.
+          if [ -f public/CNAME ] || [ "${{ github.event.repository.name }}" = "${{ github.repository_owner }}.github.io" ]; then
             echo "path=/" >> "$GITHUB_OUTPUT"
           else
             echo "path=/${{ github.event.repository.name }}/" >> "$GITHUB_OUTPUT"

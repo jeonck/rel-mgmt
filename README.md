@@ -1,5 +1,7 @@
 # Release Board — 데브옵스 릴리즈 Go/NoGo
 
+**<https://rel-mgmt.metacog.co.kr>**
+
 데브옵스 스택 **55종**의 최신 릴리즈·EOL 일정을 매일 밤 자동 수집하고,
 규칙 기반으로 **지금 도입해도 되는지(GO / HOLD / NO-GO)** 를 판정해 보여주는 릴리즈 관리 보드입니다.
 
@@ -100,7 +102,7 @@ GITHUB_TOKEN=$(gh auth token) npm run collect
 npm run dev
 ```
 
-http://localhost:5173/rel-mgmt/ 로 접속합니다.
+http://localhost:5173 으로 접속합니다.
 
 기타 스크립트
 
@@ -121,7 +123,15 @@ npm run build         # 타입 검사 + 프로덕션 빌드
 4. **Actions → Daily collect & deploy → Run workflow** 로 첫 실행을 수동 트리거합니다.
 
 이후에는 매일 UTC 07:00에 자동으로 수집 → 커밋 → 빌드 → 배포가 돌아갑니다.
-배포 경로(`vite base`)는 워크플로가 저장소 이름에서 자동으로 계산합니다.
+
+### 커스텀 도메인
+
+[`public/CNAME`](public/CNAME)에 `rel-mgmt.metacog.co.kr`이 들어 있습니다.
+DNS에 `rel-mgmt` CNAME → `jeonck.github.io` 레코드가 있어야 하고,
+GitHub이 도메인 검증을 마치면 Settings → Pages에서 **Enforce HTTPS** 를 켤 수 있습니다.
+
+배포 경로(`vite base`)는 워크플로가 자동으로 계산합니다 — `public/CNAME`이 있으면 사이트 루트(`/`),
+없으면 프로젝트 페이지 경로(`/<repo>/`)를 씁니다. 도메인을 떼려면 `public/CNAME`만 지우면 됩니다.
 
 > GitHub Actions 크론은 UTC만 지원합니다. 미국 중부 시간에 정확히 고정하려면
 > 서머타임 전환 시기에 `.github/workflows/daily.yml`의 cron을 `0 7`(CDT) ↔ `0 8`(CST)로 조정하세요.
