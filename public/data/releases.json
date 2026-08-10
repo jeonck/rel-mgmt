@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-10T22:57:44.123Z",
+  "generatedAt": "2026-08-10T23:18:21.631Z",
   "timezone": "America/Chicago",
   "counts": {
     "total": 55,
@@ -162,7 +162,7 @@
         "releasePolicy": "https://github.com/argoproj/argo-cd/security/policy#supported-versions"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "argo-workflows",
@@ -313,7 +313,7 @@
         "releasePolicy": "https://argo-workflows.readthedocs.io/en/latest/releases/"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "cert-manager",
@@ -464,7 +464,7 @@
         "releasePolicy": "https://cert-manager.io/docs/releases/"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "containerd",
@@ -629,7 +629,7 @@
         "releasePolicy": "https://containerd.io/releases/"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "docker-engine",
@@ -780,7 +780,7 @@
         "releasePolicy": "https://github.com/moby/moby/blob/master/project/BRANCHES-AND-TAGS.md"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "envoy",
@@ -931,7 +931,7 @@
         "releasePolicy": "https://github.com/envoyproxy/envoy/blob/main/RELEASES.md#major-release-schedule"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "etcd",
@@ -1082,7 +1082,7 @@
         "releasePolicy": "https://github.com/etcd-io/etcd/blob/main/Documentation/contributor-guide/branch_management.md#stable-branches"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "flux",
@@ -1233,7 +1233,7 @@
         "releasePolicy": "https://fluxcd.io/flux/releases/#supported-releases"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "harbor",
@@ -1384,7 +1384,7 @@
         "releasePolicy": "https://github.com/goharbor/harbor/blob/main/RELEASES.md"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "helm",
@@ -1535,7 +1535,7 @@
         "github": "https://github.com/helm/helm/releases"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "istio",
@@ -1686,7 +1686,7 @@
         "releasePolicy": "https://istio.io/latest/docs/releases/supported-releases/#support-policy"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "kubernetes",
@@ -1839,7 +1839,7 @@
         "releasePolicy": "https://kubernetes.io/releases/patch-releases/"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "podman",
@@ -1989,7 +1989,7 @@
         "endoflife": "https://endoflife.date/podman"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "traefik",
@@ -2142,7 +2142,7 @@
         "releasePolicy": "https://doc.traefik.io/traefik/deprecation/releases"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "ansible-core",
@@ -2293,7 +2293,7 @@
         "releasePolicy": "https://docs.ansible.com/ansible-core/devel/reference_appendices/release_and_maintenance.html"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "consul",
@@ -2444,7 +2444,7 @@
         "releasePolicy": "https://support.hashicorp.com/hc/en-us/articles/360021185113-Support-Period-and-End-of-Life-EOL-Policy"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "actions-runner",
@@ -2595,7 +2595,7 @@
         "github": "https://github.com/actions/runner/releases"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "gitlab",
@@ -2711,7 +2711,7 @@
         "releasePolicy": "https://docs.gitlab.com/ee/policy/maintenance.html"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "gitlab-runner",
@@ -2827,7 +2827,7 @@
         "releasePolicy": "https://docs.gitlab.com/runner/#gitlab-runner-versions"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "vault",
@@ -2978,7 +2978,7 @@
         "releasePolicy": "https://support.hashicorp.com/hc/en-us/articles/360021185113-Support-Period-and-End-of-Life-EOL-Policy"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "jenkins",
@@ -3135,7 +3135,7 @@
         "releasePolicy": "https://www.jenkins.io/download/lts/"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "keycloak",
@@ -3286,7 +3286,7 @@
         "releasePolicy": "https://github.com/keycloak/keycloak/security/policy#supported-versions"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "nomad",
@@ -3437,7 +3437,7 @@
         "releasePolicy": "https://support.hashicorp.com/hc/en-us/articles/360021185113-Support-Period-and-End-of-Life-EOL-Policy"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "opentofu",
@@ -3587,7 +3587,7 @@
         "endoflife": "https://endoflife.date/opentofu"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "packer",
@@ -3738,7 +3738,7 @@
         "releasePolicy": "https://support.hashicorp.com/hc/en-us/articles/360021185113-Support-Period-and-End-of-Life-EOL-Policy"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "sonarqube",
@@ -3890,7 +3890,7 @@
         "releasePolicy": "https://docs.sonarsource.com/sonarqube-community-build/server-upgrade-and-maintenance/upgrade/release-cycle-model/"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "tekton",
@@ -4041,7 +4041,7 @@
         "github": "https://github.com/tektoncd/pipeline/releases"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "terraform",
@@ -4192,7 +4192,7 @@
         "releasePolicy": "https://support.hashicorp.com/hc/en-us/articles/360021185113-Support-Period-and-End-of-Life-EOL-Policy"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "elasticsearch",
@@ -4344,7 +4344,7 @@
         "releasePolicy": "https://www.elastic.co/support_policy"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "fluent-bit",
@@ -4496,7 +4496,7 @@
         "releasePolicy": "https://fluentbit.io/announcements/older-versions"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "grafana",
@@ -4648,7 +4648,7 @@
         "endoflife": "https://endoflife.date/grafana"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "loki",
@@ -4798,7 +4798,7 @@
         "endoflife": "https://endoflife.date/grafana-loki"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "jaeger",
@@ -4949,7 +4949,7 @@
         "github": "https://github.com/jaegertracing/jaeger/releases"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "opensearch",
@@ -5102,7 +5102,7 @@
         "releasePolicy": "https://www.opensearch.org/releases.html"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "otel-collector",
@@ -5253,7 +5253,7 @@
         "github": "https://github.com/open-telemetry/opentelemetry-collector/releases"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "prometheus",
@@ -5416,7 +5416,7 @@
         "releasePolicy": "https://prometheus.io/docs/introduction/release-cycle/"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "thanos",
@@ -5567,7 +5567,7 @@
         "github": "https://github.com/thanos-io/thanos/releases"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "vector",
@@ -5718,7 +5718,7 @@
         "github": "https://github.com/vectordotdev/vector/releases"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "kafka",
@@ -5868,7 +5868,7 @@
         "endoflife": "https://endoflife.date/apache-kafka"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "tomcat",
@@ -6018,7 +6018,7 @@
         "releasePolicy": "https://tomcat.apache.org/whichversion.html"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "temurin",
@@ -6174,7 +6174,7 @@
         "releasePolicy": "https://adoptium.net/support/"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "go",
@@ -6324,7 +6324,7 @@
         "releasePolicy": "https://go.dev/doc/devel/release#policy"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "haproxy",
@@ -6487,7 +6487,7 @@
         "releasePolicy": "https://www.haproxy.org/"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "mariadb",
@@ -6649,7 +6649,7 @@
         "releasePolicy": "https://mariadb.org/about/#maintenance-policy"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "minio",
@@ -6800,7 +6800,7 @@
         "github": "https://github.com/minio/minio/releases"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "mongodb",
@@ -6950,7 +6950,7 @@
         "releasePolicy": "https://www.mongodb.com/legal/support-policy"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "mysql",
@@ -7114,7 +7114,7 @@
         "releasePolicy": "https://www.oracle.com/us/support/library/lifetime-support-technology-069183.pdf"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "nginx",
@@ -7264,7 +7264,7 @@
         "releasePolicy": "https://www.nginx.com/blog/nginx-1-18-1-19-released/#NGINX-Versioning-Explained"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "nodejs",
@@ -7417,7 +7417,7 @@
         "releasePolicy": "https://nodejs.org/en/about/previous-releases"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "postgresql",
@@ -7567,7 +7567,7 @@
         "releasePolicy": "https://www.postgresql.org/support/versioning/"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "python",
@@ -7720,7 +7720,7 @@
         "releasePolicy": "https://devguide.python.org/versions/"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "rabbitmq",
@@ -7871,7 +7871,7 @@
         "releasePolicy": "https://www.rabbitmq.com/release-information"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "redis",
@@ -8030,7 +8030,7 @@
         "releasePolicy": "https://redis.io/docs/latest/operate/oss_and_stack/install/version-mgmt/"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "spring-boot",
@@ -8181,7 +8181,7 @@
         "releasePolicy": "https://github.com/spring-projects/spring-boot/wiki/Supported-Versions"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     },
     {
       "id": "valkey",
@@ -8324,7 +8324,7 @@
         "releasePolicy": "https://valkey.io/topics/releases/"
       },
       "errors": [],
-      "collectedAt": "2026-08-10T22:57:44.123Z"
+      "collectedAt": "2026-08-10T23:18:21.631Z"
     }
   ]
 }
