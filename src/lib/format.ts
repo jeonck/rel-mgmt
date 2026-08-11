@@ -1,22 +1,22 @@
-const KO = 'ko-KR';
+const LOCALE = 'en-US';
 
 export function formatDate(iso: string | null | undefined): string {
   if (!iso) return '—';
   const d = new Date(iso.length === 10 ? `${iso}T00:00:00Z` : iso);
   if (Number.isNaN(d.getTime())) return '—';
-  return new Intl.DateTimeFormat(KO, { year: 'numeric', month: '2-digit', day: '2-digit' })
-    .format(d)
-    .replace(/\.$/, '');
+  return new Intl.DateTimeFormat(LOCALE, {
+    year: 'numeric',
+    month: 'short',
+    day: '2-digit',
+    timeZone: 'UTC',
+  }).format(d);
 }
 
 export function formatDateTime(iso: string | null | undefined): string {
   if (!iso) return '—';
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return '—';
-  return new Intl.DateTimeFormat(KO, {
-    dateStyle: 'medium',
-    timeStyle: 'short',
-  }).format(d);
+  return new Intl.DateTimeFormat(LOCALE, { dateStyle: 'medium', timeStyle: 'short' }).format(d);
 }
 
 /** 수집 기준 시간대(CDT/CST)로 표기 — 스케줄이 이 시간대 기준이라 함께 보여준다. */
@@ -24,7 +24,7 @@ export function formatInCentral(iso: string | null | undefined): string {
   if (!iso) return '—';
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return '—';
-  return new Intl.DateTimeFormat('en-US', {
+  return new Intl.DateTimeFormat(LOCALE, {
     timeZone: 'America/Chicago',
     month: 'short',
     day: 'numeric',
@@ -42,10 +42,9 @@ export function relativeTime(iso: string | null | undefined, now = Date.now()): 
 
   const diffMin = Math.round((t - now) / 60_000);
   const abs = Math.abs(diffMin);
-  const rtf = new Intl.RelativeTimeFormat(KO, { numeric: 'auto' });
+  const rtf = new Intl.RelativeTimeFormat(LOCALE, { numeric: 'auto' });
 
-  // Intl은 0분을 "현재 분"으로 내놓는다 — 사람이 쓰는 말로 바꾼다
-  if (abs < 1) return '방금';
+  if (abs < 1) return 'just now';
   if (abs < 60) return rtf.format(diffMin, 'minute');
   if (abs < 60 * 24) return rtf.format(Math.round(diffMin / 60), 'hour');
   if (abs < 60 * 24 * 30) return rtf.format(Math.round(diffMin / (60 * 24)), 'day');
@@ -55,21 +54,21 @@ export function relativeTime(iso: string | null | undefined, now = Date.now()): 
 /** 릴리즈 경과일을 짧게 — 표 안에서 폭을 적게 먹어야 한다. */
 export function formatAge(days: number | null | undefined): string {
   if (days === null || days === undefined) return '—';
-  if (days < 0) return '예정';
-  if (days === 0) return '오늘';
-  if (days < 30) return `${days}일`;
-  if (days < 365) return `${Math.floor(days / 30)}개월`;
+  if (days < 0) return 'upcoming';
+  if (days === 0) return 'today';
+  if (days < 30) return `${days}d`;
+  if (days < 365) return `${Math.floor(days / 30)}mo`;
   const years = Math.floor(days / 365);
   const months = Math.floor((days % 365) / 30);
-  return months > 0 ? `${years}년 ${months}개월` : `${years}년`;
+  return months > 0 ? `${years}y ${months}mo` : `${years}y`;
 }
 
 export function formatEolRemaining(days: number | null | undefined): string {
-  if (days === null || days === undefined) return '미공개';
-  if (days < 0) return `${Math.abs(days)}일 경과`;
-  if (days < 60) return `${days}일`;
-  if (days < 730) return `${Math.round(days / 30)}개월`;
-  return `${(days / 365).toFixed(1)}년`;
+  if (days === null || days === undefined) return 'unpublished';
+  if (days < 0) return `${Math.abs(days)}d past`;
+  if (days < 60) return `${days}d`;
+  if (days < 730) return `${Math.round(days / 30)}mo`;
+  return `${(days / 365).toFixed(1)}y`;
 }
 
 /**
@@ -88,8 +87,8 @@ export function nextCollectionAt(from = new Date()): Date {
 
 export function countdownTo(target: Date, now = Date.now()): string {
   const ms = target.getTime() - now;
-  if (ms <= 0) return '곧';
+  if (ms <= 0) return 'due';
   const hours = Math.floor(ms / 3_600_000);
   const minutes = Math.floor((ms % 3_600_000) / 60_000);
-  return hours > 0 ? `${hours}시간 ${minutes}분` : `${minutes}분`;
+  return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`;
 }

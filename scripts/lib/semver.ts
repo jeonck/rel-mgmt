@@ -49,6 +49,27 @@ export function parseVersion(raw: string): ParsedVersion {
   };
 }
 
+/**
+ * 오름차순 비교 (-1 / 0 / 1). 버전 범위 판정에 쓴다.
+ * 누락된 자리는 0으로 본다 — `3.14`는 `3.14.0`과 같게 취급한다.
+ */
+export function compareVersions(a: string, b: string): number {
+  const pa = parseVersion(a);
+  const pb = parseVersion(b);
+  const segments: [number | null, number | null][] = [
+    [pa.major, pb.major],
+    [pa.minor, pb.minor],
+    [pa.patch, pb.patch],
+  ];
+  for (const [x, y] of segments) {
+    const dx = x ?? 0;
+    const dy = y ?? 0;
+    if (dx !== dy) return dx < dy ? -1 : 1;
+  }
+  // 26.8.0.126808 처럼 자릿수가 더 있는 경우를 위한 마무리 비교
+  return Math.sign(pa.version.localeCompare(pb.version, 'en', { numeric: true }));
+}
+
 /** 큰 버전이 앞에 오도록 비교 (내림차순 정렬용). */
 export function compareVersionDesc(a: string, b: string): number {
   const pa = parseVersion(a);

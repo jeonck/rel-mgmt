@@ -1,11 +1,12 @@
 import type { ChangeEvent, ChangeKind } from '../lib/types';
 
 const KIND_STYLE: Record<ChangeKind, { icon: string; color: string; label: string }> = {
-  'new-version': { icon: '↑', color: 'var(--accent)', label: '신규 버전' },
-  'verdict-up': { icon: '▲', color: 'var(--go)', label: '판정 상향' },
-  'verdict-down': { icon: '▼', color: 'var(--nogo)', label: '판정 하향' },
-  'eol-soon': { icon: '!', color: 'var(--hold)', label: 'EOL 임박' },
-  'new-product': { icon: '+', color: 'var(--text-muted)', label: '추적 추가' },
+  'new-version': { icon: '↑', color: 'var(--accent)', label: 'New version' },
+  'verdict-up': { icon: '▲', color: 'var(--go)', label: 'Verdict improved' },
+  'verdict-down': { icon: '▼', color: 'var(--nogo)', label: 'Verdict worsened' },
+  'eol-soon': { icon: '!', color: 'var(--hold)', label: 'End of life approaching' },
+  'new-cve': { icon: '⚑', color: 'var(--nogo)', label: 'New CVE' },
+  'new-product': { icon: '+', color: 'var(--text-muted)', label: 'Newly tracked' },
 };
 
 /**
@@ -29,7 +30,7 @@ export function ChangeFeed({
         <span aria-hidden style={{ color: 'var(--go)' }}>
           ●
         </span>
-        직전 수집 대비 변경 없음 — 모든 제품이 어제와 동일합니다.
+        No changes since the previous run — every product matches yesterday.
       </div>
     );
   }
@@ -38,11 +39,11 @@ export function ChangeFeed({
     <section
       className="rounded-xl"
       style={{ background: 'var(--panel)', border: '1px solid var(--border)', boxShadow: 'var(--shadow-panel)' }}
-      aria-label="직전 수집 대비 변경 사항"
+      aria-label="Changes since the previous run"
     >
       <div className="flex items-center gap-2 px-4 pt-3">
         <h2 className="text-[11px] font-bold tracking-wide uppercase" style={{ color: 'var(--text-muted)' }}>
-          직전 수집 대비 변경
+          Changes since last run
         </h2>
         <span
           className="mono rounded px-1.5 text-[10.5px] font-semibold"

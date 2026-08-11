@@ -1,12 +1,13 @@
-import type { Reason, Verdict } from '../src/lib/types.js';
+import type { Reason, SecurityReport, Verdict } from '../src/lib/types.js';
 
 /**
  * 규칙 기반 Go/NoGo 판정 엔진.
  *
  * 설계 원칙
  *  1. 점수는 100점에서 시작해 리스크만큼 깎는다. 근거(reasons)는 전부 남긴다.
- *  2. "즉시 탈락" 조건(프리릴리즈 / EOL 경과)은 점수와 무관하게 NO-GO다.
+ *  2. "즉시 탈락" 조건(프리릴리즈 / EOL 경과 / CRITICAL CVE)은 점수와 무관하게 NO-GO다.
  *  3. 임계값은 제품별 policy로 덮어쓸 수 있다 — DB와 CLI 도구의 리스크는 같지 않다.
+ *  4. 근거 문구는 사이트 표기 언어(영문)로 생성해 그대로 화면에 나간다.
  */
 
 export interface Policy {
@@ -40,6 +41,7 @@ export interface VerdictInput {
   isSupportEnded: boolean;
   isMaintained: boolean;
   eolInDays: number | null;
+  security: SecurityReport;
   /** 알려진 정보가 사실상 없을 때 UNKNOWN 처리 */
   hasData: boolean;
 }
@@ -50,23 +52,45 @@ export interface VerdictResult {
   reasons: Reason[];
 }
 
+const plural = (n: number, word: string) => `${n} ${word}${n === 1 ? '' : 's'}`;
+const verb = (n: number, singular: string, pluralForm: string) => (n === 1 ? singular : pluralForm);
+
 export function evaluate(input: VerdictInput, policy: Policy = DEFAULT_POLICY): VerdictResult {
   const reasons: Reason[] = [];
   const add = (code: string, label: string, delta: number, tone: Reason['tone']) =>
     reasons.push({ code, label, delta, tone });
 
   if (!input.hasData) {
-    add('no-data', '수집된 버전 정보가 없어 판정할 수 없습니다', 0, 'info');
+    add('no-data', 'No release data collected — cannot evaluate', 0, 'info');
     return { verdict: 'UNKNOWN', score: 0, reasons };
   }
 
   // ── 즉시 탈락 조건
   if (input.prerelease) {
-    add('prerelease', '프리릴리즈(RC/beta/alpha) — 운영 도입 대상 아님', -100, 'bad');
+    add('prerelease', 'Pre-release (RC / beta / alpha) — not a production candidate', -100, 'bad');
     return { verdict: 'NO-GO', score: 0, reasons };
   }
   if (input.isEol) {
-    add('eol-passed', '보안 지원 종료(EOL) — 신규 도입 금지, 기존 사용 시 업그레이드 필요', -100, 'bad');
+    add(
+      'eol-passed',
+      'Past end-of-life — no security patches; upgrade required, do not adopt',
+      -100,
+      'bad',
+    );
+    return { verdict: 'NO-GO', score: 0, reasons };
+  }
+
+  const sec = input.security;
+  const cveUsable = sec.status === 'ok';
+
+  if (cveUsable && sec.counts.CRITICAL > 0) {
+    const worst = sec.top.find((c) => c.severity === 'CRITICAL');
+    add(
+      'cve-critical',
+      `${plural(sec.counts.CRITICAL, 'critical CVE')} ${verb(sec.counts.CRITICAL, 'affects', 'affect')} this version${worst ? ` (${worst.id}, CVSS ${worst.score})` : ''}`,
+      -100,
+      'bad',
+    );
     return { verdict: 'NO-GO', score: 0, reasons };
   }
 
@@ -76,7 +100,44 @@ export function evaluate(input: VerdictInput, policy: Policy = DEFAULT_POLICY): 
     add(code, label, delta, tone);
   };
 
-  // ── 1. 숙성 기간 (soak time)
+  // ── 1. 알려진 취약점
+  //
+  // NVD의 CPE 데이터는 신규 릴리즈에 대해 수 주 늦는다. 그래서 "0건"을 안전의 근거로
+  // 쓰지 않고, 조회했다는 사실만 정보성으로 남긴다. 조회 실패 시에는 감점하지 않는다
+  // (일시 장애로 멀쩡한 버전을 NO-GO로 떨어뜨리면 보드를 신뢰할 수 없게 된다).
+  if (!cveUsable) {
+    if (sec.status === 'unmapped') {
+      add('cve-unmapped', 'No CPE mapping — CVE tracking unavailable for this product', 0, 'info');
+    } else if (sec.status === 'error') {
+      add('cve-error', 'NVD lookup failed — vulnerability data unavailable this run', 0, 'warn');
+    }
+  } else if (sec.counts.HIGH > 0) {
+    const worst = sec.top.find((c) => c.severity === 'HIGH');
+    cut(
+      'cve-high',
+      `${plural(sec.counts.HIGH, 'high-severity CVE')} ${verb(sec.counts.HIGH, 'affects', 'affect')} this version${worst ? ` (${worst.id}, CVSS ${worst.score})` : ''}`,
+      -40,
+      'bad',
+    );
+  } else if (sec.counts.MEDIUM > 0) {
+    cut(
+      'cve-medium',
+      `${plural(sec.counts.MEDIUM, 'medium-severity CVE')} ${verb(sec.counts.MEDIUM, 'affects', 'affect')} this version`,
+      -15,
+      'warn',
+    );
+  } else if (sec.counts.LOW + sec.counts.UNSCORED > 0) {
+    cut(
+      'cve-low',
+      `${plural(sec.counts.LOW + sec.counts.UNSCORED, 'low or unscored CVE')} ${verb(sec.counts.LOW + sec.counts.UNSCORED, 'affects', 'affect')} this version`,
+      -5,
+      'warn',
+    );
+  } else {
+    add('cve-none', 'No CVEs recorded in NVD against this version', 0, 'good');
+  }
+
+  // ── 2. 숙성 기간 (soak time)
   //
   // 새 마이너 트레인(.0)과 기존 트레인의 패치 릴리즈는 리스크 성격이 다르다.
   // 전자는 기능 변경이 들어와 초기 결함이 몰리고, 후자는 대개 버그·보안 수정이라
@@ -84,67 +145,82 @@ export function evaluate(input: VerdictInput, policy: Policy = DEFAULT_POLICY): 
   const isNewTrain = input.patch === null || input.patch === 0;
 
   if (input.ageDays === null) {
-    cut('age-unknown', '릴리즈 일자 미상 — 숙성 기간 확인 불가', -10, 'warn');
+    cut('age-unknown', 'Release date unknown — soak time cannot be verified', -10, 'warn');
   } else if (isNewTrain) {
     if (input.ageDays < 7) {
-      cut('age-fresh', `새 트레인 출시 ${input.ageDays}일차 — 초기 결함 리스크가 가장 높은 구간`, -45, 'bad');
+      cut(
+        'age-fresh',
+        `New train, ${plural(input.ageDays, 'day')} old — highest window for early defects`,
+        -45,
+        'bad',
+      );
     } else if (input.ageDays < policy.minSoakDays) {
       cut(
         'age-short',
-        `새 트레인 숙성 기간 부족 (${input.ageDays}일 / 기준 ${policy.minSoakDays}일)`,
+        `New train under-soaked (${input.ageDays} of ${policy.minSoakDays} days)`,
         -25,
         'warn',
       );
     } else {
-      add('age-ok', `출시 ${input.ageDays}일 경과 — 숙성 기준 충족`, 0, 'good');
+      add('age-ok', `${plural(input.ageDays, 'day')} since release — soak target met`, 0, 'good');
     }
   } else if (input.ageDays < 3) {
-    cut('patch-fresh', `패치 릴리즈 ${input.ageDays}일차 — 회귀 여부가 아직 드러나지 않음`, -25, 'warn');
+    cut(
+      'patch-fresh',
+      `Patch released ${plural(input.ageDays, 'day')} ago — regressions not yet surfaced`,
+      -25,
+      'warn',
+    );
   } else if (input.ageDays < 10) {
-    cut('patch-recent', `패치 릴리즈 ${input.ageDays}일차 — 짧은 검증 기간`, -12, 'warn');
+    cut('patch-recent', `Patch released ${plural(input.ageDays, 'day')} ago — short bake time`, -12, 'warn');
   } else {
-    add('age-ok', `패치 릴리즈 후 ${input.ageDays}일 경과 — 검증 기간 충족`, 0, 'good');
+    add('age-ok', `${plural(input.ageDays, 'day')} since patch — bake time met`, 0, 'good');
   }
 
-  // ── 2. 패치 성숙도
+  // ── 3. 패치 성숙도
   if (input.patch === null) {
-    add('patch-unknown', '패치 번호를 해석할 수 없는 버전 체계', 0, 'info');
+    add('patch-unknown', 'Versioning scheme has no parseable patch number', 0, 'info');
   } else if (input.patch === 0) {
-    cut('patch-zero', '.0 릴리즈 — 첫 패치 전까지 알려지지 않은 결함이 남아 있을 수 있음', -20, 'warn');
+    cut('patch-zero', '.0 release — unknown defects remain until the first patch', -20, 'warn');
   } else if (input.patch < policy.minPatch) {
-    cut('patch-low', `패치 ${input.patch} — 기준(${policy.minPatch}) 미만`, -10, 'warn');
+    cut('patch-low', `Patch ${input.patch} — below the ${policy.minPatch}-patch target`, -10, 'warn');
   } else {
-    add('patch-ok', `패치 ${input.patch} 누적 — 초기 결함이 정리된 수준`, 0, 'good');
+    add('patch-ok', `${plural(input.patch, 'patch')} shipped — early defects settled`, 0, 'good');
   }
 
-  // ── 3. 잔여 지원 기간 (EOL runway)
+  // ── 4. 잔여 지원 기간 (EOL runway)
   if (input.eolInDays === null) {
-    add('eol-unknown', 'EOL 일정 미공개', 0, 'info');
+    add('eol-unknown', 'No published end-of-life date', 0, 'info');
   } else if (input.eolInDays < 30) {
-    cut('eol-30', `EOL까지 ${input.eolInDays}일 — 사실상 도입 불가`, -55, 'bad');
+    cut('eol-30', `${plural(input.eolInDays, 'day')} of support left — not adoptable`, -55, 'bad');
   } else if (input.eolInDays < 90) {
-    cut('eol-90', `EOL까지 ${input.eolInDays}일 — 도입 즉시 재업그레이드 필요`, -30, 'bad');
+    cut(
+      'eol-90',
+      `${plural(input.eolInDays, 'day')} of support left — you would re-upgrade immediately`,
+      -30,
+      'bad',
+    );
   } else if (input.eolInDays < policy.eolWarnDays) {
-    cut('eol-warn', `EOL까지 ${input.eolInDays}일 — 운영 기간이 짧음`, -15, 'warn');
+    cut('eol-warn', `${plural(input.eolInDays, 'day')} of support left — short runway`, -15, 'warn');
   } else if (input.eolInDays >= 365) {
     score += 5;
-    add('eol-long', `EOL까지 ${input.eolInDays}일 — 충분한 운영 기간 확보`, 5, 'good');
+    add('eol-long', `${plural(input.eolInDays, 'day')} of support left — comfortable runway`, 5, 'good');
   } else {
-    add('eol-ok', `EOL까지 ${input.eolInDays}일`, 0, 'info');
+    add('eol-ok', `${plural(input.eolInDays, 'day')} of support left`, 0, 'info');
   }
 
-  // ── 4. 일반 지원 상태
+  // ── 5. 지원 상태
   if (input.isSupportEnded) {
-    cut('support-ended', '일반 지원 종료 — 보안 패치만 제공되는 라인', -20, 'warn');
+    cut('support-ended', 'Active support ended — security fixes only', -20, 'warn');
   }
   if (!input.isMaintained) {
-    cut('unmaintained', '유지보수 중단된 릴리즈 트레인', -25, 'bad');
+    cut('unmaintained', 'Release train is no longer maintained', -25, 'bad');
   }
 
-  // ── 5. LTS 가산
+  // ── 6. LTS 가산
   if (input.isLts) {
     score += 8;
-    add('lts', 'LTS 라인 — 장기 지원 대상', 8, 'good');
+    add('lts', 'Long-term support train', 8, 'good');
   }
 
   score = Math.max(0, Math.min(100, Math.round(score)));

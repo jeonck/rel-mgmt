@@ -17,7 +17,7 @@ export function useSnapshot(): State {
 
     fetch(url, { signal: controller.signal, cache: 'no-cache' })
       .then((res) => {
-        if (!res.ok) throw new Error(`데이터를 불러오지 못했습니다 (HTTP ${res.status})`);
+        if (!res.ok) throw new Error(`Snapshot request failed (HTTP ${res.status})`);
         return res.json() as Promise<Snapshot>;
       })
       .then((snapshot) => setState({ status: 'ready', snapshot }))

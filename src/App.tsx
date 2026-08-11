@@ -75,6 +75,7 @@ export default function App() {
           return d !== null && d <= EOL_SOON_DAYS;
         }
         if (quick === 'CHANGED') return changedIds.has(p.id);
+        if (quick === 'CVE') return (p.latest?.security.counts.total ?? 0) > 0;
         if (quick !== 'ALL') return p.verdict === quick;
         return true;
       }),
@@ -107,7 +108,7 @@ export default function App() {
           return av - bv;
         }
         case 'name':
-          return a.name.localeCompare(b.name, 'ko');
+          return a.name.localeCompare(b.name, 'en');
       }
     });
     return sorted;
@@ -148,7 +149,7 @@ export default function App() {
             className="grid h-64 place-items-center rounded-xl text-[13px]"
             style={{ background: 'var(--panel)', border: '1px solid var(--border)', color: 'var(--text-faint)' }}
           >
-            릴리즈 데이터를 불러오는 중…
+            Loading release data…
           </div>
         )}
 
@@ -157,10 +158,10 @@ export default function App() {
             className="rounded-xl p-6 text-[13px]"
             style={{ background: 'var(--nogo-soft)', border: '1px solid var(--nogo-line)', color: 'var(--nogo)' }}
           >
-            <p className="font-semibold">데이터를 불러오지 못했습니다</p>
+            <p className="font-semibold">Could not load the release snapshot</p>
             <p className="mt-1" style={{ color: 'var(--text-muted)' }}>
-              {state.message} — 아직 수집이 한 번도 돌지 않았다면{' '}
-              <code className="mono">npm run collect</code>을 먼저 실행하세요.
+              {state.message} — if the collector has never run, execute{' '}
+              <code className="mono">npm run collect</code> first.
             </p>
           </div>
         )}
@@ -193,7 +194,7 @@ export default function App() {
                 className="grid h-48 place-items-center rounded-xl text-[13px]"
                 style={{ background: 'var(--panel)', border: '1px solid var(--border)', color: 'var(--text-faint)' }}
               >
-                조건에 맞는 제품이 없습니다.
+                No products match these filters.
               </div>
             ) : view === 'table' ? (
               <ProductTable products={visible} expandedId={expandedId} onToggle={toggle} rowRefs={rowRefs} />

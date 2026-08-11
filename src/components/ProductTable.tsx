@@ -1,5 +1,6 @@
 import { CATEGORIES, type Product } from '../lib/types';
 import { formatAge, formatDate } from '../lib/format';
+import { CveBadge } from './CveBadge';
 import { EolMeter } from './EolMeter';
 import { ProductDetail } from './ProductDetail';
 import { ProductIcon } from './ProductIcon';
@@ -44,7 +45,11 @@ function Row({
               <div className="flex items-center gap-1.5">
                 <span className="truncate text-[13.5px] font-semibold">{product.name}</span>
                 {product.errors.length > 0 && (
-                  <span title={product.errors.join('\n')} style={{ color: 'var(--hold)' }} aria-label="수집 경고">
+                  <span
+                    title={product.errors.join('\n')}
+                    style={{ color: 'var(--hold)' }}
+                    aria-label="Collection warning"
+                  >
                     ⚠
                   </span>
                 )}
@@ -69,7 +74,7 @@ function Row({
             )}
           </div>
           <span className="mono block text-[11px]" style={{ color: 'var(--text-faint)' }}>
-            {formatDate(latest?.releaseDate)} · {formatAge(latest?.ageDays)} 전
+            {formatDate(latest?.releaseDate)} · {formatAge(latest?.ageDays)} ago
           </span>
         </td>
 
@@ -79,6 +84,8 @@ function Row({
             {latest && <ScoreBar verdict={product.verdict} score={latest.score} />}
           </div>
         </td>
+
+        <td className="px-3 py-2.5">{latest && <CveBadge report={latest.security} />}</td>
 
         <td className="px-3 py-2.5">
           {recommended ? (
@@ -91,13 +98,13 @@ function Row({
               </span>
               {!upgradeNeeded && (
                 <span className="text-[10.5px]" style={{ color: 'var(--text-faint)' }}>
-                  (최신과 동일)
+                  (same as latest)
                 </span>
               )}
             </span>
           ) : (
             <span className="text-[11.5px]" style={{ color: 'var(--nogo)' }}>
-              대안 없음
+              none available
             </span>
           )}
         </td>
@@ -114,7 +121,7 @@ function Row({
             type="button"
             aria-expanded={expanded}
             aria-controls={detailId}
-            aria-label={`${product.name} 상세 ${expanded ? '접기' : '펼치기'}`}
+            aria-label={`${expanded ? 'Collapse' : 'Expand'} details for ${product.name}`}
             onClick={(e) => {
               e.stopPropagation();
               onToggle();
@@ -131,7 +138,7 @@ function Row({
 
       {expanded && (
         <tr id={detailId} className="expand-in">
-          <td colSpan={7} style={{ background: 'var(--surface)', borderTop: '1px solid var(--border)' }}>
+          <td colSpan={8} style={{ background: 'var(--surface)', borderTop: '1px solid var(--border)' }}>
             <ProductDetail product={product} />
           </td>
         </tr>
@@ -156,19 +163,22 @@ export function ProductTable({
       className="overflow-x-auto rounded-xl"
       style={{ background: 'var(--panel)', border: '1px solid var(--border)', boxShadow: 'var(--shadow-panel)' }}
     >
-      <table className="w-full min-w-[860px] border-collapse text-left">
-        <caption className="sr-only">데브옵스 소프트웨어별 최신 릴리즈와 도입 판정</caption>
+      <table className="w-full min-w-[980px] border-collapse text-left">
+        <caption className="sr-only">
+          Latest release and adoption verdict for each tracked DevOps product
+        </caption>
         <thead>
           <tr
             className="text-[10.5px] font-semibold tracking-wide uppercase"
             style={{ color: 'var(--text-faint)', background: 'var(--surface)' }}
           >
             <th className="w-[3px] p-0" />
-            <th scope="col" className="px-3 py-2 font-semibold">제품</th>
-            <th scope="col" className="px-3 py-2 font-semibold">최신 버전</th>
-            <th scope="col" className="px-3 py-2 font-semibold">판정</th>
-            <th scope="col" className="px-3 py-2 font-semibold">도입 권장</th>
-            <th scope="col" className="px-3 py-2 font-semibold">지원 잔여</th>
+            <th scope="col" className="px-3 py-2 font-semibold">Product</th>
+            <th scope="col" className="px-3 py-2 font-semibold">Latest</th>
+            <th scope="col" className="px-3 py-2 font-semibold">Verdict</th>
+            <th scope="col" className="px-3 py-2 font-semibold">CVE</th>
+            <th scope="col" className="px-3 py-2 font-semibold">Recommended</th>
+            <th scope="col" className="px-3 py-2 font-semibold">Support left</th>
             <th className="w-9 p-0" />
           </tr>
         </thead>

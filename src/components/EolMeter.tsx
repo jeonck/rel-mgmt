@@ -16,7 +16,7 @@ export function EolMeter({ days, date }: { days: number | null; date: string | n
   if (days === null) {
     return (
       <span className="mono text-[11px]" style={{ color: 'var(--text-faint)' }}>
-        미공개
+        unpublished
       </span>
     );
   }
@@ -42,7 +42,9 @@ export function EolMeter({ days, date }: { days: number | null; date: string | n
         className="block h-[3px] w-16 overflow-hidden rounded-full"
         style={{ background: 'var(--border)' }}
         role="img"
-        aria-label={expired ? `지원 종료 ${Math.abs(days)}일 경과` : `지원 잔여 ${days}일`}
+        aria-label={
+          expired ? `Support ended ${Math.abs(days)} days ago` : `${days} days of support left`
+        }
       >
         <span
           className="block h-full rounded-full"

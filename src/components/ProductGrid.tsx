@@ -1,5 +1,6 @@
 import type { Product } from '../lib/types';
 import { formatAge, formatDate, formatEolRemaining } from '../lib/format';
+import { CveBadge } from './CveBadge';
 import { ProductDetail } from './ProductDetail';
 import { ProductIcon } from './ProductIcon';
 import { ScoreBar, VerdictBadge } from './VerdictBadge';
@@ -49,13 +50,16 @@ function Card({
                 {product.blurb}
               </p>
             </div>
-            <VerdictBadge verdict={product.verdict} score={latest?.score} size="sm" />
+            <span className="flex shrink-0 flex-col items-end gap-1">
+              <VerdictBadge verdict={product.verdict} score={latest?.score} size="sm" />
+              {latest && <CveBadge report={latest.security} size="sm" />}
+            </span>
           </div>
 
           <div className="flex items-baseline gap-2">
             <span className="mono text-[19px] font-bold tracking-tight">{latest?.version ?? '—'}</span>
             <span className="mono text-[11.5px]" style={{ color: 'var(--text-faint)' }}>
-              {formatDate(latest?.releaseDate)} · {formatAge(latest?.ageDays)} 전
+              {formatDate(latest?.releaseDate)} · {formatAge(latest?.ageDays)} ago
             </span>
           </div>
 
@@ -63,16 +67,16 @@ function Card({
 
           <dl className="grid grid-cols-2 gap-2 text-[11.5px]">
             <div>
-              <dt style={{ color: 'var(--text-faint)' }}>도입 권장</dt>
+              <dt style={{ color: 'var(--text-faint)' }}>Recommended</dt>
               <dd
                 className="mono font-medium"
                 style={{ color: recommended ? (upgradeNeeded ? 'var(--go)' : 'var(--text-muted)') : 'var(--nogo)' }}
               >
-                {recommended ? recommended.version : '대안 없음'}
+                {recommended ? recommended.version : 'none available'}
               </dd>
             </div>
             <div>
-              <dt style={{ color: 'var(--text-faint)' }}>지원 잔여</dt>
+              <dt style={{ color: 'var(--text-faint)' }}>Support left</dt>
               <dd
                 className="mono font-medium"
                 style={{ color: eolDays !== null && eolDays < 180 ? 'var(--hold)' : 'var(--text-muted)' }}

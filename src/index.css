@@ -92,8 +92,8 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family:
-    'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui,
-    'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, system-ui, 'Helvetica Neue', Arial,
+    sans-serif;
   font-feature-settings: 'tnum' 1;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;

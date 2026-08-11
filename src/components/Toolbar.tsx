@@ -4,10 +4,10 @@ export type SortKey = 'risk' | 'recent' | 'eol' | 'name';
 export type ViewMode = 'table' | 'grid';
 
 export const SORT_OPTIONS: { key: SortKey; label: string }[] = [
-  { key: 'risk', label: '위험 높은 순' },
-  { key: 'recent', label: '최근 릴리즈 순' },
-  { key: 'eol', label: 'EOL 임박 순' },
-  { key: 'name', label: '이름 순' },
+  { key: 'risk', label: 'Highest risk' },
+  { key: 'recent', label: 'Most recent release' },
+  { key: 'eol', label: 'Support ending soonest' },
+  { key: 'name', label: 'Name' },
 ];
 
 export function Toolbar({
@@ -28,7 +28,7 @@ export function Toolbar({
   onView: (v: ViewMode) => void;
 }) {
   const tabs: { id: CategoryId | 'all'; label: string }[] = [
-    { id: 'all', label: '전체' },
+    { id: 'all', label: 'All' },
     ...CATEGORIES.map((c) => ({ id: c.id as CategoryId | 'all', label: c.short })),
   ];
 
@@ -37,7 +37,7 @@ export function Toolbar({
       {/* 카테고리 */}
       <div
         role="tablist"
-        aria-label="카테고리"
+        aria-label="Category"
         className="flex flex-wrap gap-1 rounded-xl p-1"
         style={{ background: 'var(--panel)', border: '1px solid var(--border)' }}
       >
@@ -69,7 +69,7 @@ export function Toolbar({
       <div className="flex items-center gap-2">
         {/* 정렬 */}
         <label className="flex items-center gap-2 text-[12px]" style={{ color: 'var(--text-faint)' }}>
-          <span className="hidden sm:inline">정렬</span>
+          <span className="hidden sm:inline">Sort</span>
           <select
             value={sort}
             onChange={(e) => onSort(e.target.value as SortKey)}
@@ -89,12 +89,12 @@ export function Toolbar({
           className="flex rounded-lg p-0.5"
           style={{ background: 'var(--panel)', border: '1px solid var(--border)' }}
           role="group"
-          aria-label="보기 방식"
+          aria-label="Layout"
         >
           {(
             [
-              { id: 'table' as const, label: '표', title: '조밀한 표 — 대량 비교에 유리' },
-              { id: 'grid' as const, label: '카드', title: '카드 — 제품별 상세 요약' },
+              { id: 'table' as const, label: 'Table', title: 'Dense table — best for comparing many products' },
+              { id: 'grid' as const, label: 'Cards', title: 'Cards — per-product summary' },
             ]
           ).map((v) => (
             <button

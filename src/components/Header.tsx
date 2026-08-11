@@ -84,8 +84,8 @@ export function Header({
               value={query}
               onChange={(e) => onQueryChange(e.target.value)}
               type="search"
-              placeholder="제품 · 벤더 · 버전 검색"
-              aria-label="제품 검색"
+              placeholder="Search product, vendor, or version"
+              aria-label="Search products"
               className="w-full bg-transparent text-[13px] outline-none placeholder:text-[var(--text-faint)]"
               style={{ color: 'var(--text)' }}
             />
@@ -108,7 +108,7 @@ export function Header({
         <div className="ml-auto flex items-center gap-4">
           <dl className="text-right leading-tight">
             <dt className="text-[10px] tracking-wide uppercase" style={{ color: 'var(--text-faint)' }}>
-              마지막 수집
+              Last collected
             </dt>
             <dd className="mono text-[12px]" style={{ color: 'var(--text)' }}>
               {generatedAt ? relativeTime(generatedAt) : '—'}
@@ -120,17 +120,17 @@ export function Header({
 
           <dl className="hidden text-right leading-tight lg:block">
             <dt className="text-[10px] tracking-wide uppercase" style={{ color: 'var(--text-faint)' }}>
-              다음 수집
+              Next run
             </dt>
             <dd className="mono text-[12px]" style={{ color: 'var(--text-muted)' }}>
-              {countdownTo(next, tick)} 후
+              in {countdownTo(next, tick)}
             </dd>
           </dl>
 
           <button
             type="button"
             onClick={onToggleTheme}
-            aria-label={theme === 'dark' ? '밝은 테마로 전환' : '어두운 테마로 전환'}
+            aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
             className="grid h-8 w-8 place-items-center rounded-lg transition-colors hover:bg-[var(--surface-hover)]"
             style={{ border: '1px solid var(--border)', color: 'var(--text-muted)' }}
           >

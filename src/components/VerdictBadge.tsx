@@ -15,14 +15,14 @@ const LABEL: Record<Verdict, string> = {
   GO: 'GO',
   HOLD: 'HOLD',
   'NO-GO': 'NO-GO',
-  UNKNOWN: '정보없음',
+  UNKNOWN: 'NO DATA',
 };
 
 export const VERDICT_DESCRIPTION: Record<Verdict, string> = {
-  GO: '지금 도입해도 되는 상태',
-  HOLD: '조건부 — 근거를 확인하고 판단',
-  'NO-GO': '지금 도입하면 안 되는 상태',
-  UNKNOWN: '판정할 데이터가 부족',
+  GO: 'Safe to adopt now',
+  HOLD: 'Conditional — read the reasoning before deciding',
+  'NO-GO': 'Do not adopt this version yet',
+  UNKNOWN: 'Not enough data to judge',
 };
 
 export function VerdictBadge({
@@ -68,7 +68,7 @@ export function ScoreBar({ verdict, score }: { verdict: Verdict; score: number }
       className="inline-block h-1 w-12 overflow-hidden rounded-full align-middle"
       style={{ background: 'var(--border)' }}
       role="img"
-      aria-label={`위험도 점수 ${score}점 / 100점`}
+      aria-label={`Risk score ${score} out of 100`}
     >
       <span
         className="block h-full rounded-full transition-[width] duration-300"

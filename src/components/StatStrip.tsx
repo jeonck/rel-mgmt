@@ -1,6 +1,6 @@
 import type { Snapshot, Verdict } from '../lib/types';
 
-export type QuickFilter = Verdict | 'ALL' | 'EOL_SOON' | 'CHANGED';
+export type QuickFilter = Verdict | 'ALL' | 'EOL_SOON' | 'CHANGED' | 'CVE';
 
 interface Tile {
   key: QuickFilter;
@@ -33,22 +33,29 @@ export function StatStrip({
 }) {
   const c = snapshot.counts;
   const tiles: Tile[] = [
-    { key: 'ALL', label: '추적 대상', value: c.total, hint: '전체 제품', tone: 'neutral' },
-    { key: 'GO', label: 'GO', value: c.go, hint: '최신 버전 도입 가능', tone: 'go' },
-    { key: 'HOLD', label: 'HOLD', value: c.hold, hint: '조건부 — 근거 확인 필요', tone: 'hold' },
-    { key: 'NO-GO', label: 'NO-GO', value: c.nogo, hint: '최신 버전 도입 보류', tone: 'nogo' },
-    { key: 'EOL_SOON', label: 'EOL 임박', value: c.eolSoon, hint: '지원 잔여 180일 이하', tone: 'hold' },
+    { key: 'ALL', label: 'Tracked', value: c.total, hint: 'Products in the catalog', tone: 'neutral' },
+    { key: 'GO', label: 'GO', value: c.go, hint: 'Latest is safe to adopt', tone: 'go' },
+    { key: 'HOLD', label: 'HOLD', value: c.hold, hint: 'Conditional — see reasoning', tone: 'hold' },
+    { key: 'NO-GO', label: 'NO-GO', value: c.nogo, hint: 'Do not adopt the latest yet', tone: 'nogo' },
+    {
+      key: 'CVE',
+      label: 'CVE affected',
+      value: c.cveAffected,
+      hint: c.cveSevere > 0 ? `${c.cveSevere} with critical or high` : 'Known CVEs against latest',
+      tone: c.cveSevere > 0 ? 'nogo' : 'hold',
+    },
+    { key: 'EOL_SOON', label: 'EOL soon', value: c.eolSoon, hint: '180 days of support or less', tone: 'hold' },
     {
       key: 'CHANGED',
-      label: '오늘 변경',
+      label: 'Changed',
       value: snapshot.changes.length,
-      hint: '직전 수집 대비 변동',
+      hint: 'Since the previous run',
       tone: 'accent',
     },
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-6">
+    <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7">
       {tiles.map((t) => {
         const isActive = active === t.key;
         const vars = TONE_VARS[t.tone];

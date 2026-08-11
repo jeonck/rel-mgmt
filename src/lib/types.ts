@@ -16,21 +16,58 @@ export interface Category {
 }
 
 export const CATEGORIES: Category[] = [
-  { id: 'container', label: '컨테이너 / 오케스트레이션', short: 'Container' },
-  { id: 'iac-cicd', label: 'IaC / CI·CD', short: 'IaC·CI/CD' },
-  { id: 'observability', label: '관측 / 모니터링', short: 'Observability' },
-  { id: 'runtime', label: '런타임 / 미들웨어 / DB', short: 'Runtime·DB' },
+  { id: 'container', label: 'Containers & Orchestration', short: 'Containers' },
+  { id: 'iac-cicd', label: 'IaC & CI/CD', short: 'IaC · CI/CD' },
+  { id: 'observability', label: 'Observability', short: 'Observability' },
+  { id: 'runtime', label: 'Runtimes, Middleware & Databases', short: 'Runtime · DB' },
 ];
 
 /** 판정 근거 한 줄. UI에서 그대로 나열한다. */
 export interface Reason {
   /** 규칙 식별자 (테스트/디버깅용) */
   code: string;
-  /** 사용자에게 보여줄 한국어 설명 */
+  /** 사용자에게 보여줄 설명 (영문 — 사이트 표기 언어) */
   label: string;
   /** 점수 가감 (0이면 정보성) */
   delta: number;
   tone: 'good' | 'warn' | 'bad' | 'info';
+}
+
+export type CveSeverity = 'CRITICAL' | 'HIGH' | 'MEDIUM' | 'LOW' | 'UNSCORED';
+
+export const CVE_SEVERITIES: CveSeverity[] = ['CRITICAL', 'HIGH', 'MEDIUM', 'LOW', 'UNSCORED'];
+
+export interface CveRef {
+  /** CVE-2026-12345 */
+  id: string;
+  /** CVSS base score. NVD 분석 전이면 null */
+  score: number | null;
+  severity: CveSeverity;
+  published: string | null;
+  summary: string;
+  url: string;
+}
+
+export type SecurityStatus =
+  /** NVD 조회 성공 */
+  | 'ok'
+  /** 이 제품에 매핑된 CPE가 없어 조회 자체가 불가 */
+  | 'unmapped'
+  /** 조회 실패 (일시 장애 등) — 판정에 반영하지 않는다 */
+  | 'error'
+  /** 이 버전은 조회 대상이 아니었다 (상위 후보만 조회한다) */
+  | 'skipped';
+
+export interface SecurityReport {
+  status: SecurityStatus;
+  /** 이 버전에 영향을 주는 것으로 NVD에 등록된 CVE 수 */
+  counts: Record<CveSeverity, number> & { total: number };
+  /** 심각도 높은 순 상위 항목 */
+  top: CveRef[];
+  cpe: string | null;
+  checkedAt: string | null;
+  /** 조회 실패 사유나 절삭 안내 */
+  note?: string;
 }
 
 /** 하나의 버전에 대한 평가 결과 */
@@ -54,6 +91,8 @@ export interface ReleaseCandidate {
   supportEndDate: string | null;
   isSupportEnded: boolean;
   notesUrl: string | null;
+  /** NVD 조회 결과. 상위 후보 몇 개만 실제로 조회한다. */
+  security: SecurityReport;
   verdict: Verdict;
   /** 0~100 */
   score: number;
@@ -104,6 +143,7 @@ export type ChangeKind =
   | 'verdict-up'
   | 'verdict-down'
   | 'eol-soon'
+  | 'new-cve'
   | 'new-product';
 
 export interface ChangeEvent {
@@ -131,6 +171,10 @@ export interface Snapshot {
     unknown: number;
     eolSoon: number;
     errored: number;
+    /** 최신 버전이 CVE 영향을 받는 제품 수 */
+    cveAffected: number;
+    /** 그중 CRITICAL/HIGH를 포함하는 제품 수 */
+    cveSevere: number;
   };
   /** 이번 수집에서 감지된 변경 */
   changes: ChangeEvent[];

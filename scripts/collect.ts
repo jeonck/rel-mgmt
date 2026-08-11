@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { CATALOG, type CatalogEntry } from './catalog.js';
 import { fetchEndOfLife, type EolProduct } from './sources/endoflife.js';
 import { fetchGithubReleases, type GhReleaseInfo } from './sources/github.js';
+import { fetchCves, skippedReport, unmappedReport } from './sources/nvd.js';
 import { fetchText, mapLimit } from './lib/http.js';
 import { compareVersionDesc, daysBetween, parseVersion } from './lib/semver.js';
 import { evaluate, resolvePolicy } from './verdict.js';
@@ -14,6 +15,7 @@ import {
   type EventLog,
   type Product,
   type ReleaseCandidate,
+  type SecurityReport,
   type Snapshot,
   type TrainInfo,
 } from '../src/lib/types.js';
@@ -27,7 +29,23 @@ const EVENTS_PATH = join(DATA_DIR, 'events.json');
 const TIMEZONE = 'America/Chicago'; // CDT/CST — 수집 스케줄 기준 시간대
 const EVENT_LOG_LIMIT = 400;
 const MAX_TRAINS = 6;
+/**
+ * 제품당 NVD 조회 상한 = 후보 트레인 수 + 최신 1건.
+ *
+ * 낮게 잡았다가 문제가 있었다. 상한이 3이면 Python처럼 여러 트레인이 같은 CVE에 걸린
+ * 제품에서 앞의 후보들이 예산을 다 쓰고, 정작 "권장"으로 뽑히는 버전은 CVE를 한 번도
+ * 확인하지 않은 채 안전한 대안처럼 화면에 나간다. 권장 버전만큼은 반드시 검증된
+ * 상태여야 하므로 탐색 전체를 덮을 수 있는 예산을 준다.
+ */
+const MAX_CVE_LOOKUPS = MAX_TRAINS + 1;
 const DRY_RUN = process.argv.includes('--dry-run');
+const SKIP_CVE = process.argv.includes('--skip-cve');
+/** `--only=kubernetes,nginx` — 디버깅용 부분 수집 (--dry-run과 함께 쓴다) */
+const ONLY = process.argv
+  .find((a) => a.startsWith('--only='))
+  ?.slice('--only='.length)
+  .split(',')
+  .filter(Boolean);
 
 const NOW = new Date().toISOString();
 
@@ -139,7 +157,11 @@ function mergeCandidates(eolCands: RawCandidate[], ghCands: RawCandidate[]): Raw
   return [...byTrain.values()];
 }
 
-function toReleaseCandidate(raw: RawCandidate, policyOverride?: CatalogEntry['policy']) {
+function toReleaseCandidate(
+  raw: RawCandidate,
+  security: SecurityReport,
+  policyOverride?: CatalogEntry['policy'],
+) {
   const parsed = parseVersion(raw.version);
   const ageDays = daysBetween(raw.releaseDate, NOW);
   // daysBetween(eol, now)은 EOL이 지났으면 양수 → 부호를 뒤집어 "잔여일"로 만든다
@@ -156,6 +178,7 @@ function toReleaseCandidate(raw: RawCandidate, policyOverride?: CatalogEntry['po
       isSupportEnded: raw.isSupportEnded,
       isMaintained: raw.isMaintained,
       eolInDays,
+      security,
       hasData: true,
     },
     resolvePolicy(policyOverride),
@@ -175,6 +198,7 @@ function toReleaseCandidate(raw: RawCandidate, policyOverride?: CatalogEntry['po
     supportEndDate: raw.supportEndDate,
     isSupportEnded: raw.isSupportEnded,
     notesUrl: raw.notesUrl,
+    security,
     verdict,
     score,
     reasons,
@@ -225,16 +249,16 @@ async function collectProduct(entry: CatalogEntry): Promise<Product> {
   if (entry.eol) {
     try {
       eol = await fetchEndOfLife(entry.eol);
-      if (!eol) errors.push(`endoflife.date에 '${entry.eol}' 제품이 없습니다`);
+      if (!eol) errors.push(`endoflife.date has no product named "${entry.eol}"`);
     } catch (err) {
-      errors.push(`endoflife.date 수집 실패: ${(err as Error).message}`);
+      errors.push(`endoflife.date lookup failed: ${(err as Error).message}`);
     }
   }
   if (entry.repo) {
     try {
       releases = await fetchGithubReleases(entry.repo, entry.tagFilter);
     } catch (err) {
-      errors.push(`GitHub 수집 실패: ${(err as Error).message}`);
+      errors.push(`GitHub lookup failed: ${(err as Error).message}`);
     }
   }
 
@@ -243,10 +267,51 @@ async function collectProduct(entry: CatalogEntry): Promise<Product> {
   const stable = merged.filter((c) => !c.prerelease);
   const pool = (stable.length > 0 ? stable : merged).sort(betterFirst).slice(0, MAX_TRAINS);
 
-  const candidates = pool.map((raw) => toReleaseCandidate(raw, entry.policy));
+  // ── 판정 1차: CVE 없이 평가한다.
+  // CVE 조회는 비싸므로(NVD 레이트리밋) 화면에 실제로 나가는 후보에만 쓴다.
+  const candidates = pool.map((raw) => toReleaseCandidate(raw, skippedReport(), entry.policy));
+
+  const cpe = entry.cpe ?? eol?.cpe ?? null;
+  let lookups = 0;
+
+  /** 후보 i에 CVE를 반영해 다시 평가한다. 이미 조회했거나 예산을 넘었으면 그대로 둔다. */
+  const applyCves = async (i: number): Promise<void> => {
+    const raw = pool[i];
+    const current = candidates[i];
+    if (!raw || !current || current.security.status !== 'skipped') return;
+
+    if (!cpe) {
+      candidates[i] = toReleaseCandidate(raw, unmappedReport(), entry.policy);
+      return;
+    }
+    if (SKIP_CVE || lookups >= MAX_CVE_LOOKUPS) return;
+
+    lookups++;
+    const report = await fetchCves(cpe, raw.version);
+    if (report.status === 'error') errors.push(report.note ?? 'NVD lookup failed');
+    candidates[i] = toReleaseCandidate(raw, report, entry.policy);
+  };
+
+  // 최신 버전은 헤드라인 판정이라 항상 조회한다
+  await applyCves(0);
+
+  // 권장 버전은 "CVE까지 반영하고도 GO"인 첫 후보다.
+  // 1차에서 GO였던 후보만 확인하면 되므로 대개 1~2회 추가 조회로 끝난다.
+  //
+  // 검증되지 않은(status === 'skipped') 후보는 절대 권장하지 않는다 —
+  // 확인 안 한 버전을 "안전한 대안"이라고 내놓는 게 가장 나쁜 실패 방식이다.
+  let recommended: ReleaseCandidate | null = null;
+  for (let i = 0; i < candidates.length; i++) {
+    if (candidates[i]!.verdict !== 'GO') continue;
+    await applyCves(i);
+    const candidate = candidates[i]!;
+    if (candidate.verdict === 'GO' && candidate.security.status !== 'skipped') {
+      recommended = candidate;
+      break;
+    }
+  }
 
   const latest = candidates[0] ?? null;
-  const recommended = candidates.find((c) => c.verdict === 'GO') ?? null;
 
   const trains: TrainInfo[] = pool.map((raw, i) => ({
     train: raw.train ?? raw.version,
@@ -298,24 +363,52 @@ function diff(previous: Snapshot | null, products: Product[]): ChangeEvent[] {
     const prev = prevById.get(p.id);
 
     if (!prev) {
-      if (previous) push(p, 'new-product', `추적 대상에 추가됨`);
+      if (previous) push(p, 'new-product', 'Added to the tracked catalog');
       continue;
     }
 
     if (p.latest && prev.latest && p.latest.version !== prev.latest.version) {
-      push(p, 'new-version', `최신 버전 ${prev.latest.version} → ${p.latest.version}`, prev.latest.version, p.latest.version);
+      push(
+        p,
+        'new-version',
+        `Latest ${prev.latest.version} → ${p.latest.version}`,
+        prev.latest.version,
+        p.latest.version,
+      );
     }
 
     if (p.verdict !== prev.verdict) {
       const rank = { 'NO-GO': 0, UNKNOWN: 1, HOLD: 2, GO: 3 } as const;
       const up = rank[p.verdict] > rank[prev.verdict];
-      push(p, up ? 'verdict-up' : 'verdict-down', `판정 ${prev.verdict} → ${p.verdict}`, prev.verdict, p.verdict);
+      push(
+        p,
+        up ? 'verdict-up' : 'verdict-down',
+        `Verdict ${prev.verdict} → ${p.verdict}`,
+        prev.verdict,
+        p.verdict,
+      );
+    }
+
+    // 새로 등재된 CVE는 버전이 그대로여도 알려야 한다 — NVD 등재가 릴리즈보다 늦기 때문이다
+    const prevCve = prev.latest?.security;
+    const nowCve = p.latest?.security;
+    if (
+      prevCve?.status === 'ok' &&
+      nowCve?.status === 'ok' &&
+      nowCve.counts.total > prevCve.counts.total
+    ) {
+      const added = nowCve.counts.total - prevCve.counts.total;
+      push(
+        p,
+        'new-cve',
+        `${added} new CVE${added === 1 ? '' : 's'} recorded against ${p.latest?.version}`,
+      );
     }
 
     const before = prev.recommended?.eolInDays ?? prev.latest?.eolInDays ?? null;
     const after = p.recommended?.eolInDays ?? p.latest?.eolInDays ?? null;
     if (before !== null && after !== null && before > 90 && after <= 90) {
-      push(p, 'eol-soon', `EOL ${after}일 남음 — 업그레이드 계획 필요`);
+      push(p, 'eol-soon', `${after} days of support left — plan the upgrade`);
     }
   }
 
@@ -333,7 +426,10 @@ async function readJson<T>(path: string): Promise<T | null> {
 }
 
 async function main() {
-  console.log(`[collect] ${CATALOG.length}개 제품 수집 시작 (dry-run=${DRY_RUN})`);
+  const catalog = ONLY ? CATALOG.filter((e) => ONLY.includes(e.id)) : CATALOG;
+  console.log(
+    `[collect] ${catalog.length}개 제품 수집 시작 (dry-run=${DRY_RUN}, cve=${SKIP_CVE ? 'skip' : process.env.NVD_API_KEY ? 'api-key' : 'anonymous'})`,
+  );
 
   await mkdir(DATA_DIR, { recursive: true });
   await mkdir(ICON_DIR, { recursive: true });
@@ -341,7 +437,7 @@ async function main() {
   const previous = await readJson<Snapshot>(SNAPSHOT_PATH);
   const prevById = new Map(previous?.products.map((p) => [p.id, p]) ?? []);
 
-  const products = await mapLimit(CATALOG, 6, async (entry) => {
+  const products = await mapLimit(catalog, 6, async (entry) => {
     try {
       const product = await collectProduct(entry);
       // 이번 회차에서 아무 버전도 못 얻었다면 직전 스냅샷을 유지한다 (일시 장애 방어)
@@ -349,17 +445,23 @@ async function main() {
         const prev = prevById.get(entry.id);
         if (prev?.latest) {
           console.warn(`[collect] ${entry.id}: 수집 실패 — 직전 데이터 유지`);
-          return { ...prev, errors: [...product.errors, '이번 수집 실패 — 직전 데이터 표시 중'] };
+          return {
+            ...prev,
+            errors: [...product.errors, 'This run failed — showing the previous snapshot'],
+          };
         }
       }
+      const cve = product.latest?.security;
+      const cveNote =
+        cve?.status === 'ok' ? `CVE ${cve.counts.total}` : `CVE ${cve?.status ?? 'n/a'}`;
       console.log(
-        `[collect] ${entry.id.padEnd(18)} ${(product.latest?.version ?? '-').padEnd(14)} ${product.verdict}`,
+        `[collect] ${entry.id.padEnd(18)} ${(product.latest?.version ?? '-').padEnd(14)} ${product.verdict.padEnd(7)} ${cveNote}`,
       );
       return product;
     } catch (err) {
       console.error(`[collect] ${entry.id} 실패: ${(err as Error).message}`);
       const prev = prevById.get(entry.id);
-      if (prev) return { ...prev, errors: [`수집 실패: ${(err as Error).message}`] };
+      if (prev) return { ...prev, errors: [`Collection failed: ${(err as Error).message}`] };
       throw err;
     }
   });
@@ -377,6 +479,10 @@ async function main() {
       return d !== null && d !== undefined && d <= 180;
     }).length,
     errored: products.filter((p) => p.errors.length > 0).length,
+    cveAffected: products.filter((p) => (p.latest?.security.counts.total ?? 0) > 0).length,
+    cveSevere: products.filter(
+      (p) => (p.latest?.security.counts.CRITICAL ?? 0) + (p.latest?.security.counts.HIGH ?? 0) > 0,
+    ).length,
   };
 
   const snapshot: Snapshot = {

@@ -20,6 +20,7 @@ interface EolV1Response {
     name: string;
     label: string;
     links?: { icon?: string | null; html?: string | null; releasePolicy?: string | null };
+    identifiers?: { type: string; id: string }[];
     releases: EolV1Release[];
   };
 }
@@ -46,6 +47,8 @@ export interface EolProduct {
   iconUrl: string | null;
   htmlUrl: string | null;
   releasePolicyUrl: string | null;
+  /** NVD CVE 조회에 쓰는 CPE (cpe:2.3:a:vendor:product). 없을 수 있다. */
+  cpe: string | null;
   trains: EolTrain[];
 }
 
@@ -61,6 +64,7 @@ export async function fetchEndOfLife(slug: string): Promise<EolProduct | null> {
     iconUrl: result.links?.icon ?? null,
     htmlUrl: result.links?.html ?? null,
     releasePolicyUrl: result.links?.releasePolicy ?? null,
+    cpe: result.identifiers?.find((i) => i.type === 'cpe')?.id ?? null,
     trains: (result.releases ?? []).map((r) => ({
       train: r.name,
       releaseDate: r.releaseDate,
