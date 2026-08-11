@@ -1,5 +1,5 @@
 import type { Product } from '../lib/types';
-import { formatAge, formatDate, formatEolRemaining } from '../lib/format';
+import { formatAgeAgo, formatDate, formatEolRemaining } from '../lib/format';
 import { CveBadge } from './CveBadge';
 import { ProductDetail } from './ProductDetail';
 import { ProductIcon } from './ProductIcon';
@@ -59,7 +59,7 @@ function Card({
           <div className="flex items-baseline gap-2">
             <span className="mono text-[19px] font-bold tracking-tight">{latest?.version ?? '—'}</span>
             <span className="mono text-[11.5px]" style={{ color: 'var(--text-faint)' }}>
-              {formatDate(latest?.releaseDate)} · {formatAge(latest?.ageDays)} ago
+              {formatDate(latest?.releaseDate)} · {formatAgeAgo(latest?.ageDays)}
             </span>
           </div>
 

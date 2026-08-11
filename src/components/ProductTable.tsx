@@ -1,5 +1,5 @@
 import { CATEGORIES, type Product } from '../lib/types';
-import { formatAge, formatDate } from '../lib/format';
+import { formatAgeAgo, formatDate } from '../lib/format';
 import { CveBadge } from './CveBadge';
 import { EolMeter } from './EolMeter';
 import { ProductDetail } from './ProductDetail';
@@ -74,7 +74,7 @@ function Row({
             )}
           </div>
           <span className="mono block text-[11px]" style={{ color: 'var(--text-faint)' }}>
-            {formatDate(latest?.releaseDate)} · {formatAge(latest?.ageDays)} ago
+            {formatDate(latest?.releaseDate)} · {formatAgeAgo(latest?.ageDays)}
           </span>
         </td>
 

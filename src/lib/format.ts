@@ -63,6 +63,17 @@ export function formatAge(days: number | null | undefined): string {
   return months > 0 ? `${years}y ${months}mo` : `${years}y`;
 }
 
+/**
+ * 표에 "3d ago"처럼 쓰기 위한 표현.
+ * formatAge는 0일이면 "today"를 돌려주므로 그냥 " ago"를 붙이면 "today ago"가 된다.
+ */
+export function formatAgeAgo(days: number | null | undefined): string {
+  if (days === null || days === undefined) return '—';
+  if (days < 0) return 'upcoming';
+  if (days === 0) return 'today';
+  return `${formatAge(days)} ago`;
+}
+
 export function formatEolRemaining(days: number | null | undefined): string {
   if (days === null || days === undefined) return 'unpublished';
   if (days < 0) return `${Math.abs(days)}d past`;

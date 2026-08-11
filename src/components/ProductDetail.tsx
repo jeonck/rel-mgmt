@@ -1,4 +1,4 @@
-import { formatAge, formatDate, formatEolRemaining } from '../lib/format';
+import { formatAgeAgo, formatDate, formatEolRemaining } from '../lib/format';
 import type { Product, Reason, ReleaseCandidate } from '../lib/types';
 import { CveSeverityDot, SEVERITY_COLOR } from './CveBadge';
 import { VerdictBadge } from './VerdictBadge';
@@ -237,7 +237,7 @@ export function ProductDetail({ product }: { product: Product }) {
 
         {latest && (
           <p className="mt-2 text-[11.5px]" style={{ color: 'var(--text-faint)' }}>
-            Latest release {formatDate(latest.releaseDate)} · {formatAge(latest.ageDays)} old
+            Latest release {formatDate(latest.releaseDate)} · {formatAgeAgo(latest.ageDays)}
           </p>
         )}
 
