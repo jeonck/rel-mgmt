@@ -64,7 +64,7 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add public/data public/icons
-          git commit -m "chore(data): 릴리즈 스냅샷 갱신 $(date -u '+%Y-%m-%d')"
+          git commit -m "chore(data): refresh release snapshot $(date -u '+%Y-%m-%d')"
           git push
 
       - name: 배포 경로 결정
