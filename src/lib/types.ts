@@ -7,7 +7,13 @@ export const SCHEMA_VERSION = 1;
 
 export type Verdict = 'GO' | 'HOLD' | 'NO-GO' | 'UNKNOWN';
 
-export type CategoryId = 'container' | 'iac-cicd' | 'observability' | 'runtime';
+export type CategoryId =
+  | 'platform'
+  | 'container'
+  | 'iac-cicd'
+  | 'observability'
+  | 'runtime'
+  | 'enterprise';
 
 export interface Category {
   id: CategoryId;
@@ -15,11 +21,14 @@ export interface Category {
   short: string;
 }
 
+// 인프라 스택을 아래에서 위로 읽는 순서로 배치한다 — 탭 순서가 곧 이 순서다
 export const CATEGORIES: Category[] = [
+  { id: 'platform', label: 'Platform & Infrastructure', short: 'Platform' },
   { id: 'container', label: 'Containers & Orchestration', short: 'Containers' },
   { id: 'iac-cicd', label: 'IaC & CI/CD', short: 'IaC · CI/CD' },
   { id: 'observability', label: 'Observability', short: 'Observability' },
   { id: 'runtime', label: 'Runtimes, Middleware & Databases', short: 'Runtime · DB' },
+  { id: 'enterprise', label: 'Enterprise Applications', short: 'Enterprise' },
 ];
 
 /** 판정 근거 한 줄. UI에서 그대로 나열한다. */

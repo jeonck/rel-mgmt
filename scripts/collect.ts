@@ -40,7 +40,7 @@ const MAX_TRAINS = 6;
 const MAX_CVE_LOOKUPS = MAX_TRAINS + 1;
 const DRY_RUN = process.argv.includes('--dry-run');
 const SKIP_CVE = process.argv.includes('--skip-cve');
-/** `--only=kubernetes,nginx` — 디버깅용 부분 수집 (--dry-run과 함께 쓴다) */
+/** `--only=kubernetes,nginx` — 부분 수집. 나머지 제품은 직전 스냅샷을 유지한다. */
 const ONLY = process.argv
   .find((a) => a.startsWith('--only='))
   ?.slice('--only='.length)
@@ -157,11 +157,7 @@ function mergeCandidates(eolCands: RawCandidate[], ghCands: RawCandidate[]): Raw
   return [...byTrain.values()];
 }
 
-function toReleaseCandidate(
-  raw: RawCandidate,
-  security: SecurityReport,
-  policyOverride?: CatalogEntry['policy'],
-) {
+function toReleaseCandidate(raw: RawCandidate, security: SecurityReport, entry: CatalogEntry) {
   const parsed = parseVersion(raw.version);
   const ageDays = daysBetween(raw.releaseDate, NOW);
   // daysBetween(eol, now)은 EOL이 지났으면 양수 → 부호를 뒤집어 "잔여일"로 만든다
@@ -179,9 +175,10 @@ function toReleaseCandidate(
       isMaintained: raw.isMaintained,
       eolInDays,
       security,
+      cveScoring: entry.cveScoring ?? 'score',
       hasData: true,
     },
-    resolvePolicy(policyOverride),
+    resolvePolicy(entry.policy),
   );
 
   const candidate: ReleaseCandidate = {
@@ -269,7 +266,7 @@ async function collectProduct(entry: CatalogEntry): Promise<Product> {
 
   // ── 판정 1차: CVE 없이 평가한다.
   // CVE 조회는 비싸므로(NVD 레이트리밋) 화면에 실제로 나가는 후보에만 쓴다.
-  const candidates = pool.map((raw) => toReleaseCandidate(raw, skippedReport(), entry.policy));
+  const candidates = pool.map((raw) => toReleaseCandidate(raw, skippedReport(), entry));
 
   const cpe = entry.cpe ?? eol?.cpe ?? null;
   let lookups = 0;
@@ -281,7 +278,7 @@ async function collectProduct(entry: CatalogEntry): Promise<Product> {
     if (!raw || !current || current.security.status !== 'skipped') return;
 
     if (!cpe) {
-      candidates[i] = toReleaseCandidate(raw, unmappedReport(), entry.policy);
+      candidates[i] = toReleaseCandidate(raw, unmappedReport(), entry);
       return;
     }
     if (SKIP_CVE || lookups >= MAX_CVE_LOOKUPS) return;
@@ -289,7 +286,7 @@ async function collectProduct(entry: CatalogEntry): Promise<Product> {
     lookups++;
     const report = await fetchCves(cpe, raw.version);
     if (report.status === 'error') errors.push(report.note ?? 'NVD lookup failed');
-    candidates[i] = toReleaseCandidate(raw, report, entry.policy);
+    candidates[i] = toReleaseCandidate(raw, report, entry);
   };
 
   // 최신 버전은 헤드라인 판정이라 항상 조회한다
@@ -466,21 +463,29 @@ async function main() {
     }
   });
 
-  const changes = diff(previous, products);
+  // `--only`로 일부만 돌렸다면 나머지는 직전 스냅샷을 그대로 살린다.
+  // 이게 없으면 부분 재수집이 나머지 제품을 통째로 지워버린다.
+  const collected = ONLY
+    ? CATALOG.map((entry) => products.find((p) => p.id === entry.id) ?? prevById.get(entry.id)).filter(
+        (p): p is Product => Boolean(p),
+      )
+    : products;
+
+  const changes = diff(previous, collected);
 
   const counts = {
-    total: products.length,
-    go: products.filter((p) => p.verdict === 'GO').length,
-    hold: products.filter((p) => p.verdict === 'HOLD').length,
-    nogo: products.filter((p) => p.verdict === 'NO-GO').length,
-    unknown: products.filter((p) => p.verdict === 'UNKNOWN').length,
-    eolSoon: products.filter((p) => {
+    total: collected.length,
+    go: collected.filter((p) => p.verdict === 'GO').length,
+    hold: collected.filter((p) => p.verdict === 'HOLD').length,
+    nogo: collected.filter((p) => p.verdict === 'NO-GO').length,
+    unknown: collected.filter((p) => p.verdict === 'UNKNOWN').length,
+    eolSoon: collected.filter((p) => {
       const d = p.recommended?.eolInDays ?? p.latest?.eolInDays;
       return d !== null && d !== undefined && d <= 180;
     }).length,
-    errored: products.filter((p) => p.errors.length > 0).length,
-    cveAffected: products.filter((p) => (p.latest?.security.counts.total ?? 0) > 0).length,
-    cveSevere: products.filter(
+    errored: collected.filter((p) => p.errors.length > 0).length,
+    cveAffected: collected.filter((p) => (p.latest?.security.counts.total ?? 0) > 0).length,
+    cveSevere: collected.filter(
       (p) => (p.latest?.security.counts.CRITICAL ?? 0) + (p.latest?.security.counts.HIGH ?? 0) > 0,
     ).length,
   };
@@ -491,7 +496,7 @@ async function main() {
     timezone: TIMEZONE,
     counts,
     changes,
-    products: products.sort((a, b) => a.category.localeCompare(b.category) || a.name.localeCompare(b.name)),
+    products: collected.sort((a, b) => a.category.localeCompare(b.category) || a.name.localeCompare(b.name)),
   };
 
   const prevEvents = (await readJson<EventLog>(EVENTS_PATH))?.events ?? [];

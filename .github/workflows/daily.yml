@@ -50,8 +50,9 @@ jobs:
           # 키를 넣으면 30초당 50건이 되어 2분 내로 끝난다.
           # 발급: https://nvd.nist.gov/developers/request-an-api-key
           NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
-        # NVD 레이트리밋 대기 때문에 기본 6시간 안에는 끝나지만 여유를 둔다
-        timeout-minutes: 45
+        # NVD 레이트리밋 대기가 대부분이다. 79종 익명 조회는 25~35분 걸린다
+        # (NVD_API_KEY 시크릿을 넣으면 3분 내로 끝난다).
+        timeout-minutes: 75
         run: npm run collect
 
       - name: 수집 결과 커밋

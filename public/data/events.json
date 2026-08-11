@@ -1,4 +1,257 @@
 {
-  "updatedAt": "2026-08-11T08:04:11.011Z",
-  "events": []
+  "updatedAt": "2026-08-11T14:24:54.769Z",
+  "events": [
+    {
+      "at": "2026-08-11T14:24:54.769Z",
+      "productId": "rhel",
+      "productName": "Red Hat Enterprise Linux",
+      "category": "platform",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → GO",
+      "from": "NO-GO",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-11T14:24:54.769Z",
+      "productId": "ubuntu",
+      "productName": "Ubuntu",
+      "category": "platform",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "windows-server",
+      "productName": "Windows Server",
+      "category": "platform",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "rhel",
+      "productName": "Red Hat Enterprise Linux",
+      "category": "platform",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "ubuntu",
+      "productName": "Ubuntu",
+      "category": "platform",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "rocky-linux",
+      "productName": "Rocky Linux",
+      "category": "platform",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "debian",
+      "productName": "Debian",
+      "category": "platform",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "oracle-linux",
+      "productName": "Oracle Linux",
+      "category": "platform",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "esxi",
+      "productName": "VMware ESXi",
+      "category": "platform",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "vmware-cloud-foundation",
+      "productName": "VMware Cloud Foundation",
+      "category": "platform",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "proxmox-ve",
+      "productName": "Proxmox VE",
+      "category": "platform",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "nutanix-aos",
+      "productName": "Nutanix AOS",
+      "category": "platform",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "cisco-ios-xe",
+      "productName": "Cisco IOS XE",
+      "category": "platform",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "big-ip",
+      "productName": "F5 BIG-IP",
+      "category": "platform",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "citrix-vad",
+      "productName": "Citrix Virtual Apps and Desktops",
+      "category": "platform",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "netapp-ontap",
+      "productName": "NetApp ONTAP",
+      "category": "platform",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "veeam-backup",
+      "productName": "Veeam Backup & Replication",
+      "category": "platform",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "argo-workflows",
+      "productName": "Argo Workflows",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 4.0.8 → 4.1.0",
+      "from": "4.0.8",
+      "to": "4.1.0"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "argo-workflows",
+      "productName": "Argo Workflows",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "otel-collector",
+      "productName": "OpenTelemetry Collector",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "elasticsearch",
+      "productName": "Elasticsearch",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "splunk",
+      "productName": "Splunk Enterprise",
+      "category": "observability",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "zabbix",
+      "productName": "Zabbix",
+      "category": "observability",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "oracle-database",
+      "productName": "Oracle Database",
+      "category": "runtime",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "apache-http-server",
+      "productName": "Apache HTTP Server",
+      "category": "runtime",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "jboss-eap",
+      "productName": "Red Hat JBoss EAP",
+      "category": "runtime",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "msexchange",
+      "productName": "Microsoft Exchange Server",
+      "category": "enterprise",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "sharepoint",
+      "productName": "Microsoft SharePoint",
+      "category": "enterprise",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "jira-software",
+      "productName": "Jira Software (Data Center)",
+      "category": "enterprise",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T14:12:01.079Z",
+      "productId": "confluence",
+      "productName": "Confluence (Data Center)",
+      "category": "enterprise",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    }
+  ]
 }

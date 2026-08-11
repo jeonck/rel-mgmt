@@ -42,6 +42,8 @@ export interface VerdictInput {
   isMaintained: boolean;
   eolInDays: number | null;
   security: SecurityReport;
+  /** 'advisory'면 CVE를 표시만 하고 점수에는 반영하지 않는다 */
+  cveScoring: 'score' | 'advisory';
   /** 알려진 정보가 사실상 없을 때 UNKNOWN 처리 */
   hasData: boolean;
 }
@@ -82,8 +84,9 @@ export function evaluate(input: VerdictInput, policy: Policy = DEFAULT_POLICY): 
 
   const sec = input.security;
   const cveUsable = sec.status === 'ok';
+  const cveScored = cveUsable && input.cveScoring === 'score';
 
-  if (cveUsable && sec.counts.CRITICAL > 0) {
+  if (cveScored && sec.counts.CRITICAL > 0) {
     const worst = sec.top.find((c) => c.severity === 'CRITICAL');
     add(
       'cve-critical',
@@ -105,7 +108,17 @@ export function evaluate(input: VerdictInput, policy: Policy = DEFAULT_POLICY): 
   // NVD의 CPE 데이터는 신규 릴리즈에 대해 수 주 늦는다. 그래서 "0건"을 안전의 근거로
   // 쓰지 않고, 조회했다는 사실만 정보성으로 남긴다. 조회 실패 시에는 감점하지 않는다
   // (일시 장애로 멀쩡한 버전을 NO-GO로 떨어뜨리면 보드를 신뢰할 수 없게 된다).
-  if (!cveUsable) {
+  if (cveUsable && input.cveScoring === 'advisory') {
+    // 패키지 업데이트로 해소되는 취약점이라 버전 판정과 분리한다
+    add(
+      'cve-advisory',
+      sec.counts.total > 0
+        ? `${plural(sec.counts.total, 'CVE')} recorded against this release — fixed by package updates, not by changing version, so not scored`
+        : 'No CVEs recorded in NVD against this release',
+      0,
+      sec.counts.total > 0 ? 'info' : 'good',
+    );
+  } else if (!cveUsable) {
     if (sec.status === 'unmapped') {
       add('cve-unmapped', 'No CPE mapping — CVE tracking unavailable for this product', 0, 'info');
     } else if (sec.status === 'error') {

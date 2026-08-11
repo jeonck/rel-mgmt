@@ -2,9 +2,9 @@
 
 **<https://rel-mgmt.metacog.co.kr>**
 
-A release-management board for **55 DevOps products**. Every night it collects the latest releases,
-end-of-life schedules and known CVEs, then scores each version into a rule-based verdict:
-**GO / HOLD / NO-GO**.
+A release-management board for **79 products** across the DevOps and enterprise infrastructure stack.
+Every night it collects the latest releases, end-of-life schedules and known CVEs, then scores each
+version into a rule-based verdict: **GO / HOLD / NO-GO**.
 
 - Collected daily at **02:00 CDT (07:00 UTC)** by a GitHub Actions cron
 - Sources
@@ -29,6 +29,22 @@ end-of-life schedules and known CVEs, then scores each version into a rule-based
 The headline verdict always describes the *latest* version. When the latest is not adoptable, the
 question that actually matters is "then what do I ship?" — so the newest version that does clear the
 bar is computed alongside it as **Recommended**.
+
+---
+
+## Categories
+
+| Category | What it holds |
+| --- | --- |
+| Platform | Server OS, hypervisors, network, storage and backup — the layer everything else runs on |
+| Containers | Orchestration, runtimes, registries, service mesh, GitOps |
+| IaC · CI/CD | Provisioning, configuration management, pipelines, secrets, identity |
+| Observability | Metrics, logs, traces, SIEM |
+| Runtime · DB | Language runtimes, application servers, databases, brokers, proxies |
+| Enterprise | Mail, collaboration and business applications run on-premises |
+
+Platform products carry a 90-day soak bar and a one-year EOL warning window, because a hypervisor or
+storage OS upgrade is the hardest thing on this board to walk back.
 
 ---
 
@@ -73,8 +89,23 @@ because rolling them back is expensive — see `policy` in [`scripts/catalog.ts`
 The collector queries NVD by **CPE plus exact version**. Version-range matching is done by NVD
 itself, so there is no chance of missing a vulnerability by misreading a CPE configuration tree.
 
-CPEs resolve automatically from the `identifiers` field on endoflife.date (49 of 55 products); the
-rest are filled in manually through the `cpe` field in [`scripts/catalog.ts`](scripts/catalog.ts).
+CPEs resolve automatically from the `identifiers` field on endoflife.date; the rest are filled in
+manually through the `cpe` field in [`scripts/catalog.ts`](scripts/catalog.ts).
+
+Some products are deliberately left **unmapped** rather than mapped to a best-guess CPE, because a
+single-CPE query would return an incomplete count that the UI would render as authoritative:
+
+| Product | Why |
+| --- | --- |
+| Windows Server | NVD uses a separate CPE per edition (`windows_server_2019`, `_2022`, …) |
+| F5 BIG-IP | Split across a dozen module CPEs (`big-ip_apm`, `big-ip_asm`, …) |
+| Veeam Backup & Replication | Two competing CPE names, each holding part of the history |
+| NetApp ONTAP | Split between `clustered_data_ontap` and `ontap` |
+| Oracle Database | NVD version scheme does not line up with the release numbering |
+| OpenTofu, Thanos, Vector, Jaeger, OTel Collector | No CPE in the NVD dictionary |
+
+`n/a` on the board means "cannot be checked", which is a different and more honest statement than
+`none`.
 
 ### What has to be filtered out
 
@@ -93,19 +124,23 @@ Each of these produced real false positives during development, so the code defe
 
 - NVD publishes CPE records **weeks after** a release ships. `none` means "nothing filed yet", not
   "safe".
-- Products without a CPE mapping show `n/a` and are excluded from scoring — currently 5: OpenTofu,
-  Thanos, Vector, Jaeger, OpenTelemetry Collector.
+- Products without a CPE mapping show `n/a` and are excluded from scoring (see the table above).
 - A failed NVD lookup deducts nothing. Dropping a healthy version to NO-GO because of a transient
   outage would be worse; the run is flagged with ⚠ on the site instead.
 - Only the latest version and the recommended candidates are queried, not every train. But a version
   is **never recommended unless its CVE lookup completed** — presenting an unverified version as the
   safe alternative is the worst possible failure mode.
+- Linux distributions (RHEL, Ubuntu, Debian, Rocky, Oracle Linux) list their CVEs but do not score
+  them. A distro CPE always carries open component CVEs, and they are fixed by `dnf`/`apt` updates
+  rather than by moving to a new release — scoring them would pin every distribution at HOLD or
+  NO-GO forever and make the verdict meaningless. Set `cveScoring: 'advisory'` in the catalog to opt
+  a product into this.
 
 ### NVD API key (optional)
 
-Without a key, NVD allows 5 requests per 30 seconds and a full collection takes 15–20 minutes.
+Without a key, NVD allows 5 requests per 30 seconds and a full collection takes 25–35 minutes.
 Request a [free key](https://nvd.nist.gov/developers/request-an-api-key) and store it as the
-`NVD_API_KEY` repository secret to get 50 requests per 30 seconds, which finishes in under 2 minutes.
+`NVD_API_KEY` repository secret to get 50 requests per 30 seconds, which finishes in about 3 minutes.
 Everything works without one.
 
 ---
@@ -118,7 +153,7 @@ Add one entry to the array in [`scripts/catalog.ts`](scripts/catalog.ts).
 {
   id: 'nats',
   name: 'NATS',
-  category: 'runtime',               // container | iac-cicd | observability | runtime
+  category: 'runtime',               // platform | container | iac-cicd | observability | runtime | enterprise
   vendor: 'CNCF',
   blurb: 'Lightweight messaging system',
   homepage: 'https://nats.io',
@@ -152,7 +187,7 @@ GITHUB_TOKEN=$(gh auth token) npm run collect
 
 > It runs without a token, but GitHub's anonymous rate limit of 60 requests/hour fails roughly half
 > the products. Failed products keep their previous snapshot and show a ⚠ warning on the site.
-> A full collection takes 15–20 minutes because of NVD throttling (about 2 minutes with `NVD_API_KEY`).
+> A full collection takes 25–35 minutes because of NVD throttling (about 3 minutes with `NVD_API_KEY`).
 
 ```bash
 npm run dev
