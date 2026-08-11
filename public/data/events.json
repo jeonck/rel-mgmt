@@ -1,6 +1,186 @@
 {
-  "updatedAt": "2026-08-11T14:53:26.039Z",
+  "updatedAt": "2026-08-11T15:41:57.407Z",
   "events": [
+    {
+      "at": "2026-08-11T15:41:57.407Z",
+      "productId": "calico",
+      "productName": "Calico",
+      "category": "container",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T15:41:57.407Z",
+      "productId": "cilium",
+      "productName": "Cilium",
+      "category": "container",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T15:41:57.407Z",
+      "productId": "ceph",
+      "productName": "Ceph",
+      "category": "storage",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T15:41:57.407Z",
+      "productId": "rook",
+      "productName": "Rook",
+      "category": "storage",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T15:41:57.407Z",
+      "productId": "longhorn",
+      "productName": "Longhorn",
+      "category": "storage",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T15:41:57.407Z",
+      "productId": "openebs",
+      "productName": "OpenEBS",
+      "category": "storage",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T15:41:57.407Z",
+      "productId": "gitea",
+      "productName": "Gitea",
+      "category": "iac-cicd",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T15:41:57.407Z",
+      "productId": "nexus",
+      "productName": "Sonatype Nexus Repository",
+      "category": "iac-cicd",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T15:41:57.407Z",
+      "productId": "haproxy",
+      "productName": "HAProxy",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 3.4.3 → 3.5-dev4",
+      "from": "3.4.3",
+      "to": "3.5-dev4"
+    },
+    {
+      "at": "2026-08-11T15:41:57.407Z",
+      "productId": "haproxy",
+      "productName": "HAProxy",
+      "category": "runtime",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-11T15:41:57.407Z",
+      "productId": "pinot",
+      "productName": "Apache Pinot",
+      "category": "runtime",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T15:41:57.407Z",
+      "productId": "electron",
+      "productName": "Electron",
+      "category": "framework",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T15:41:57.407Z",
+      "productId": "react-native",
+      "productName": "React Native",
+      "category": "framework",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T15:41:57.407Z",
+      "productId": "flutter",
+      "productName": "Flutter",
+      "category": "framework",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T15:41:57.407Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T15:41:57.407Z",
+      "productId": "capacitor",
+      "productName": "Capacitor",
+      "category": "framework",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T15:41:57.407Z",
+      "productId": "cordova-android",
+      "productName": "Apache Cordova (Android)",
+      "category": "framework",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T15:41:57.407Z",
+      "productId": "maui",
+      "productName": ".NET MAUI",
+      "category": "framework",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T15:41:57.407Z",
+      "productId": "tauri",
+      "productName": "Tauri",
+      "category": "framework",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T15:41:57.407Z",
+      "productId": "qt",
+      "productName": "Qt",
+      "category": "framework",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T15:41:57.407Z",
+      "productId": "fastapi",
+      "productName": "FastAPI",
+      "category": "framework",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
+    {
+      "at": "2026-08-11T15:41:57.407Z",
+      "productId": "superset",
+      "productName": "Apache Superset",
+      "category": "enterprise",
+      "kind": "new-product",
+      "message": "Added to the tracked catalog"
+    },
     {
       "at": "2026-08-11T14:53:26.039Z",
       "productId": "jenkins",
