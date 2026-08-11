@@ -437,6 +437,52 @@ async function readJson<T>(path: string): Promise<T | null> {
   }
 }
 
+/**
+ * `--only` 실행이 조용히 데이터를 되돌리는 것을 막는 경고.
+ *
+ * 부분 수집도 결과물은 "전체 스냅샷"이다. 목록에 없는 제품은 로컬 releases.json에서
+ * 그대로 복사돼 나가므로, 체크아웃이 뒤처져 있으면 수집하지 않은 제품이 옛 값으로
+ * 되돌아간다. 실제로 두 커밋 뒤처진 스냅샷에서 한 제품만 돌렸다가 99종이 80종이 된 적이
+ * 있고, 어디에서도 오류가 나지 않았다. 그래서 이월 건수와 스냅샷 나이를 눈에 띄게 찍는다.
+ */
+function warnAboutPartialRun(
+  only: string[],
+  collectedNow: Product[],
+  merged: Product[],
+  previous: Snapshot | null,
+): void {
+  const unknownIds = only.filter((id) => !CATALOG.some((e) => e.id === id));
+  if (unknownIds.length > 0) {
+    console.warn(`[collect] ⚠ 카탈로그에 없는 id: ${unknownIds.join(', ')}`);
+  }
+
+  const carried = merged.length - collectedNow.length;
+  if (carried <= 0) return;
+
+  const ageHours = previous
+    ? (Date.parse(NOW) - Date.parse(previous.generatedAt)) / 3_600_000
+    : null;
+  const age =
+    ageHours === null
+      ? '기존 스냅샷 없음'
+      : ageHours < 1
+        ? `${Math.round(ageHours * 60)}분 전 수집분`
+        : `${ageHours.toFixed(1)}시간 전 수집분`;
+
+  console.warn(
+    `[collect] ⚠ 부분 수집: ${collectedNow.length}종만 새로 수집하고 ${carried}종은 기존 스냅샷(${age})을 그대로 이월합니다.`,
+  );
+
+  // 하루가 지난 스냅샷이면 야간 수집이 이미 한 번 이상 돌았다는 뜻이다 —
+  // 이월된 값이 원격보다 오래됐을 가능성이 높다.
+  if (ageHours !== null && ageHours > 12) {
+    console.warn(
+      `[collect] ⚠ 이월본이 오래됐습니다. 커밋하면 그 ${carried}종이 옛 값으로 되돌아갑니다. ` +
+        `git pull 후 다시 실행하거나, 확인만 할 거라면 --dry-run을 쓰세요.`,
+    );
+  }
+}
+
 async function main() {
   const catalog = ONLY ? CATALOG.filter((e) => ONLY.includes(e.id)) : CATALOG;
   console.log(
@@ -486,6 +532,8 @@ async function main() {
       )
     : products;
 
+  if (ONLY) warnAboutPartialRun(ONLY, products, collected, previous);
+
   const changes = diff(previous, collected);
 
   const counts = {
@@ -521,7 +569,7 @@ async function main() {
   };
 
   console.log(
-    `[collect] 완료 — GO ${counts.go} / HOLD ${counts.hold} / NO-GO ${counts.nogo} / UNKNOWN ${counts.unknown}, 변경 ${changes.length}건, 오류 ${counts.errored}건`,
+    `[collect] 완료 — 총 ${counts.total}종 · GO ${counts.go} / HOLD ${counts.hold} / NO-GO ${counts.nogo} / UNKNOWN ${counts.unknown}, 변경 ${changes.length}건, 오류 ${counts.errored}건`,
   );
 
   if (DRY_RUN) {
