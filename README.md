@@ -15,6 +15,81 @@ version into a rule-based verdict: **GO / HOLD / NO-GO**.
 
 ---
 
+## What it is for
+
+Upgrade decisions are usually made with a browser full of tabs. Someone checks a release page, digs
+for an end-of-life date on a different page, greps a CVE feed, and forms an opinion. Repeat per
+product, forget half of them, and find out at audit time that a component went end-of-life eight
+months ago.
+
+This board does that sweep every night for 99 products and collapses it into one answer per product:
+**can I ship the latest version today, and if not, what should I ship instead?**
+
+Built for the people who own that call:
+
+- **Platform and infrastructure engineers** planning upgrade windows
+- **Release managers** running a literal Go/NoGo gate
+- **Security and compliance** tracking end-of-life exposure and known vulnerabilities
+
+It is a decision aid, not a scanner. It reads public release metadata; it does not connect to your
+estate and has no idea which versions you actually run.
+
+## What makes it useful
+
+**It answers, rather than reporting.** Most version trackers hand you a table of numbers and leave
+the judgement to you. This one applies an explicit risk model — soak time, patch maturity, remaining
+support runway, known CVEs — and commits to GO, HOLD or NO-GO. When the latest version fails, it
+computes the newest version that *does* pass, so you leave with a target rather than a warning.
+
+**The reasoning is on the page.** Every verdict expands into the rules that produced it and the
+points each one cost. Nothing is a black box, and the entire rule set lives in one readable file
+([`scripts/verdict.ts`](scripts/verdict.ts)) that you can argue with and change. Thresholds are
+per-product, because a 90-day soak bar makes sense for PostgreSQL and not for a CLI tool.
+
+**Three sources, reconciled per version.** Release feeds, EOL calendars and vulnerability data
+normally live in three different places with three different notions of what a "version" is.
+Reconciling them is most of the work, and it is done here once, nightly, instead of by each person
+who needs the answer.
+
+**The accuracy work is the product.** Version data is full of traps that produce answers which look
+right and are not. This board has been made to survive the ones we hit:
+
+- NVD's `virtualMatchString` also matches platforms a vulnerability merely *runs on* — unfiltered,
+  Django CVEs attach to Python and Next.js CVEs attach to Node.js. That happened on the first run and
+  flipped verdicts, so `vulnerable: false` entries are now excluded.
+- A release candidate sorts above the stable release it precedes, so `2.15.2-rc3` displaced `2.15.2`
+  until stable builds were given priority within a train.
+- Terraform CLI and Terraform Enterprise share a CPE with incompatible version schemes, which made
+  `1.15.8 < 202107-1` true and pinned Enterprise-only CVEs onto the CLI.
+- Flutter's newest GitHub release is a 2024 pre-release and its tags API returns 1.x tags from 2020;
+  both would report a two-year-old version as current.
+- Linux distributions always carry open component CVEs that are fixed by package updates, so scoring
+  them pinned every distribution at HOLD or NO-GO forever. They now list CVEs without scoring them.
+
+**It says what it does not know.** `n/a` (no CPE mapping exists, so the check is impossible) is kept
+distinct from `none` (checked, nothing filed). NVD's weeks-long publication lag is stated on the page
+rather than buried, a failed lookup never deducts points, and a version is never recommended unless
+its own vulnerability check completed. The board is designed to be boring and trustworthy rather than
+confidently wrong.
+
+**Diffs first.** The top of the page is what changed since the previous run — new versions, verdict
+moves, newly filed CVEs — because on most days that is the entire reason to open it.
+
+**Nothing to operate.** A GitHub Actions cron, a JSON file and a static page. No server, no database,
+no credentials beyond an optional free NVD API key. Adding a product is one entry in
+[`scripts/catalog.ts`](scripts/catalog.ts).
+
+### What it is not
+
+- Not an inventory. It does not know your deployed versions, so it cannot tell you that *you* are
+  exposed — only that a version is.
+- Not a vulnerability scanner. CVEs come from NVD's published CPE matches, which lag releases and
+  cover some products poorly; several are marked `n/a` for exactly that reason.
+- Not authoritative. Verdicts are one opinionated risk model. Read the reasoning, then apply your own
+  change-management rules.
+
+---
+
 ## What the board answers
 
 | Question | Where to look |
