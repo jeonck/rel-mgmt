@@ -318,6 +318,22 @@ npx tsx scripts/collect.ts --dry-run --only=python,tomcat --skip-cve
 `--only` restricts the run to specific products and `--skip-cve` skips NVD entirely, which makes
 repeated runs fast.
 
+> **`--only` writes a full snapshot, not a partial one.** Products outside the list are copied
+> forward from your local `public/data/releases.json`. If that file is behind the branch — the
+> nightly workflow commits a fresh one every day — the stale copies get written back and every
+> product you did not collect silently reverts.
+>
+> This has already come close to landing: a one-product `--only` run against a snapshot that was two
+> commits old produced 80 products instead of 99, which would have dropped 19 of them from the site
+> with no error anywhere.
+>
+> ```bash
+> git pull && npx tsx scripts/collect.ts --only=ceph
+> ```
+>
+> Pull first, and check the product count in the output before committing. Adding `--dry-run` avoids
+> the problem entirely when you only want to see what a product resolves to.
+
 ---
 
 ## Deploying to GitHub Pages
