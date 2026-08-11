@@ -4,7 +4,8 @@ import { fileURLToPath } from 'node:url';
 
 import { CATALOG, type CatalogEntry } from './catalog.js';
 import { fetchEndOfLife, type EolProduct } from './sources/endoflife.js';
-import { fetchGithubReleases, type GhReleaseInfo } from './sources/github.js';
+import { fetchGithubReleases, fetchGithubTags, type GhReleaseInfo } from './sources/github.js';
+import { fetchFlutterReleases } from './sources/flutter.js';
 import { fetchCves, skippedReport, unmappedReport } from './sources/nvd.js';
 import { fetchText, mapLimit } from './lib/http.js';
 import { compareVersionDesc, daysBetween, parseVersion } from './lib/semver.js';
@@ -251,9 +252,23 @@ async function collectProduct(entry: CatalogEntry): Promise<Product> {
       errors.push(`endoflife.date lookup failed: ${(err as Error).message}`);
     }
   }
-  if (entry.repo) {
+  if (entry.customSource === 'flutter') {
     try {
-      releases = await fetchGithubReleases(entry.repo, entry.tagFilter);
+      releases = await fetchFlutterReleases();
+    } catch (err) {
+      errors.push(`Flutter release manifest lookup failed: ${(err as Error).message}`);
+    }
+  } else if (entry.repo) {
+    try {
+      releases =
+        entry.githubSource === 'tags'
+          ? await fetchGithubTags(entry.repo, entry.tagFilter)
+          : await fetchGithubReleases(entry.repo, entry.tagFilter);
+
+      // Releases를 아예 발행하지 않는 저장소(Ceph 등)는 태그로 넘어간다
+      if (releases.length === 0 && entry.githubSource !== 'tags') {
+        releases = await fetchGithubTags(entry.repo, entry.tagFilter);
+      }
     } catch (err) {
       errors.push(`GitHub lookup failed: ${(err as Error).message}`);
     }

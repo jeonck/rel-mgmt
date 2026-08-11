@@ -28,8 +28,21 @@ export interface CatalogEntry {
   repo?: string;
   /** endoflife.date가 CPE를 주지 않는 제품용 수동 매핑 */
   cpe?: string;
-  /** GitHub 태그 중 이 정규식에 맞는 것만 릴리즈로 인정 */
+  /**
+   * GitHub 태그 중 이 정규식에 맞는 것만 릴리즈로 인정한다.
+   * 캡처 그룹이 있으면 그룹 1이 버전이 된다 — `^release-(\d+\.\d+\.\d+)` 처럼.
+   */
   tagFilter?: string;
+  /**
+   * GitHub에서 무엇을 릴리즈로 볼지.
+   *  - 'auto'(기본) : Releases를 먼저 보고, 비어 있으면 태그로 넘어간다
+   *  - 'tags'       : 항상 태그를 본다. Releases가 방치된 저장소(Flutter)에 쓴다 —
+   *                   자동 폴백은 Releases가 "비어 있을 때"만 도는데, 이런 저장소는
+   *                   오래된 릴리즈가 남아 있어서 폴백이 걸리지 않는다.
+   */
+  githubSource?: 'auto' | 'tags';
+  /** GitHub이 아닌 제품 전용 소스 (해당 제품의 릴리즈 채널이 GitHub에 없을 때) */
+  customSource?: 'flutter';
   /**
    * CVE를 판정 점수에 반영할지.
    *
@@ -390,6 +403,72 @@ export const CATALOG: CatalogEntry[] = [
     repo: 'fluxcd/flux2',
   },
 
+  {
+    id: 'calico',
+    name: 'Calico',
+    category: 'container',
+    vendor: 'Tigera',
+    blurb: 'Kubernetes networking and network policy',
+    homepage: 'https://www.tigera.io/project-calico/',
+    eol: 'calico',
+    repo: 'projectcalico/calico',
+  },
+  {
+    id: 'cilium',
+    name: 'Cilium',
+    category: 'container',
+    vendor: 'CNCF',
+    blurb: 'eBPF networking, observability and security',
+    homepage: 'https://cilium.io',
+    icon: 'cilium',
+    eol: 'cilium',
+    repo: 'cilium/cilium',
+  },
+
+  // ─────────────────────────────── Cloud-Native Storage
+  {
+    id: 'ceph',
+    name: 'Ceph',
+    category: 'storage',
+    vendor: 'IBM / Red Hat',
+    blurb: 'Distributed object, block and file storage',
+    homepage: 'https://ceph.io',
+    icon: 'ceph',
+    repo: 'ceph/ceph',
+    // Ceph는 GitHub Releases를 발행하지 않아 태그로 넘어간다. 태그 체계는
+    // x.0.z = 개발, x.1.z = RC, 그 이상 = 안정이라 앞의 둘을 걸러낸다.
+    tagFilter: '^v(\\d+\\.[2-9]\\d*\\.\\d+)$',
+  },
+  {
+    id: 'rook',
+    name: 'Rook',
+    category: 'storage',
+    vendor: 'CNCF',
+    blurb: 'Kubernetes storage operator for Ceph',
+    homepage: 'https://rook.io',
+    icon: 'rook',
+    repo: 'rook/rook',
+  },
+  {
+    id: 'longhorn',
+    name: 'Longhorn',
+    category: 'storage',
+    vendor: 'CNCF',
+    blurb: 'Distributed block storage for Kubernetes',
+    homepage: 'https://longhorn.io',
+    eol: 'longhorn',
+    repo: 'longhorn/longhorn',
+  },
+  {
+    id: 'openebs',
+    name: 'OpenEBS',
+    category: 'storage',
+    vendor: 'CNCF',
+    blurb: 'Container-attached block storage',
+    homepage: 'https://openebs.io',
+    repo: 'openebs/openebs',
+  },
+
   // ─────────────────────────────── IaC & CI/CD
   {
     id: 'terraform',
@@ -545,6 +624,30 @@ export const CATALOG: CatalogEntry[] = [
     icon: 'tekton',
     repo: 'tektoncd/pipeline',
     cpe: 'cpe:2.3:a:linuxfoundation:tekton_pipelines',
+  },
+
+  {
+    id: 'gitea',
+    name: 'Gitea',
+    category: 'iac-cicd',
+    vendor: 'Gitea Ltd.',
+    blurb: 'Lightweight self-hosted Git service',
+    homepage: 'https://about.gitea.com',
+    icon: 'gitea',
+    repo: 'go-gitea/gitea',
+  },
+  {
+    id: 'nexus',
+    name: 'Sonatype Nexus Repository',
+    category: 'iac-cicd',
+    vendor: 'Sonatype',
+    blurb: 'Artifact and package repository',
+    homepage: 'https://www.sonatype.com/products/sonatype-nexus-repository',
+    icon: 'sonatype',
+    eol: 'nexus',
+    repo: 'sonatype/nexus-public',
+    // 태그가 release-3.95.0-07 형태라 캡처 그룹으로 버전만 뽑는다
+    tagFilter: '^release-(\\d+\\.\\d+\\.\\d+)',
   },
 
   // ─────────────────────────────── Observability
@@ -856,7 +959,7 @@ export const CATALOG: CatalogEntry[] = [
   {
     id: 'minio',
     name: 'MinIO',
-    category: 'runtime',
+    category: 'storage',
     vendor: 'MinIO Inc.',
     blurb: 'S3-compatible object storage',
     homepage: 'https://min.io',
@@ -898,6 +1001,127 @@ export const CATALOG: CatalogEntry[] = [
     eol: 'redhat-jboss-eap',
     cpe: 'cpe:2.3:a:redhat:jboss_enterprise_application_platform',
     policy: { minSoakDays: 60, eolWarnDays: 270 },
+  },
+
+  {
+    id: 'pinot',
+    name: 'Apache Pinot',
+    category: 'runtime',
+    vendor: 'ASF',
+    blurb: 'Real-time distributed OLAP datastore',
+    homepage: 'https://pinot.apache.org',
+    icon: 'apachepinot',
+    repo: 'apache/pinot',
+    tagFilter: '^release-(\\d+\\.\\d+\\.\\d+)$',
+  },
+
+  // ─────────────────────────────── Application Frameworks
+  {
+    id: 'electron',
+    name: 'Electron',
+    category: 'framework',
+    vendor: 'OpenJS Foundation',
+    blurb: 'Desktop apps with web technology',
+    homepage: 'https://www.electronjs.org',
+    icon: 'electron',
+    eol: 'electron',
+    repo: 'electron/electron',
+  },
+  {
+    id: 'react-native',
+    name: 'React Native',
+    category: 'framework',
+    vendor: 'Meta',
+    blurb: 'Cross-platform mobile apps in React',
+    homepage: 'https://reactnative.dev',
+    icon: 'react',
+    eol: 'react-native',
+    repo: 'facebook/react-native',
+  },
+  {
+    id: 'flutter',
+    name: 'Flutter',
+    category: 'framework',
+    vendor: 'Google',
+    blurb: 'Cross-platform UI toolkit',
+    homepage: 'https://flutter.dev',
+    icon: 'flutter',
+    // GitHub Releases가 방치돼 있어 공식 릴리즈 매니페스트를 쓴다
+    customSource: 'flutter',
+  },
+  {
+    id: 'ionic',
+    name: 'Ionic Framework',
+    category: 'framework',
+    vendor: 'Ionic',
+    blurb: 'Hybrid mobile apps with web components',
+    homepage: 'https://ionicframework.com',
+    icon: 'ionic',
+    eol: 'ionic',
+    repo: 'ionic-team/ionic-framework',
+  },
+  {
+    id: 'capacitor',
+    name: 'Capacitor',
+    category: 'framework',
+    vendor: 'Ionic',
+    blurb: 'Native runtime for web apps',
+    homepage: 'https://capacitorjs.com',
+    icon: 'capacitor',
+    repo: 'ionic-team/capacitor',
+  },
+  {
+    id: 'cordova-android',
+    name: 'Apache Cordova (Android)',
+    category: 'framework',
+    vendor: 'ASF',
+    blurb: 'Hybrid app platform',
+    homepage: 'https://cordova.apache.org',
+    icon: 'apachecordova',
+    repo: 'apache/cordova-android',
+    tagFilter: '^rel/(\\d+\\.\\d+\\.\\d+)$',
+  },
+  {
+    id: 'maui',
+    name: '.NET MAUI',
+    category: 'framework',
+    vendor: 'Microsoft',
+    blurb: 'Cross-platform .NET app framework',
+    homepage: 'https://dotnet.microsoft.com/apps/maui',
+    icon: 'dotnet',
+    repo: 'dotnet/maui',
+  },
+  {
+    id: 'tauri',
+    name: 'Tauri',
+    category: 'framework',
+    vendor: 'Tauri Programme',
+    blurb: 'Lightweight desktop apps with a Rust backend',
+    homepage: 'https://tauri.app',
+    icon: 'tauri',
+    repo: 'tauri-apps/tauri',
+    tagFilter: '^tauri-v(\\d+\\.\\d+\\.\\d+)$',
+  },
+  {
+    id: 'qt',
+    name: 'Qt',
+    category: 'framework',
+    vendor: 'The Qt Company',
+    blurb: 'Cross-platform C++ application framework',
+    homepage: 'https://www.qt.io',
+    icon: 'qt',
+    eol: 'qt',
+    repo: 'qt/qtbase',
+  },
+  {
+    id: 'fastapi',
+    name: 'FastAPI',
+    category: 'framework',
+    vendor: 'FastAPI',
+    blurb: 'Python web API framework',
+    homepage: 'https://fastapi.tiangolo.com',
+    icon: 'fastapi',
+    repo: 'fastapi/fastapi',
   },
 
   // ─────────────────────────────── Enterprise Applications
@@ -942,5 +1166,17 @@ export const CATALOG: CatalogEntry[] = [
     icon: 'confluence',
     eol: 'confluence',
     policy: { minSoakDays: 60, eolWarnDays: 270 },
+  },
+  {
+    id: 'superset',
+    name: 'Apache Superset',
+    category: 'enterprise',
+    vendor: 'ASF',
+    blurb: 'Business intelligence and data exploration',
+    homepage: 'https://superset.apache.org',
+    icon: 'apachesuperset',
+    repo: 'apache/superset',
+    // 릴리즈 목록 앞쪽을 superset-helm-chart-* 가 채우고 있다.
+    // 기본 필터가 버전으로 시작하는 태그만 인정하므로 차트 릴리즈는 자연히 걸러진다.
   },
 ];

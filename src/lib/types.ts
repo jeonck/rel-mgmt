@@ -10,9 +10,11 @@ export type Verdict = 'GO' | 'HOLD' | 'NO-GO' | 'UNKNOWN';
 export type CategoryId =
   | 'platform'
   | 'container'
+  | 'storage'
   | 'iac-cicd'
   | 'observability'
   | 'runtime'
+  | 'framework'
   | 'enterprise';
 
 export interface Category {
@@ -25,9 +27,11 @@ export interface Category {
 export const CATEGORIES: Category[] = [
   { id: 'platform', label: 'Platform & Infrastructure', short: 'Platform' },
   { id: 'container', label: 'Containers & Orchestration', short: 'Containers' },
+  { id: 'storage', label: 'Cloud-Native Storage', short: 'Storage' },
   { id: 'iac-cicd', label: 'IaC & CI/CD', short: 'IaC · CI/CD' },
   { id: 'observability', label: 'Observability', short: 'Observability' },
   { id: 'runtime', label: 'Runtimes, Middleware & Databases', short: 'Runtime · DB' },
+  { id: 'framework', label: 'Application Frameworks', short: 'Frameworks' },
   { id: 'enterprise', label: 'Enterprise Applications', short: 'Enterprise' },
 ];
 

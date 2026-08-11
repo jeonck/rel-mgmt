@@ -2,7 +2,7 @@
 
 **<https://rel-mgmt.metacog.co.kr>**
 
-A release-management board for **79 products** across the DevOps and enterprise infrastructure stack.
+A release-management board for **99 products** across the DevOps, infrastructure and application stack.
 Every night it collects the latest releases, end-of-life schedules and known CVEs, then scores each
 version into a rule-based verdict: **GO / HOLD / NO-GO**.
 
@@ -36,11 +36,13 @@ bar is computed alongside it as **Recommended**.
 
 | Category | What it holds |
 | --- | --- |
-| Platform | Server OS, hypervisors, network, storage and backup — the layer everything else runs on |
-| Containers | Orchestration, runtimes, registries, service mesh, GitOps |
-| IaC · CI/CD | Provisioning, configuration management, pipelines, secrets, identity |
+| Platform | Server OS, hypervisors, network, storage appliances and backup |
+| Containers | Orchestration, runtimes, registries, service mesh, CNI, GitOps |
+| Storage | Cloud-native persistent storage — Ceph, Rook, Longhorn, OpenEBS, MinIO |
+| IaC · CI/CD | Provisioning, configuration management, pipelines, artifacts, secrets, identity |
 | Observability | Metrics, logs, traces, SIEM |
 | Runtime · DB | Language runtimes, application servers, databases, brokers, proxies |
+| Frameworks | Cross-platform app and web frameworks — Electron, React Native, Flutter, Qt, … |
 | Enterprise | Mail, collaboration and business applications run on-premises |
 
 Platform products carry a 90-day soak bar and a one-year EOL warning window, because a hypervisor or
@@ -153,7 +155,8 @@ Add one entry to the array in [`scripts/catalog.ts`](scripts/catalog.ts).
 {
   id: 'nats',
   name: 'NATS',
-  category: 'runtime',               // platform | container | iac-cicd | observability | runtime | enterprise
+  category: 'runtime',               // platform | container | storage | iac-cicd
+                                     // | observability | runtime | framework | enterprise
   vendor: 'CNCF',
   blurb: 'Lightweight messaging system',
   homepage: 'https://nats.io',
@@ -171,6 +174,34 @@ Add one entry to the array in [`scripts/catalog.ts`](scripts/catalog.ts).
 - Available endoflife.date slugs: <https://endoflife.date/api/v1/products>
 - Icons are downloaded to `public/icons/<id>.svg` on first collection and committed, so the site has
   no CDN dependency.
+
+### Reading versions from awkward release tags
+
+Projects decorate their tags in incompatible ways, so `tagFilter` doubles as a version extractor —
+if the regex has a capture group, group 1 becomes the version:
+
+| Project | Tag | `tagFilter` |
+| --- | --- | --- |
+| Sonatype Nexus | `release-3.95.0-07` | `^release-(\d+\.\d+\.\d+)` |
+| Apache Pinot | `release-1.5.1` | `^release-(\d+\.\d+\.\d+)$` |
+| Tauri | `tauri-v2.11.5` | `^tauri-v(\d+\.\d+\.\d+)$` |
+| Apache Cordova | `rel/15.1.0` | `^rel/(\d+\.\d+\.\d+)$` |
+| MinIO | `RELEASE.2026-12-18T13-15-44Z` | `^RELEASE\.` (filter only, no group) |
+
+Earlier the collector guessed prefixes globally, which silently mangled MinIO's date-based tags into
+`12-18T13-15-44Z`. Declaring the shape per product is verbose but cannot misfire.
+
+### When GitHub Releases are not the source of truth
+
+- **No releases published** (Ceph, Qt): the collector falls back to the tags API automatically and
+  resolves dates through one commit lookup per kept tag.
+- **Releases abandoned** (Flutter): the newest GitHub release is a 2024 pre-release and the tags API
+  returns 1.x tags from 2020, so either source would report a two-year-old version as current.
+  Flutter uses its official release manifest instead — see `scripts/sources/flutter.ts`. Set
+  `githubSource: 'tags'` or `customSource` in the catalog for cases like this.
+- **Sibling artifacts crowd the feed** (Apache Superset): the first 15 releases are all
+  `superset-helm-chart-*`. The default filter only accepts tags that start with a version, so the
+  chart releases drop out on their own.
 - `blurb` is rendered on the site, so write it in English.
 
 ---
