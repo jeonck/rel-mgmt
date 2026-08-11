@@ -66,7 +66,19 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add public/data public/icons
           git commit -m "chore(data): refresh release snapshot $(date -u '+%Y-%m-%d')"
-          git push
+
+          # 수집은 몇 분씩 걸린다. 그 사이 누군가 main에 푸시하면 이 push는 거부되고,
+          # 재시도가 없으면 그날 수집 결과가 통째로 버려진다. 리베이스 후 다시 시도한다.
+          # 건드리는 파일이 public/data, public/icons뿐이라 충돌 위험은 사실상 없다.
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "push가 거부됨 — 최신 main 위로 리베이스 후 재시도 ($attempt/3)"
+            git pull --rebase origin "${GITHUB_REF_NAME}" || exit 1
+          done
+          echo "3회 시도 후에도 수집 결과를 푸시하지 못했습니다"
+          exit 1
 
       - name: 배포 경로 결정
         id: base
