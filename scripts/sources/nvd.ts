@@ -216,7 +216,11 @@ export async function fetchCves(cpeBase: string, version: string): Promise<Secur
   if (!base) {
     return { status: 'unmapped', counts: emptyCounts(), top: [], cpe: cpeBase, checkedAt: null };
   }
-  const cpe = [base, version, ...Array(7).fill('*')].join(':');
+  // CPE 2.3 문자열에서 '+'는 이스케이프 없이 쓸 수 없다. 시맨틱 버전의 빌드
+  // 메타데이터(Temurin의 26.0.2+10)를 그대로 넣으면 NVD가 404를 돌려준다.
+  // 빌드 번호는 버전 식별자가 아니므로 떼고 조회한다.
+  const cpeVersion = version.split('+')[0] ?? version;
+  const cpe = [base, cpeVersion, ...Array(7).fill('*')].join(':');
 
   const url =
     `${ENDPOINT}?virtualMatchString=${encodeURIComponent(cpe)}&resultsPerPage=${PAGE_SIZE}`;
@@ -230,14 +234,17 @@ export async function fetchCves(cpeBase: string, version: string): Promise<Secur
       }),
     );
 
+    // fetchJson은 404에서만 null을 준다. 존재하지만 해당 CVE가 없는 CPE는 200 + 0건이므로,
+    // 404는 "NVD가 이 CPE를 해석하지 못한다"는 영구적 상태다. 일시 장애(error)와 구분해야
+    // 매일 밤 ⚠만 반복해서 뜨는 일을 막을 수 있다.
     if (!data) {
       return {
-        status: 'error',
+        status: 'unmapped',
         counts: emptyCounts(),
         top: [],
         cpe,
         checkedAt,
-        note: 'NVD returned no data for this CPE',
+        note: 'NVD does not recognise this CPE, so the version cannot be checked',
       };
     }
 

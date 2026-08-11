@@ -29,6 +29,14 @@ export interface CatalogEntry {
   /** endoflife.date가 CPE를 주지 않는 제품용 수동 매핑 */
   cpe?: string;
   /**
+   * CVE 추적을 명시적으로 끈다.
+   *
+   * CPE는 존재하지만 그 아래에 취약점이 전혀 등재되지 않는 제품이 있다. 이 경우 조회는
+   * 성공하고 0건이 나오는데, 화면에는 "확인했고 깨끗함(none)"으로 읽혀서 오히려 위험하다.
+   * 확인 불가(n/a)로 표시하는 편이 정직하다.
+   */
+  cveTracking?: 'none';
+  /**
    * GitHub 태그 중 이 정규식에 맞는 것만 릴리즈로 인정한다.
    * 캡처 그룹이 있으면 그룹 1이 버전이 된다 — `^release-(\d+\.\d+\.\d+)` 처럼.
    */
@@ -830,6 +838,10 @@ export const CATALOG: CatalogEntry[] = [
     homepage: 'https://adoptium.net',
     icon: 'eclipseadoptium',
     eol: 'eclipse-temurin',
+    // NVD의 eclipse:temurin CPE에는 등재된 CVE가 하나도 없다 (전체 0건).
+    // JDK 취약점은 oracle:jdk 쪽에 쌓이는데, Temurin은 자체 일정으로 패치를 내보내므로
+    // 그 CVE를 Temurin 버전에 그대로 붙이면 양방향으로 틀린 결과가 된다.
+    cveTracking: 'none',
     policy: { minSoakDays: 60, eolWarnDays: 180 },
   },
   {

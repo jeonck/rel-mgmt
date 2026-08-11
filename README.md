@@ -179,6 +179,7 @@ single-CPE query would return an incomplete count that the UI would render as au
 | Veeam Backup & Replication | Two competing CPE names, each holding part of the history |
 | NetApp ONTAP | Split between `clustered_data_ontap` and `ontap` |
 | Oracle Database | NVD version scheme does not line up with the release numbering |
+| Eclipse Temurin | `eclipse:temurin` holds zero CVEs in all of NVD — JDK vulnerabilities are filed under `oracle:jdk`, and Temurin patches on its own schedule, so borrowing them would be wrong in both directions |
 | OpenTofu, Thanos, Vector, Jaeger, OTel Collector | No CPE in the NVD dictionary |
 
 `n/a` on the board means "cannot be checked", which is a different and more honest statement than
@@ -196,6 +197,13 @@ Each of these produced real false positives during development, so the code defe
   land on the CLI.
 - **CPE 2.2 URI format.** endoflife.date mixes `cpe:2.3:…` with the older `cpe:/a:…`. Jenkins uses
   the latter, and without normalization the lookup fails outright.
+- **Build metadata in versions.** A `+` cannot appear unescaped in a CPE 2.3 string, so Temurin's
+  `26.0.2+10` made NVD return 404 on every run. Build numbers are not part of version identity and
+  are now stripped before the query.
+
+A 404 from NVD means it cannot parse or find the CPE, which is permanent — it is reported as `n/a`
+rather than as a lookup error, so it does not put a retry-tomorrow warning on the board forever.
+A CPE that exists but has no matching CVEs returns 200 with zero results instead.
 
 ### Limits (also stated on the site)
 

@@ -283,7 +283,7 @@ async function collectProduct(entry: CatalogEntry): Promise<Product> {
   // CVE 조회는 비싸므로(NVD 레이트리밋) 화면에 실제로 나가는 후보에만 쓴다.
   const candidates = pool.map((raw) => toReleaseCandidate(raw, skippedReport(), entry));
 
-  const cpe = entry.cpe ?? eol?.cpe ?? null;
+  const cpe = entry.cveTracking === 'none' ? null : (entry.cpe ?? eol?.cpe ?? null);
   let lookups = 0;
 
   /** 후보 i에 CVE를 반영해 다시 평가한다. 이미 조회했거나 예산을 넘었으면 그대로 둔다. */
