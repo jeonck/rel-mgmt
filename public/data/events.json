@@ -1,6 +1,186 @@
 {
-  "updatedAt": "2026-08-12T08:09:21.246Z",
+  "updatedAt": "2026-08-13T08:11:43.519Z",
   "events": [
+    {
+      "at": "2026-08-13T08:11:43.519Z",
+      "productId": "containerd",
+      "productName": "containerd",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 2.3.3 → 2.3.4",
+      "from": "2.3.3",
+      "to": "2.3.4"
+    },
+    {
+      "at": "2026-08-13T08:11:43.519Z",
+      "productId": "argo-cd",
+      "productName": "Argo CD",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 3.5.0 → 3.5.1",
+      "from": "3.5.0",
+      "to": "3.5.1"
+    },
+    {
+      "at": "2026-08-13T08:11:43.519Z",
+      "productId": "envoy",
+      "productName": "Envoy",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-13T08:11:43.519Z",
+      "productId": "podman",
+      "productName": "Podman",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 6.0.2 → 6.1.0",
+      "from": "6.0.2",
+      "to": "6.1.0"
+    },
+    {
+      "at": "2026-08-13T08:11:43.519Z",
+      "productId": "podman",
+      "productName": "Podman",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-08-13T08:11:43.519Z",
+      "productId": "gitlab",
+      "productName": "GitLab",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 19.2.1 → 19.2.2",
+      "from": "19.2.1",
+      "to": "19.2.2"
+    },
+    {
+      "at": "2026-08-13T08:11:43.519Z",
+      "productId": "gitlab",
+      "productName": "GitLab",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict HOLD → NO-GO",
+      "from": "HOLD",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-08-13T08:11:43.519Z",
+      "productId": "gitlab-runner",
+      "productName": "GitLab Runner",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 19.2.1 → 19.2.2",
+      "from": "19.2.1",
+      "to": "19.2.2"
+    },
+    {
+      "at": "2026-08-13T08:11:43.519Z",
+      "productId": "gitlab-runner",
+      "productName": "GitLab Runner",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict HOLD → NO-GO",
+      "from": "HOLD",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-08-13T08:11:43.519Z",
+      "productId": "nomad",
+      "productName": "Nomad",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 2.0.4 → 2.0.5",
+      "from": "2.0.4",
+      "to": "2.0.5"
+    },
+    {
+      "at": "2026-08-13T08:11:43.519Z",
+      "productId": "nomad",
+      "productName": "Nomad",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-13T08:11:43.519Z",
+      "productId": "nexus",
+      "productName": "Sonatype Nexus Repository",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-13T08:11:43.519Z",
+      "productId": "fluent-bit",
+      "productName": "Fluent Bit",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-13T08:11:43.519Z",
+      "productId": "tomcat",
+      "productName": "Apache Tomcat",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 11.0.24 → 11.0.25",
+      "from": "11.0.24",
+      "to": "11.0.25"
+    },
+    {
+      "at": "2026-08-13T08:11:43.519Z",
+      "productId": "flutter",
+      "productName": "Flutter",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 3.44.9 → 3.47.0",
+      "from": "3.44.9",
+      "to": "3.47.0"
+    },
+    {
+      "at": "2026-08-13T08:11:43.519Z",
+      "productId": "flutter",
+      "productName": "Flutter",
+      "category": "framework",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-08-13T08:11:43.519Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 8.8.17 → 8.8.18",
+      "from": "8.8.17",
+      "to": "8.8.18"
+    },
+    {
+      "at": "2026-08-13T08:11:43.519Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
     {
       "at": "2026-08-12T08:09:21.246Z",
       "productId": "sonarqube",
