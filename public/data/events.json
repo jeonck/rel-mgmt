@@ -1,6 +1,166 @@
 {
-  "updatedAt": "2026-08-13T08:11:43.519Z",
+  "updatedAt": "2026-08-14T08:07:32.549Z",
   "events": [
+    {
+      "at": "2026-08-14T08:07:32.549Z",
+      "productId": "veeam-backup",
+      "productName": "Veeam Backup & Replication",
+      "category": "platform",
+      "kind": "new-version",
+      "message": "Latest 13.1.0.411 → 13.1.1.18",
+      "from": "13.1.0.411",
+      "to": "13.1.1.18"
+    },
+    {
+      "at": "2026-08-14T08:07:32.549Z",
+      "productId": "veeam-backup",
+      "productName": "Veeam Backup & Replication",
+      "category": "platform",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-14T08:07:32.549Z",
+      "productId": "helm",
+      "productName": "Helm",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 4.2.3 → 4.2.4",
+      "from": "4.2.3",
+      "to": "4.2.4"
+    },
+    {
+      "at": "2026-08-14T08:07:32.549Z",
+      "productId": "helm",
+      "productName": "Helm",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-14T08:07:32.549Z",
+      "productId": "rook",
+      "productName": "Rook",
+      "category": "storage",
+      "kind": "new-version",
+      "message": "Latest 1.20.3 → 1.20.4",
+      "from": "1.20.3",
+      "to": "1.20.4"
+    },
+    {
+      "at": "2026-08-14T08:07:32.549Z",
+      "productId": "rook",
+      "productName": "Rook",
+      "category": "storage",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-14T08:07:32.549Z",
+      "productId": "longhorn",
+      "productName": "Longhorn",
+      "category": "storage",
+      "kind": "new-version",
+      "message": "Latest 1.12.0 → 1.12.1",
+      "from": "1.12.0",
+      "to": "1.12.1"
+    },
+    {
+      "at": "2026-08-14T08:07:32.549Z",
+      "productId": "gitlab",
+      "productName": "GitLab",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-14T08:07:32.549Z",
+      "productId": "gitea",
+      "productName": "Gitea",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 1.27.1 → 1.27.2",
+      "from": "1.27.1",
+      "to": "1.27.2"
+    },
+    {
+      "at": "2026-08-14T08:07:32.549Z",
+      "productId": "gitea",
+      "productName": "Gitea",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-14T08:07:32.549Z",
+      "productId": "nexus",
+      "productName": "Sonatype Nexus Repository",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 3.95.0-07 → 3.95.1-01",
+      "from": "3.95.0-07",
+      "to": "3.95.1-01"
+    },
+    {
+      "at": "2026-08-14T08:07:32.549Z",
+      "productId": "nexus",
+      "productName": "Sonatype Nexus Repository",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-14T08:07:32.549Z",
+      "productId": "elasticsearch",
+      "productName": "Elasticsearch",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-14T08:07:32.549Z",
+      "productId": "vector",
+      "productName": "Vector",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-14T08:07:32.549Z",
+      "productId": "go",
+      "productName": "Go",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 1.26.5 → 1.26.6",
+      "from": "1.26.5",
+      "to": "1.26.6"
+    },
+    {
+      "at": "2026-08-14T08:07:32.549Z",
+      "productId": "go",
+      "productName": "Go",
+      "category": "runtime",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
     {
       "at": "2026-08-13T08:11:43.519Z",
       "productId": "containerd",
