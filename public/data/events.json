@@ -1,6 +1,96 @@
 {
-  "updatedAt": "2026-08-14T08:07:32.549Z",
+  "updatedAt": "2026-08-15T07:22:55.399Z",
   "events": [
+    {
+      "at": "2026-08-15T07:22:55.399Z",
+      "productId": "argo-cd",
+      "productName": "Argo CD",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-15T07:22:55.399Z",
+      "productId": "argo-workflows",
+      "productName": "Argo Workflows",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 4.1.0 → 4.1.1",
+      "from": "4.1.0",
+      "to": "4.1.1"
+    },
+    {
+      "at": "2026-08-15T07:22:55.399Z",
+      "productId": "argo-workflows",
+      "productName": "Argo Workflows",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-15T07:22:55.399Z",
+      "productId": "gitlab-runner",
+      "productName": "GitLab Runner",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-15T07:22:55.399Z",
+      "productId": "nomad",
+      "productName": "Nomad",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-15T07:22:55.399Z",
+      "productId": "tomcat",
+      "productName": "Apache Tomcat",
+      "category": "runtime",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-15T07:22:55.399Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-15T07:22:55.399Z",
+      "productId": "msexchange",
+      "productName": "Microsoft Exchange Server",
+      "category": "enterprise",
+      "kind": "new-version",
+      "message": "Latest 15.2.2562.45 → 15.2.2562.46",
+      "from": "15.2.2562.45",
+      "to": "15.2.2562.46"
+    },
+    {
+      "at": "2026-08-15T07:22:55.399Z",
+      "productId": "sharepoint",
+      "productName": "Microsoft SharePoint",
+      "category": "enterprise",
+      "kind": "new-version",
+      "message": "Latest 16.0.19725.20434 → 16.0.19725.20522",
+      "from": "16.0.19725.20434",
+      "to": "16.0.19725.20522"
+    },
     {
       "at": "2026-08-14T08:07:32.549Z",
       "productId": "veeam-backup",
