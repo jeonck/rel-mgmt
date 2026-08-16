@@ -1,6 +1,26 @@
 {
-  "updatedAt": "2026-08-15T07:22:55.399Z",
+  "updatedAt": "2026-08-16T07:23:12.621Z",
   "events": [
+    {
+      "at": "2026-08-16T07:23:12.621Z",
+      "productId": "fluent-bit",
+      "productName": "Fluent Bit",
+      "category": "observability",
+      "kind": "new-version",
+      "message": "Latest 5.1.0 → 5.1.1",
+      "from": "5.1.0",
+      "to": "5.1.1"
+    },
+    {
+      "at": "2026-08-16T07:23:12.621Z",
+      "productId": "go",
+      "productName": "Go",
+      "category": "runtime",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
     {
       "at": "2026-08-15T07:22:55.399Z",
       "productId": "argo-cd",
