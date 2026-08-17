@@ -1,6 +1,46 @@
 {
-  "updatedAt": "2026-08-16T07:23:12.621Z",
+  "updatedAt": "2026-08-17T07:44:10.812Z",
   "events": [
+    {
+      "at": "2026-08-17T07:44:10.812Z",
+      "productId": "helm",
+      "productName": "Helm",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-17T07:44:10.812Z",
+      "productId": "rook",
+      "productName": "Rook",
+      "category": "storage",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-17T07:44:10.812Z",
+      "productId": "gitea",
+      "productName": "Gitea",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-17T07:44:10.812Z",
+      "productId": "temurin",
+      "productName": "Eclipse Temurin (JDK)",
+      "category": "runtime",
+      "kind": "verdict-down",
+      "message": "Verdict HOLD → NO-GO",
+      "from": "HOLD",
+      "to": "NO-GO"
+    },
     {
       "at": "2026-08-16T07:23:12.621Z",
       "productId": "fluent-bit",
