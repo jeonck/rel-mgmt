@@ -1,6 +1,186 @@
 {
-  "updatedAt": "2026-08-18T07:29:51.386Z",
+  "updatedAt": "2026-08-19T07:30:59.428Z",
   "events": [
+    {
+      "at": "2026-08-19T07:30:59.428Z",
+      "productId": "proxmox-ve",
+      "productName": "Proxmox VE",
+      "category": "platform",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-19T07:30:59.428Z",
+      "productId": "traefik",
+      "productName": "Traefik",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 3.7.10 → 3.7.11",
+      "from": "3.7.10",
+      "to": "3.7.11"
+    },
+    {
+      "at": "2026-08-19T07:30:59.428Z",
+      "productId": "traefik",
+      "productName": "Traefik",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-19T07:30:59.428Z",
+      "productId": "podman",
+      "productName": "Podman",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-19T07:30:59.428Z",
+      "productId": "cilium",
+      "productName": "Cilium",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 1.20.0 → 1.20.1",
+      "from": "1.20.0",
+      "to": "1.20.1"
+    },
+    {
+      "at": "2026-08-19T07:30:59.428Z",
+      "productId": "jenkins",
+      "productName": "Jenkins",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 2.577 → 2.578",
+      "from": "2.577",
+      "to": "2.578"
+    },
+    {
+      "at": "2026-08-19T07:30:59.428Z",
+      "productId": "keycloak",
+      "productName": "Keycloak",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 26.7.1 → 26.7.2",
+      "from": "26.7.1",
+      "to": "26.7.2"
+    },
+    {
+      "at": "2026-08-19T07:30:59.428Z",
+      "productId": "keycloak",
+      "productName": "Keycloak",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-19T07:30:59.428Z",
+      "productId": "prometheus",
+      "productName": "Prometheus",
+      "category": "observability",
+      "kind": "new-version",
+      "message": "Latest 3.13.2 → 3.14.0",
+      "from": "3.13.2",
+      "to": "3.14.0"
+    },
+    {
+      "at": "2026-08-19T07:30:59.428Z",
+      "productId": "prometheus",
+      "productName": "Prometheus",
+      "category": "observability",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-08-19T07:30:59.428Z",
+      "productId": "grafana",
+      "productName": "Grafana",
+      "category": "observability",
+      "kind": "new-version",
+      "message": "Latest 13.1.3 → 13.2.0",
+      "from": "13.1.3",
+      "to": "13.2.0"
+    },
+    {
+      "at": "2026-08-19T07:30:59.428Z",
+      "productId": "grafana",
+      "productName": "Grafana",
+      "category": "observability",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-08-19T07:30:59.428Z",
+      "productId": "fluent-bit",
+      "productName": "Fluent Bit",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-19T07:30:59.428Z",
+      "productId": "jaeger",
+      "productName": "Jaeger",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-19T07:30:59.428Z",
+      "productId": "rabbitmq",
+      "productName": "RabbitMQ",
+      "category": "runtime",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-19T07:30:59.428Z",
+      "productId": "electron",
+      "productName": "Electron",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 43.4.0 → 43.4.1",
+      "from": "43.4.0",
+      "to": "43.4.1"
+    },
+    {
+      "at": "2026-08-19T07:30:59.428Z",
+      "productId": "electron",
+      "productName": "Electron",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-19T07:30:59.428Z",
+      "productId": "qt",
+      "productName": "Qt",
+      "category": "framework",
+      "kind": "verdict-down",
+      "message": "Verdict HOLD → NO-GO",
+      "from": "HOLD",
+      "to": "NO-GO"
+    },
     {
       "at": "2026-08-18T07:29:51.386Z",
       "productId": "argo-workflows",
