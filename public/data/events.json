@@ -1,6 +1,196 @@
 {
-  "updatedAt": "2026-08-19T07:30:59.428Z",
+  "updatedAt": "2026-08-20T07:33:13.829Z",
   "events": [
+    {
+      "at": "2026-08-20T07:33:13.829Z",
+      "productId": "ceph",
+      "productName": "Ceph",
+      "category": "storage",
+      "kind": "new-version",
+      "message": "Latest 20.2.3 → 20.2.4",
+      "from": "20.2.3",
+      "to": "20.2.4"
+    },
+    {
+      "at": "2026-08-20T07:33:13.829Z",
+      "productId": "ceph",
+      "productName": "Ceph",
+      "category": "storage",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-20T07:33:13.829Z",
+      "productId": "rook",
+      "productName": "Rook",
+      "category": "storage",
+      "kind": "new-version",
+      "message": "Latest 1.20.4 → 1.20.5",
+      "from": "1.20.4",
+      "to": "1.20.5"
+    },
+    {
+      "at": "2026-08-20T07:33:13.829Z",
+      "productId": "rook",
+      "productName": "Rook",
+      "category": "storage",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-20T07:33:13.829Z",
+      "productId": "terraform",
+      "productName": "Terraform",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 1.15.8 → 1.15.9",
+      "from": "1.15.8",
+      "to": "1.15.9"
+    },
+    {
+      "at": "2026-08-20T07:33:13.829Z",
+      "productId": "terraform",
+      "productName": "Terraform",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-20T07:33:13.829Z",
+      "productId": "opentofu",
+      "productName": "OpenTofu",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 1.12.5 → 1.12.6",
+      "from": "1.12.5",
+      "to": "1.12.6"
+    },
+    {
+      "at": "2026-08-20T07:33:13.829Z",
+      "productId": "opentofu",
+      "productName": "OpenTofu",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-20T07:33:13.829Z",
+      "productId": "actions-runner",
+      "productName": "GitHub Actions Runner",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-20T07:33:13.829Z",
+      "productId": "zabbix",
+      "productName": "Zabbix",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-20T07:33:13.829Z",
+      "productId": "go",
+      "productName": "Go",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 1.26.6 → 1.26.7",
+      "from": "1.26.6",
+      "to": "1.26.7"
+    },
+    {
+      "at": "2026-08-20T07:33:13.829Z",
+      "productId": "go",
+      "productName": "Go",
+      "category": "runtime",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-20T07:33:13.829Z",
+      "productId": "redis",
+      "productName": "Redis",
+      "category": "runtime",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-20T07:33:13.829Z",
+      "productId": "nginx",
+      "productName": "nginx",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 1.31.3 → 1.31.4",
+      "from": "1.31.3",
+      "to": "1.31.4"
+    },
+    {
+      "at": "2026-08-20T07:33:13.829Z",
+      "productId": "nginx",
+      "productName": "nginx",
+      "category": "runtime",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-20T07:33:13.829Z",
+      "productId": "flutter",
+      "productName": "Flutter",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 3.47.0 → 3.47.1",
+      "from": "3.47.0",
+      "to": "3.47.1"
+    },
+    {
+      "at": "2026-08-20T07:33:13.829Z",
+      "productId": "flutter",
+      "productName": "Flutter",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-20T07:33:13.829Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 8.8.18 → 9.0.0",
+      "from": "8.8.18",
+      "to": "9.0.0"
+    },
+    {
+      "at": "2026-08-20T07:33:13.829Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
     {
       "at": "2026-08-19T07:30:59.428Z",
       "productId": "proxmox-ve",
