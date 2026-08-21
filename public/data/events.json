@@ -1,6 +1,214 @@
 {
-  "updatedAt": "2026-08-20T07:33:13.829Z",
+  "updatedAt": "2026-08-21T07:34:58.832Z",
   "events": [
+    {
+      "at": "2026-08-21T07:34:58.832Z",
+      "productId": "kubernetes",
+      "productName": "Kubernetes",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 1.36.3 → 1.36.4",
+      "from": "1.36.3",
+      "to": "1.36.4"
+    },
+    {
+      "at": "2026-08-21T07:34:58.832Z",
+      "productId": "kubernetes",
+      "productName": "Kubernetes",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-21T07:34:58.832Z",
+      "productId": "traefik",
+      "productName": "Traefik",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-21T07:34:58.832Z",
+      "productId": "cilium",
+      "productName": "Cilium",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-21T07:34:58.832Z",
+      "productId": "ceph",
+      "productName": "Ceph",
+      "category": "storage",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-21T07:34:58.832Z",
+      "productId": "rook",
+      "productName": "Rook",
+      "category": "storage",
+      "kind": "new-version",
+      "message": "Latest 1.20.5 → 1.20.6",
+      "from": "1.20.5",
+      "to": "1.20.6"
+    },
+    {
+      "at": "2026-08-21T07:34:58.832Z",
+      "productId": "gitlab",
+      "productName": "GitLab",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 19.2.4 → 19.3.0",
+      "from": "19.2.4",
+      "to": "19.3.0"
+    },
+    {
+      "at": "2026-08-21T07:34:58.832Z",
+      "productId": "gitlab",
+      "productName": "GitLab",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict HOLD → NO-GO",
+      "from": "HOLD",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-08-21T07:34:58.832Z",
+      "productId": "gitlab-runner",
+      "productName": "GitLab Runner",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 19.2.2 → 19.3.0",
+      "from": "19.2.2",
+      "to": "19.3.0"
+    },
+    {
+      "at": "2026-08-21T07:34:58.832Z",
+      "productId": "gitlab-runner",
+      "productName": "GitLab Runner",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict HOLD → NO-GO",
+      "from": "HOLD",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-08-21T07:34:58.832Z",
+      "productId": "elasticsearch",
+      "productName": "Elasticsearch",
+      "category": "observability",
+      "kind": "new-version",
+      "message": "Latest 9.5.1 → 9.5.2",
+      "from": "9.5.1",
+      "to": "9.5.2"
+    },
+    {
+      "at": "2026-08-21T07:34:58.832Z",
+      "productId": "elasticsearch",
+      "productName": "Elasticsearch",
+      "category": "observability",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-21T07:34:58.832Z",
+      "productId": "splunk",
+      "productName": "Splunk Enterprise",
+      "category": "observability",
+      "kind": "new-cve",
+      "message": "28 new CVEs recorded against 10.4.0"
+    },
+    {
+      "at": "2026-08-21T07:34:58.832Z",
+      "productId": "python",
+      "productName": "Python",
+      "category": "runtime",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-21T07:34:58.832Z",
+      "productId": "go",
+      "productName": "Go",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 1.26.7 → 1.27.0",
+      "from": "1.26.7",
+      "to": "1.27.0"
+    },
+    {
+      "at": "2026-08-21T07:34:58.832Z",
+      "productId": "go",
+      "productName": "Go",
+      "category": "runtime",
+      "kind": "verdict-down",
+      "message": "Verdict HOLD → NO-GO",
+      "from": "HOLD",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-08-21T07:34:58.832Z",
+      "productId": "spring-boot",
+      "productName": "Spring Boot",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 4.1.0 → 4.1.1",
+      "from": "4.1.0",
+      "to": "4.1.1"
+    },
+    {
+      "at": "2026-08-21T07:34:58.832Z",
+      "productId": "spring-boot",
+      "productName": "Spring Boot",
+      "category": "runtime",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-21T07:34:58.832Z",
+      "productId": "maui",
+      "productName": ".NET MAUI",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 10.0.90 → 10.0.100",
+      "from": "10.0.90",
+      "to": "10.0.100"
+    },
+    {
+      "at": "2026-08-21T07:34:58.832Z",
+      "productId": "maui",
+      "productName": ".NET MAUI",
+      "category": "framework",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-21T07:34:58.832Z",
+      "productId": "qt",
+      "productName": "Qt",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
     {
       "at": "2026-08-20T07:33:13.829Z",
       "productId": "ceph",
