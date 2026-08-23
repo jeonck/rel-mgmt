@@ -1,6 +1,66 @@
 {
-  "updatedAt": "2026-08-22T07:23:40.223Z",
+  "updatedAt": "2026-08-23T07:25:52.077Z",
   "events": [
+    {
+      "at": "2026-08-23T07:25:52.077Z",
+      "productId": "kubernetes",
+      "productName": "Kubernetes",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-23T07:25:52.077Z",
+      "productId": "packer",
+      "productName": "Packer",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-23T07:25:52.077Z",
+      "productId": "nexus",
+      "productName": "Sonatype Nexus Repository",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 3.95.2 → 3.95.2-01",
+      "from": "3.95.2",
+      "to": "3.95.2-01"
+    },
+    {
+      "at": "2026-08-23T07:25:52.077Z",
+      "productId": "elasticsearch",
+      "productName": "Elasticsearch",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-23T07:25:52.077Z",
+      "productId": "spring-boot",
+      "productName": "Spring Boot",
+      "category": "runtime",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-23T07:25:52.077Z",
+      "productId": "flutter",
+      "productName": "Flutter",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
     {
       "at": "2026-08-22T07:23:40.223Z",
       "productId": "argo-workflows",
