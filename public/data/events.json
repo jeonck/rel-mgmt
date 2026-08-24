@@ -1,6 +1,46 @@
 {
-  "updatedAt": "2026-08-23T07:25:52.077Z",
+  "updatedAt": "2026-08-24T07:50:34.059Z",
   "events": [
+    {
+      "at": "2026-08-24T07:50:34.059Z",
+      "productId": "argo-workflows",
+      "productName": "Argo Workflows",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-24T07:50:34.059Z",
+      "productId": "rook",
+      "productName": "Rook",
+      "category": "storage",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-24T07:50:34.059Z",
+      "productId": "maui",
+      "productName": ".NET MAUI",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-24T07:50:34.059Z",
+      "productId": "qt",
+      "productName": "Qt",
+      "category": "framework",
+      "kind": "verdict-down",
+      "message": "Verdict HOLD → NO-GO",
+      "from": "HOLD",
+      "to": "NO-GO"
+    },
     {
       "at": "2026-08-23T07:25:52.077Z",
       "productId": "kubernetes",
