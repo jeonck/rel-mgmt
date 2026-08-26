@@ -1,6 +1,56 @@
 {
-  "updatedAt": "2026-08-25T07:36:24.387Z",
+  "updatedAt": "2026-08-26T07:38:18.991Z",
   "events": [
+    {
+      "at": "2026-08-26T07:38:18.991Z",
+      "productId": "zabbix",
+      "productName": "Zabbix",
+      "category": "observability",
+      "kind": "new-version",
+      "message": "Latest 7.4.13 → 7.4.14",
+      "from": "7.4.13",
+      "to": "7.4.14"
+    },
+    {
+      "at": "2026-08-26T07:38:18.991Z",
+      "productId": "zabbix",
+      "productName": "Zabbix",
+      "category": "observability",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-26T07:38:18.991Z",
+      "productId": "go",
+      "productName": "Go",
+      "category": "runtime",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-26T07:38:18.991Z",
+      "productId": "temurin",
+      "productName": "Eclipse Temurin (JDK)",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 26.0.2+10 → 26.0.2.1+1",
+      "from": "26.0.2+10",
+      "to": "26.0.2.1+1"
+    },
+    {
+      "at": "2026-08-26T07:38:18.991Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
     {
       "at": "2026-08-25T07:36:24.387Z",
       "productId": "jenkins",
