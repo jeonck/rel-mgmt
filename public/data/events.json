@@ -1,6 +1,266 @@
 {
-  "updatedAt": "2026-08-26T07:38:18.991Z",
+  "updatedAt": "2026-08-27T17:58:57.476Z",
   "events": [
+    {
+      "at": "2026-08-27T17:58:57.476Z",
+      "productId": "kubernetes",
+      "productName": "Kubernetes",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 1.36.4 → 1.37.0",
+      "from": "1.36.4",
+      "to": "1.37.0"
+    },
+    {
+      "at": "2026-08-27T17:58:57.476Z",
+      "productId": "kubernetes",
+      "productName": "Kubernetes",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-08-27T17:58:57.476Z",
+      "productId": "argo-cd",
+      "productName": "Argo CD",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 3.5.1 → 3.5.2",
+      "from": "3.5.1",
+      "to": "3.5.2"
+    },
+    {
+      "at": "2026-08-27T17:58:57.476Z",
+      "productId": "argo-cd",
+      "productName": "Argo CD",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-27T17:58:57.476Z",
+      "productId": "istio",
+      "productName": "Istio",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 1.30.3 → 1.30.4",
+      "from": "1.30.3",
+      "to": "1.30.4"
+    },
+    {
+      "at": "2026-08-27T17:58:57.476Z",
+      "productId": "istio",
+      "productName": "Istio",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-27T17:58:57.476Z",
+      "productId": "traefik",
+      "productName": "Traefik",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 3.7.11 → 3.7.12",
+      "from": "3.7.11",
+      "to": "3.7.12"
+    },
+    {
+      "at": "2026-08-27T17:58:57.476Z",
+      "productId": "traefik",
+      "productName": "Traefik",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-27T17:58:57.476Z",
+      "productId": "envoy",
+      "productName": "Envoy",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 1.39.0 → 1.39.1",
+      "from": "1.39.0",
+      "to": "1.39.1"
+    },
+    {
+      "at": "2026-08-27T17:58:57.476Z",
+      "productId": "envoy",
+      "productName": "Envoy",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-27T17:58:57.476Z",
+      "productId": "openebs",
+      "productName": "OpenEBS",
+      "category": "storage",
+      "kind": "new-version",
+      "message": "Latest 4.5.1 → 4.6.0",
+      "from": "4.5.1",
+      "to": "4.6.0"
+    },
+    {
+      "at": "2026-08-27T17:58:57.476Z",
+      "productId": "openebs",
+      "productName": "OpenEBS",
+      "category": "storage",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-08-27T17:58:57.476Z",
+      "productId": "terraform",
+      "productName": "Terraform",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 1.15.9 → 1.16.0",
+      "from": "1.15.9",
+      "to": "1.16.0"
+    },
+    {
+      "at": "2026-08-27T17:58:57.476Z",
+      "productId": "terraform",
+      "productName": "Terraform",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-08-27T17:58:57.476Z",
+      "productId": "gitlab",
+      "productName": "GitLab",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 19.3.0 → 19.3.1",
+      "from": "19.3.0",
+      "to": "19.3.1"
+    },
+    {
+      "at": "2026-08-27T17:58:57.476Z",
+      "productId": "gitlab-runner",
+      "productName": "GitLab Runner",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-27T17:58:57.476Z",
+      "productId": "actions-runner",
+      "productName": "GitHub Actions Runner",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 2.336.0 → 2.337.0",
+      "from": "2.336.0",
+      "to": "2.337.0"
+    },
+    {
+      "at": "2026-08-27T17:58:57.476Z",
+      "productId": "actions-runner",
+      "productName": "GitHub Actions Runner",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-08-27T17:58:57.476Z",
+      "productId": "tekton",
+      "productName": "Tekton Pipelines",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 1.15.0 → 1.15.1",
+      "from": "1.15.0",
+      "to": "1.15.1"
+    },
+    {
+      "at": "2026-08-27T17:58:57.476Z",
+      "productId": "vector",
+      "productName": "Vector",
+      "category": "observability",
+      "kind": "new-version",
+      "message": "Latest 0.57.0 → 0.58.0",
+      "from": "0.57.0",
+      "to": "0.58.0"
+    },
+    {
+      "at": "2026-08-27T17:58:57.476Z",
+      "productId": "vector",
+      "productName": "Vector",
+      "category": "observability",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-08-27T17:58:57.476Z",
+      "productId": "nodejs",
+      "productName": "Node.js",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 26.7.0 → 26.8.1",
+      "from": "26.7.0",
+      "to": "26.8.1"
+    },
+    {
+      "at": "2026-08-27T17:58:57.476Z",
+      "productId": "react-native",
+      "productName": "React Native",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 0.87.0 → 0.87.1",
+      "from": "0.87.0",
+      "to": "0.87.1"
+    },
+    {
+      "at": "2026-08-27T17:58:57.476Z",
+      "productId": "flutter",
+      "productName": "Flutter",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 3.47.1 → 3.47.2",
+      "from": "3.47.1",
+      "to": "3.47.2"
+    },
+    {
+      "at": "2026-08-27T17:58:57.476Z",
+      "productId": "flutter",
+      "productName": "Flutter",
+      "category": "framework",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-27T17:58:57.476Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 9.0.0 → 9.0.1",
+      "from": "9.0.0",
+      "to": "9.0.1"
+    },
     {
       "at": "2026-08-26T07:38:18.991Z",
       "productId": "zabbix",
