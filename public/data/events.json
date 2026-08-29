@@ -1,6 +1,76 @@
 {
-  "updatedAt": "2026-08-28T19:09:13.997Z",
+  "updatedAt": "2026-08-29T12:53:33.325Z",
   "events": [
+    {
+      "at": "2026-08-29T12:53:33.325Z",
+      "productId": "argo-cd",
+      "productName": "Argo CD",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-29T12:53:33.325Z",
+      "productId": "traefik",
+      "productName": "Traefik",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-29T12:53:33.325Z",
+      "productId": "calico",
+      "productName": "Calico",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 3.32.1 → 3.32.2",
+      "from": "3.32.1",
+      "to": "3.32.2"
+    },
+    {
+      "at": "2026-08-29T12:53:33.325Z",
+      "productId": "calico",
+      "productName": "Calico",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-29T12:53:33.325Z",
+      "productId": "opentofu",
+      "productName": "OpenTofu",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-29T12:53:33.325Z",
+      "productId": "react-native",
+      "productName": "React Native",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-29T12:53:33.325Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
     {
       "at": "2026-08-28T19:09:13.997Z",
       "productId": "ubuntu",
