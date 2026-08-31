@@ -1,6 +1,76 @@
 {
-  "updatedAt": "2026-08-30T12:27:12.809Z",
+  "updatedAt": "2026-08-31T14:37:31.904Z",
   "events": [
+    {
+      "at": "2026-08-31T14:37:31.904Z",
+      "productId": "keycloak",
+      "productName": "Keycloak",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 26.7.2 → 26.7.3",
+      "from": "26.7.2",
+      "to": "26.7.3"
+    },
+    {
+      "at": "2026-08-31T14:37:31.904Z",
+      "productId": "keycloak",
+      "productName": "Keycloak",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-08-31T14:37:31.904Z",
+      "productId": "tekton",
+      "productName": "Tekton Pipelines",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 1.15.1 → 1.16.0",
+      "from": "1.15.1",
+      "to": "1.16.0"
+    },
+    {
+      "at": "2026-08-31T14:37:31.904Z",
+      "productId": "tekton",
+      "productName": "Tekton Pipelines",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-08-31T14:37:31.904Z",
+      "productId": "electron",
+      "productName": "Electron",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 44.0.0 → 44.1.0",
+      "from": "44.0.0",
+      "to": "44.1.0"
+    },
+    {
+      "at": "2026-08-31T14:37:31.904Z",
+      "productId": "flutter",
+      "productName": "Flutter",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-08-31T14:37:31.904Z",
+      "productId": "capacitor",
+      "productName": "Capacitor",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
     {
       "at": "2026-08-30T12:27:12.809Z",
       "productId": "envoy",
