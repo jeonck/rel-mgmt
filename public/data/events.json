@@ -1,6 +1,156 @@
 {
-  "updatedAt": "2026-09-01T12:14:21.868Z",
+  "updatedAt": "2026-09-02T11:52:45.785Z",
   "events": [
+    {
+      "at": "2026-09-02T11:52:45.785Z",
+      "productId": "kubernetes",
+      "productName": "Kubernetes",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-02T11:52:45.785Z",
+      "productId": "calico",
+      "productName": "Calico",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-02T11:52:45.785Z",
+      "productId": "terraform",
+      "productName": "Terraform",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-02T11:52:45.785Z",
+      "productId": "vault",
+      "productName": "HashiCorp Vault",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 2.0.4 → 2.1.0",
+      "from": "2.0.4",
+      "to": "2.1.0"
+    },
+    {
+      "at": "2026-09-02T11:52:45.785Z",
+      "productId": "vault",
+      "productName": "HashiCorp Vault",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-09-02T11:52:45.785Z",
+      "productId": "sonarqube",
+      "productName": "SonarQube Community",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 26.8.0.126808 → 26.9.0.129388",
+      "from": "26.8.0.126808",
+      "to": "26.9.0.129388"
+    },
+    {
+      "at": "2026-09-02T11:52:45.785Z",
+      "productId": "sonarqube",
+      "productName": "SonarQube Community",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict HOLD → NO-GO",
+      "from": "HOLD",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-09-02T11:52:45.785Z",
+      "productId": "gitea",
+      "productName": "Gitea",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-02T11:52:45.785Z",
+      "productId": "nexus",
+      "productName": "Sonatype Nexus Repository",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 3.95.3-02 → 3.96.0",
+      "from": "3.95.3-02",
+      "to": "3.96.0"
+    },
+    {
+      "at": "2026-09-02T11:52:45.785Z",
+      "productId": "nexus",
+      "productName": "Sonatype Nexus Repository",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-09-02T11:52:45.785Z",
+      "productId": "grafana",
+      "productName": "Grafana",
+      "category": "observability",
+      "kind": "new-version",
+      "message": "Latest 13.2.0 → 13.2.1",
+      "from": "13.2.0",
+      "to": "13.2.1"
+    },
+    {
+      "at": "2026-09-02T11:52:45.785Z",
+      "productId": "go",
+      "productName": "Go",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 1.27.0 → 1.27.1",
+      "from": "1.27.0",
+      "to": "1.27.1"
+    },
+    {
+      "at": "2026-09-02T11:52:45.785Z",
+      "productId": "electron",
+      "productName": "Electron",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 44.1.0 → 44.1.1",
+      "from": "44.1.0",
+      "to": "44.1.1"
+    },
+    {
+      "at": "2026-09-02T11:52:45.785Z",
+      "productId": "electron",
+      "productName": "Electron",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-02T11:52:45.785Z",
+      "productId": "confluence",
+      "productName": "Confluence (Data Center)",
+      "category": "enterprise",
+      "kind": "new-version",
+      "message": "Latest 10.2.15 → 10.2.16",
+      "from": "10.2.15",
+      "to": "10.2.16"
+    },
     {
       "at": "2026-09-01T12:14:21.868Z",
       "productId": "nutanix-aos",
