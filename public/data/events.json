@@ -1,6 +1,86 @@
 {
-  "updatedAt": "2026-09-03T11:51:20.321Z",
+  "updatedAt": "2026-09-04T11:59:42.370Z",
   "events": [
+    {
+      "at": "2026-09-04T11:59:42.370Z",
+      "productId": "grafana",
+      "productName": "Grafana",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-04T11:59:42.370Z",
+      "productId": "opensearch",
+      "productName": "OpenSearch",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-04T11:59:42.370Z",
+      "productId": "zabbix",
+      "productName": "Zabbix",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-04T11:59:42.370Z",
+      "productId": "go",
+      "productName": "Go",
+      "category": "runtime",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-04T11:59:42.370Z",
+      "productId": "haproxy",
+      "productName": "HAProxy",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 3.5-dev5 → 3.5-dev6",
+      "from": "3.5-dev5",
+      "to": "3.5-dev6"
+    },
+    {
+      "at": "2026-09-04T11:59:42.370Z",
+      "productId": "electron",
+      "productName": "Electron",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 44.1.1 → 44.2.0",
+      "from": "44.1.1",
+      "to": "44.2.0"
+    },
+    {
+      "at": "2026-09-04T11:59:42.370Z",
+      "productId": "electron",
+      "productName": "Electron",
+      "category": "framework",
+      "kind": "verdict-down",
+      "message": "Verdict HOLD → NO-GO",
+      "from": "HOLD",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-09-04T11:59:42.370Z",
+      "productId": "capacitor",
+      "productName": "Capacitor",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
     {
       "at": "2026-09-03T11:51:20.321Z",
       "productId": "podman",
