@@ -1,6 +1,156 @@
 {
-  "updatedAt": "2026-09-04T11:59:42.370Z",
+  "updatedAt": "2026-09-05T11:03:11.111Z",
   "events": [
+    {
+      "at": "2026-09-05T11:03:11.111Z",
+      "productId": "esxi",
+      "productName": "VMware ESXi",
+      "category": "platform",
+      "kind": "new-version",
+      "message": "Latest 9.1.0.0200 → 9.1.1.0",
+      "from": "9.1.0.0200",
+      "to": "9.1.1.0"
+    },
+    {
+      "at": "2026-09-05T11:03:11.111Z",
+      "productId": "esxi",
+      "productName": "VMware ESXi",
+      "category": "platform",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-05T11:03:11.111Z",
+      "productId": "vmware-cloud-foundation",
+      "productName": "VMware Cloud Foundation",
+      "category": "platform",
+      "kind": "new-version",
+      "message": "Latest 9.1.0.0 → 9.1.1.0",
+      "from": "9.1.0.0",
+      "to": "9.1.1.0"
+    },
+    {
+      "at": "2026-09-05T11:03:11.111Z",
+      "productId": "containerd",
+      "productName": "containerd",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 2.3.4 → 2.3.5",
+      "from": "2.3.4",
+      "to": "2.3.5"
+    },
+    {
+      "at": "2026-09-05T11:03:11.111Z",
+      "productId": "docker-engine",
+      "productName": "Docker Engine",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 29.7.2 → 29.8.0",
+      "from": "29.7.2",
+      "to": "29.8.0"
+    },
+    {
+      "at": "2026-09-05T11:03:11.111Z",
+      "productId": "docker-engine",
+      "productName": "Docker Engine",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-09-05T11:03:11.111Z",
+      "productId": "traefik",
+      "productName": "Traefik",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 3.7.12 → 3.7.13",
+      "from": "3.7.12",
+      "to": "3.7.13"
+    },
+    {
+      "at": "2026-09-05T11:03:11.111Z",
+      "productId": "traefik",
+      "productName": "Traefik",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-05T11:03:11.111Z",
+      "productId": "podman",
+      "productName": "Podman",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-05T11:03:11.111Z",
+      "productId": "terraform",
+      "productName": "Terraform",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-05T11:03:11.111Z",
+      "productId": "nexus",
+      "productName": "Sonatype Nexus Repository",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 3.96.0 → 3.96.0-09",
+      "from": "3.96.0",
+      "to": "3.96.0-09"
+    },
+    {
+      "at": "2026-09-05T11:03:11.111Z",
+      "productId": "fluent-bit",
+      "productName": "Fluent Bit",
+      "category": "observability",
+      "kind": "new-version",
+      "message": "Latest 5.1.1 → 5.1.2",
+      "from": "5.1.1",
+      "to": "5.1.2"
+    },
+    {
+      "at": "2026-09-05T11:03:11.111Z",
+      "productId": "fluent-bit",
+      "productName": "Fluent Bit",
+      "category": "observability",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-05T11:03:11.111Z",
+      "productId": "nginx",
+      "productName": "nginx",
+      "category": "runtime",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-05T11:03:11.111Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
     {
       "at": "2026-09-04T11:59:42.370Z",
       "productId": "grafana",
