@@ -1,6 +1,36 @@
 {
-  "updatedAt": "2026-09-05T11:03:11.111Z",
+  "updatedAt": "2026-09-06T11:26:49.420Z",
   "events": [
+    {
+      "at": "2026-09-06T11:26:49.420Z",
+      "productId": "citrix-vad",
+      "productName": "Citrix Virtual Apps and Desktops",
+      "category": "platform",
+      "kind": "new-version",
+      "message": "Latest 2603 → 2607",
+      "from": "2603",
+      "to": "2607"
+    },
+    {
+      "at": "2026-09-06T11:26:49.420Z",
+      "productId": "rook",
+      "productName": "Rook",
+      "category": "storage",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-06T11:26:49.420Z",
+      "productId": "elasticsearch",
+      "productName": "Elasticsearch",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
     {
       "at": "2026-09-05T11:03:11.111Z",
       "productId": "esxi",
