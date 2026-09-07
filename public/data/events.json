@@ -1,6 +1,56 @@
 {
-  "updatedAt": "2026-09-06T11:26:49.420Z",
+  "updatedAt": "2026-09-07T13:09:46.152Z",
   "events": [
+    {
+      "at": "2026-09-07T13:09:46.152Z",
+      "productId": "nutanix-aos",
+      "productName": "Nutanix AOS",
+      "category": "platform",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-07T13:09:46.152Z",
+      "productId": "traefik",
+      "productName": "Traefik",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-07T13:09:46.152Z",
+      "productId": "vault",
+      "productName": "HashiCorp Vault",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-07T13:09:46.152Z",
+      "productId": "tekton",
+      "productName": "Tekton Pipelines",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-07T13:09:46.152Z",
+      "productId": "confluence",
+      "productName": "Confluence (Data Center)",
+      "category": "enterprise",
+      "kind": "new-version",
+      "message": "Latest 10.2.16 → 10.2.17",
+      "from": "10.2.16",
+      "to": "10.2.17"
+    },
     {
       "at": "2026-09-06T11:26:49.420Z",
       "productId": "citrix-vad",
