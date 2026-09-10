@@ -1,6 +1,216 @@
 {
-  "updatedAt": "2026-09-09T12:03:30.290Z",
+  "updatedAt": "2026-09-10T11:58:13.479Z",
   "events": [
+    {
+      "at": "2026-09-10T11:58:13.479Z",
+      "productId": "docker-engine",
+      "productName": "Docker Engine",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-10T11:58:13.479Z",
+      "productId": "helm",
+      "productName": "Helm",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 4.2.4 → 4.3.0",
+      "from": "4.2.4",
+      "to": "4.3.0"
+    },
+    {
+      "at": "2026-09-10T11:58:13.479Z",
+      "productId": "helm",
+      "productName": "Helm",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-09-10T11:58:13.479Z",
+      "productId": "terraform",
+      "productName": "Terraform",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 1.16.1 → 1.16.2",
+      "from": "1.16.1",
+      "to": "1.16.2"
+    },
+    {
+      "at": "2026-09-10T11:58:13.479Z",
+      "productId": "terraform",
+      "productName": "Terraform",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-10T11:58:13.479Z",
+      "productId": "consul",
+      "productName": "Consul",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 2.0.3 → 2.0.4",
+      "from": "2.0.3",
+      "to": "2.0.4"
+    },
+    {
+      "at": "2026-09-10T11:58:13.479Z",
+      "productId": "consul",
+      "productName": "Consul",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-10T11:58:13.479Z",
+      "productId": "nomad",
+      "productName": "Nomad",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 2.0.5 → 2.0.6",
+      "from": "2.0.5",
+      "to": "2.0.6"
+    },
+    {
+      "at": "2026-09-10T11:58:13.479Z",
+      "productId": "nomad",
+      "productName": "Nomad",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-10T11:58:13.479Z",
+      "productId": "otel-collector",
+      "productName": "OpenTelemetry Collector",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-10T11:58:13.479Z",
+      "productId": "nodejs",
+      "productName": "Node.js",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 26.8.1 → 26.8.2",
+      "from": "26.8.1",
+      "to": "26.8.2"
+    },
+    {
+      "at": "2026-09-10T11:58:13.479Z",
+      "productId": "tomcat",
+      "productName": "Apache Tomcat",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 11.0.25 → 11.0.26",
+      "from": "11.0.25",
+      "to": "11.0.26"
+    },
+    {
+      "at": "2026-09-10T11:58:13.479Z",
+      "productId": "tomcat",
+      "productName": "Apache Tomcat",
+      "category": "runtime",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-10T11:58:13.479Z",
+      "productId": "flutter",
+      "productName": "Flutter",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 3.47.2 → 3.47.3",
+      "from": "3.47.2",
+      "to": "3.47.3"
+    },
+    {
+      "at": "2026-09-10T11:58:13.479Z",
+      "productId": "flutter",
+      "productName": "Flutter",
+      "category": "framework",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-10T11:58:13.479Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 9.0.2 → 9.0.3",
+      "from": "9.0.2",
+      "to": "9.0.3"
+    },
+    {
+      "at": "2026-09-10T11:58:13.479Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-10T11:58:13.479Z",
+      "productId": "msexchange",
+      "productName": "Microsoft Exchange Server",
+      "category": "enterprise",
+      "kind": "new-version",
+      "message": "Latest 15.2.2562.46 → 15.2.2562.49",
+      "from": "15.2.2562.46",
+      "to": "15.2.2562.49"
+    },
+    {
+      "at": "2026-09-10T11:58:13.479Z",
+      "productId": "msexchange",
+      "productName": "Microsoft Exchange Server",
+      "category": "enterprise",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-10T11:58:13.479Z",
+      "productId": "sharepoint",
+      "productName": "Microsoft SharePoint",
+      "category": "enterprise",
+      "kind": "new-version",
+      "message": "Latest 16.0.19725.20522 → 16.0.20326.20124",
+      "from": "16.0.19725.20522",
+      "to": "16.0.20326.20124"
+    },
+    {
+      "at": "2026-09-10T11:58:13.479Z",
+      "productId": "sharepoint",
+      "productName": "Microsoft SharePoint",
+      "category": "enterprise",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
     {
       "at": "2026-09-09T12:03:30.290Z",
       "productId": "ansible-core",
