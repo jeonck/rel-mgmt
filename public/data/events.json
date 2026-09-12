@@ -1,6 +1,96 @@
 {
-  "updatedAt": "2026-09-11T11:56:57.575Z",
+  "updatedAt": "2026-09-12T11:23:22.635Z",
   "events": [
+    {
+      "at": "2026-09-12T11:23:22.635Z",
+      "productId": "terraform",
+      "productName": "Terraform",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-12T11:23:22.635Z",
+      "productId": "consul",
+      "productName": "Consul",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-12T11:23:22.635Z",
+      "productId": "nomad",
+      "productName": "Nomad",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-12T11:23:22.635Z",
+      "productId": "tomcat",
+      "productName": "Apache Tomcat",
+      "category": "runtime",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-12T11:23:22.635Z",
+      "productId": "mongodb",
+      "productName": "MongoDB",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 8.3.9 → 8.3.11",
+      "from": "8.3.9",
+      "to": "8.3.11"
+    },
+    {
+      "at": "2026-09-12T11:23:22.635Z",
+      "productId": "flutter",
+      "productName": "Flutter",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 3.47.3 → 3.47.4",
+      "from": "3.47.3",
+      "to": "3.47.4"
+    },
+    {
+      "at": "2026-09-12T11:23:22.635Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-12T11:23:22.635Z",
+      "productId": "capacitor",
+      "productName": "Capacitor",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 8.5.1 → 8.5.2",
+      "from": "8.5.1",
+      "to": "8.5.2"
+    },
+    {
+      "at": "2026-09-12T11:23:22.635Z",
+      "productId": "capacitor",
+      "productName": "Capacitor",
+      "category": "framework",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
     {
       "at": "2026-09-11T11:56:57.575Z",
       "productId": "argo-workflows",
