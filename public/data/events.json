@@ -1,6 +1,126 @@
 {
-  "updatedAt": "2026-09-18T11:59:29.094Z",
+  "updatedAt": "2026-09-19T11:43:02.267Z",
   "events": [
+    {
+      "at": "2026-09-19T11:43:02.267Z",
+      "productId": "debian",
+      "productName": "Debian",
+      "category": "platform",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-19T11:43:02.267Z",
+      "productId": "terraform",
+      "productName": "Terraform",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-19T11:43:02.267Z",
+      "productId": "nomad",
+      "productName": "Nomad",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 2.0.6 → 2.0.7",
+      "from": "2.0.6",
+      "to": "2.0.7"
+    },
+    {
+      "at": "2026-09-19T11:43:02.267Z",
+      "productId": "nomad",
+      "productName": "Nomad",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-19T11:43:02.267Z",
+      "productId": "packer",
+      "productName": "Packer",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 1.16.0 → 1.16.1",
+      "from": "1.16.0",
+      "to": "1.16.1"
+    },
+    {
+      "at": "2026-09-19T11:43:02.267Z",
+      "productId": "packer",
+      "productName": "Packer",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-19T11:43:02.267Z",
+      "productId": "keycloak",
+      "productName": "Keycloak",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-19T11:43:02.267Z",
+      "productId": "nexus",
+      "productName": "Sonatype Nexus Repository",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 3.96.1-01 → 3.96.2-01",
+      "from": "3.96.1-01",
+      "to": "3.96.2-01"
+    },
+    {
+      "at": "2026-09-19T11:43:02.267Z",
+      "productId": "electron",
+      "productName": "Electron",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 44.4.2 → 44.4.3",
+      "from": "44.4.2",
+      "to": "44.4.3"
+    },
+    {
+      "at": "2026-09-19T11:43:02.267Z",
+      "productId": "flutter",
+      "productName": "Flutter",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 3.47.4 → 3.47.5",
+      "from": "3.47.4",
+      "to": "3.47.5"
+    },
+    {
+      "at": "2026-09-19T11:43:02.267Z",
+      "productId": "flutter",
+      "productName": "Flutter",
+      "category": "framework",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-19T11:43:02.267Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
     {
       "at": "2026-09-18T11:59:29.094Z",
       "productId": "docker-engine",
@@ -3876,126 +3996,6 @@
       "message": "Latest 19.2.1 → 19.2.2",
       "from": "19.2.1",
       "to": "19.2.2"
-    },
-    {
-      "at": "2026-08-13T08:11:43.519Z",
-      "productId": "gitlab-runner",
-      "productName": "GitLab Runner",
-      "category": "iac-cicd",
-      "kind": "verdict-down",
-      "message": "Verdict HOLD → NO-GO",
-      "from": "HOLD",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-08-13T08:11:43.519Z",
-      "productId": "nomad",
-      "productName": "Nomad",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 2.0.4 → 2.0.5",
-      "from": "2.0.4",
-      "to": "2.0.5"
-    },
-    {
-      "at": "2026-08-13T08:11:43.519Z",
-      "productId": "nomad",
-      "productName": "Nomad",
-      "category": "iac-cicd",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-13T08:11:43.519Z",
-      "productId": "nexus",
-      "productName": "Sonatype Nexus Repository",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-13T08:11:43.519Z",
-      "productId": "fluent-bit",
-      "productName": "Fluent Bit",
-      "category": "observability",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-13T08:11:43.519Z",
-      "productId": "tomcat",
-      "productName": "Apache Tomcat",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 11.0.24 → 11.0.25",
-      "from": "11.0.24",
-      "to": "11.0.25"
-    },
-    {
-      "at": "2026-08-13T08:11:43.519Z",
-      "productId": "flutter",
-      "productName": "Flutter",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 3.44.9 → 3.47.0",
-      "from": "3.44.9",
-      "to": "3.47.0"
-    },
-    {
-      "at": "2026-08-13T08:11:43.519Z",
-      "productId": "flutter",
-      "productName": "Flutter",
-      "category": "framework",
-      "kind": "verdict-down",
-      "message": "Verdict GO → NO-GO",
-      "from": "GO",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-08-13T08:11:43.519Z",
-      "productId": "ionic",
-      "productName": "Ionic Framework",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 8.8.17 → 8.8.18",
-      "from": "8.8.17",
-      "to": "8.8.18"
-    },
-    {
-      "at": "2026-08-13T08:11:43.519Z",
-      "productId": "ionic",
-      "productName": "Ionic Framework",
-      "category": "framework",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-12T08:09:21.246Z",
-      "productId": "sonarqube",
-      "productName": "SonarQube Community",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-12T08:09:21.246Z",
-      "productId": "elasticsearch",
-      "productName": "Elasticsearch",
-      "category": "observability",
-      "kind": "new-version",
-      "message": "Latest 9.5.0 → 9.5.1",
-      "from": "9.5.0",
-      "to": "9.5.1"
     }
   ]
 }
