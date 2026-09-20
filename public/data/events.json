@@ -1,6 +1,56 @@
 {
-  "updatedAt": "2026-09-19T11:43:02.267Z",
+  "updatedAt": "2026-09-20T11:55:08.699Z",
   "events": [
+    {
+      "at": "2026-09-20T11:55:08.699Z",
+      "productId": "nomad",
+      "productName": "Nomad",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-20T11:55:08.699Z",
+      "productId": "loki",
+      "productName": "Grafana Loki",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-20T11:55:08.699Z",
+      "productId": "redis",
+      "productName": "Redis",
+      "category": "runtime",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-20T11:55:08.699Z",
+      "productId": "tauri",
+      "productName": "Tauri",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 2.11.5 → 2.11.6",
+      "from": "2.11.5",
+      "to": "2.11.6"
+    },
+    {
+      "at": "2026-09-20T11:55:08.699Z",
+      "productId": "tauri",
+      "productName": "Tauri",
+      "category": "framework",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
     {
       "at": "2026-09-19T11:43:02.267Z",
       "productId": "debian",
@@ -3946,56 +3996,6 @@
       "message": "Verdict HOLD → GO",
       "from": "HOLD",
       "to": "GO"
-    },
-    {
-      "at": "2026-08-13T08:11:43.519Z",
-      "productId": "podman",
-      "productName": "Podman",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 6.0.2 → 6.1.0",
-      "from": "6.0.2",
-      "to": "6.1.0"
-    },
-    {
-      "at": "2026-08-13T08:11:43.519Z",
-      "productId": "podman",
-      "productName": "Podman",
-      "category": "container",
-      "kind": "verdict-down",
-      "message": "Verdict GO → NO-GO",
-      "from": "GO",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-08-13T08:11:43.519Z",
-      "productId": "gitlab",
-      "productName": "GitLab",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 19.2.1 → 19.2.2",
-      "from": "19.2.1",
-      "to": "19.2.2"
-    },
-    {
-      "at": "2026-08-13T08:11:43.519Z",
-      "productId": "gitlab",
-      "productName": "GitLab",
-      "category": "iac-cicd",
-      "kind": "verdict-down",
-      "message": "Verdict HOLD → NO-GO",
-      "from": "HOLD",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-08-13T08:11:43.519Z",
-      "productId": "gitlab-runner",
-      "productName": "GitLab Runner",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 19.2.1 → 19.2.2",
-      "from": "19.2.1",
-      "to": "19.2.2"
     }
   ]
 }
