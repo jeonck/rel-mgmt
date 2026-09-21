@@ -1,6 +1,26 @@
 {
-  "updatedAt": "2026-09-20T11:55:08.699Z",
+  "updatedAt": "2026-09-21T13:29:06.050Z",
   "events": [
+    {
+      "at": "2026-09-21T13:29:06.050Z",
+      "productId": "argo-workflows",
+      "productName": "Argo Workflows",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-21T13:29:06.050Z",
+      "productId": "packer",
+      "productName": "Packer",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
     {
       "at": "2026-09-20T11:55:08.699Z",
       "productId": "nomad",
@@ -3976,26 +3996,6 @@
       "message": "Latest 2.3.3 → 2.3.4",
       "from": "2.3.3",
       "to": "2.3.4"
-    },
-    {
-      "at": "2026-08-13T08:11:43.519Z",
-      "productId": "argo-cd",
-      "productName": "Argo CD",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 3.5.0 → 3.5.1",
-      "from": "3.5.0",
-      "to": "3.5.1"
-    },
-    {
-      "at": "2026-08-13T08:11:43.519Z",
-      "productId": "envoy",
-      "productName": "Envoy",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
     }
   ]
 }
