@@ -1,6 +1,76 @@
 {
-  "updatedAt": "2026-09-21T13:29:06.050Z",
+  "updatedAt": "2026-09-22T12:13:31.966Z",
   "events": [
+    {
+      "at": "2026-09-22T12:13:31.966Z",
+      "productId": "istio",
+      "productName": "Istio",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 1.31.0 → 1.31.1",
+      "from": "1.31.0",
+      "to": "1.31.1"
+    },
+    {
+      "at": "2026-09-22T12:13:31.966Z",
+      "productId": "istio",
+      "productName": "Istio",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-22T12:13:31.966Z",
+      "productId": "nexus",
+      "productName": "Sonatype Nexus Repository",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 3.96.2-01 → 3.96.3",
+      "from": "3.96.2-01",
+      "to": "3.96.3"
+    },
+    {
+      "at": "2026-09-22T12:13:31.966Z",
+      "productId": "otel-collector",
+      "productName": "OpenTelemetry Collector",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-22T12:13:31.966Z",
+      "productId": "jaeger",
+      "productName": "Jaeger",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-22T12:13:31.966Z",
+      "productId": "nodejs",
+      "productName": "Node.js",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 26.9.0 → 26.10.0",
+      "from": "26.9.0",
+      "to": "26.10.0"
+    },
+    {
+      "at": "2026-09-22T12:13:31.966Z",
+      "productId": "flutter",
+      "productName": "Flutter",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
     {
       "at": "2026-09-21T13:29:06.050Z",
       "productId": "argo-workflows",
@@ -3926,76 +3996,6 @@
       "message": "Verdict GO → HOLD",
       "from": "GO",
       "to": "HOLD"
-    },
-    {
-      "at": "2026-08-14T08:07:32.549Z",
-      "productId": "nexus",
-      "productName": "Sonatype Nexus Repository",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 3.95.0-07 → 3.95.1-01",
-      "from": "3.95.0-07",
-      "to": "3.95.1-01"
-    },
-    {
-      "at": "2026-08-14T08:07:32.549Z",
-      "productId": "nexus",
-      "productName": "Sonatype Nexus Repository",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-14T08:07:32.549Z",
-      "productId": "elasticsearch",
-      "productName": "Elasticsearch",
-      "category": "observability",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-14T08:07:32.549Z",
-      "productId": "vector",
-      "productName": "Vector",
-      "category": "observability",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-14T08:07:32.549Z",
-      "productId": "go",
-      "productName": "Go",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 1.26.5 → 1.26.6",
-      "from": "1.26.5",
-      "to": "1.26.6"
-    },
-    {
-      "at": "2026-08-14T08:07:32.549Z",
-      "productId": "go",
-      "productName": "Go",
-      "category": "runtime",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-13T08:11:43.519Z",
-      "productId": "containerd",
-      "productName": "containerd",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 2.3.3 → 2.3.4",
-      "from": "2.3.3",
-      "to": "2.3.4"
     }
   ]
 }
