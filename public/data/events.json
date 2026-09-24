@@ -1,6 +1,106 @@
 {
-  "updatedAt": "2026-09-23T12:26:39.416Z",
+  "updatedAt": "2026-09-24T12:26:10.358Z",
   "events": [
+    {
+      "at": "2026-09-24T12:26:10.358Z",
+      "productId": "kubernetes",
+      "productName": "Kubernetes",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 1.37.0 → 1.37.1",
+      "from": "1.37.0",
+      "to": "1.37.1"
+    },
+    {
+      "at": "2026-09-24T12:26:10.358Z",
+      "productId": "terraform",
+      "productName": "Terraform",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 1.16.3 → 1.16.4",
+      "from": "1.16.3",
+      "to": "1.16.4"
+    },
+    {
+      "at": "2026-09-24T12:26:10.358Z",
+      "productId": "terraform",
+      "productName": "Terraform",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-24T12:26:10.358Z",
+      "productId": "gitlab",
+      "productName": "GitLab",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 19.4.0 → 19.4.1",
+      "from": "19.4.0",
+      "to": "19.4.1"
+    },
+    {
+      "at": "2026-09-24T12:26:10.358Z",
+      "productId": "gitlab-runner",
+      "productName": "GitLab Runner",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 19.4.0 → 19.4.1",
+      "from": "19.4.0",
+      "to": "19.4.1"
+    },
+    {
+      "at": "2026-09-24T12:26:10.358Z",
+      "productId": "zabbix",
+      "productName": "Zabbix",
+      "category": "observability",
+      "kind": "new-version",
+      "message": "Latest 7.4.14 → 7.4.15",
+      "from": "7.4.14",
+      "to": "7.4.15"
+    },
+    {
+      "at": "2026-09-24T12:26:10.358Z",
+      "productId": "zabbix",
+      "productName": "Zabbix",
+      "category": "observability",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-24T12:26:10.358Z",
+      "productId": "mariadb",
+      "productName": "MariaDB",
+      "category": "runtime",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-24T12:26:10.358Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 9.0.4 → 9.0.5",
+      "from": "9.0.4",
+      "to": "9.0.5"
+    },
+    {
+      "at": "2026-09-24T12:26:10.358Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
     {
       "at": "2026-09-23T12:26:39.416Z",
       "productId": "rhel",
@@ -3890,106 +3990,6 @@
       "productId": "gitea",
       "productName": "Gitea",
       "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-17T07:44:10.812Z",
-      "productId": "temurin",
-      "productName": "Eclipse Temurin (JDK)",
-      "category": "runtime",
-      "kind": "verdict-down",
-      "message": "Verdict HOLD → NO-GO",
-      "from": "HOLD",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-08-16T07:23:12.621Z",
-      "productId": "fluent-bit",
-      "productName": "Fluent Bit",
-      "category": "observability",
-      "kind": "new-version",
-      "message": "Latest 5.1.0 → 5.1.1",
-      "from": "5.1.0",
-      "to": "5.1.1"
-    },
-    {
-      "at": "2026-08-16T07:23:12.621Z",
-      "productId": "go",
-      "productName": "Go",
-      "category": "runtime",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-15T07:22:55.399Z",
-      "productId": "argo-cd",
-      "productName": "Argo CD",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-15T07:22:55.399Z",
-      "productId": "argo-workflows",
-      "productName": "Argo Workflows",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 4.1.0 → 4.1.1",
-      "from": "4.1.0",
-      "to": "4.1.1"
-    },
-    {
-      "at": "2026-08-15T07:22:55.399Z",
-      "productId": "argo-workflows",
-      "productName": "Argo Workflows",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-15T07:22:55.399Z",
-      "productId": "gitlab-runner",
-      "productName": "GitLab Runner",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-15T07:22:55.399Z",
-      "productId": "nomad",
-      "productName": "Nomad",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-15T07:22:55.399Z",
-      "productId": "tomcat",
-      "productName": "Apache Tomcat",
-      "category": "runtime",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-15T07:22:55.399Z",
-      "productId": "ionic",
-      "productName": "Ionic Framework",
-      "category": "framework",
       "kind": "verdict-up",
       "message": "Verdict HOLD → GO",
       "from": "HOLD",
