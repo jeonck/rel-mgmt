@@ -1,6 +1,46 @@
 {
-  "updatedAt": "2026-09-24T12:26:10.358Z",
+  "updatedAt": "2026-09-25T12:25:47.329Z",
   "events": [
+    {
+      "at": "2026-09-25T12:25:47.329Z",
+      "productId": "containerd",
+      "productName": "containerd",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 2.4.0 → 2.4.1",
+      "from": "2.4.0",
+      "to": "2.4.1"
+    },
+    {
+      "at": "2026-09-25T12:25:47.329Z",
+      "productId": "etcd",
+      "productName": "etcd",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-25T12:25:47.329Z",
+      "productId": "gitlab",
+      "productName": "GitLab",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-25T12:25:47.329Z",
+      "productId": "prometheus",
+      "productName": "Prometheus",
+      "category": "observability",
+      "kind": "new-version",
+      "message": "Latest 3.14.0 → 3.15.0",
+      "from": "3.14.0",
+      "to": "3.15.0"
+    },
     {
       "at": "2026-09-24T12:26:10.358Z",
       "productId": "kubernetes",
@@ -3954,46 +3994,6 @@
       "message": "Verdict NO-GO → HOLD",
       "from": "NO-GO",
       "to": "HOLD"
-    },
-    {
-      "at": "2026-08-18T07:29:51.386Z",
-      "productId": "qt",
-      "productName": "Qt",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 6.11.1 → 6.11.2",
-      "from": "6.11.1",
-      "to": "6.11.2"
-    },
-    {
-      "at": "2026-08-17T07:44:10.812Z",
-      "productId": "helm",
-      "productName": "Helm",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-17T07:44:10.812Z",
-      "productId": "rook",
-      "productName": "Rook",
-      "category": "storage",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-17T07:44:10.812Z",
-      "productId": "gitea",
-      "productName": "Gitea",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
     }
   ]
 }
