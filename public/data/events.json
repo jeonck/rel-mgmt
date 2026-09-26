@@ -1,6 +1,66 @@
 {
-  "updatedAt": "2026-09-25T12:25:47.329Z",
+  "updatedAt": "2026-09-26T11:58:06.096Z",
   "events": [
+    {
+      "at": "2026-09-26T11:58:06.096Z",
+      "productId": "kubernetes",
+      "productName": "Kubernetes",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-26T11:58:06.096Z",
+      "productId": "terraform",
+      "productName": "Terraform",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-26T11:58:06.096Z",
+      "productId": "actions-runner",
+      "productName": "GitHub Actions Runner",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-26T11:58:06.096Z",
+      "productId": "vector",
+      "productName": "Vector",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-26T11:58:06.096Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-09-26T11:58:06.096Z",
+      "productId": "maui",
+      "productName": ".NET MAUI",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
     {
       "at": "2026-09-25T12:25:47.329Z",
       "productId": "containerd",
@@ -3934,66 +3994,6 @@
       "message": "Latest 0.158.0 → 0.159.0",
       "from": "0.158.0",
       "to": "0.159.0"
-    },
-    {
-      "at": "2026-08-18T07:29:51.386Z",
-      "productId": "otel-collector",
-      "productName": "OpenTelemetry Collector",
-      "category": "observability",
-      "kind": "verdict-down",
-      "message": "Verdict HOLD → NO-GO",
-      "from": "HOLD",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-08-18T07:29:51.386Z",
-      "productId": "postgresql",
-      "productName": "PostgreSQL",
-      "category": "runtime",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-18T07:29:51.386Z",
-      "productId": "redis",
-      "productName": "Redis",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 8.10.0 → 8.10.1",
-      "from": "8.10.0",
-      "to": "8.10.1"
-    },
-    {
-      "at": "2026-08-18T07:29:51.386Z",
-      "productId": "rabbitmq",
-      "productName": "RabbitMQ",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 4.3.4 → 4.3.5",
-      "from": "4.3.4",
-      "to": "4.3.5"
-    },
-    {
-      "at": "2026-08-18T07:29:51.386Z",
-      "productId": "rabbitmq",
-      "productName": "RabbitMQ",
-      "category": "runtime",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-18T07:29:51.386Z",
-      "productId": "react-native",
-      "productName": "React Native",
-      "category": "framework",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
     }
   ]
 }
