@@ -1,6 +1,26 @@
 {
-  "updatedAt": "2026-09-27T12:35:31.821Z",
+  "updatedAt": "2026-09-28T14:43:36.514Z",
   "events": [
+    {
+      "at": "2026-09-28T14:43:36.514Z",
+      "productId": "otel-collector",
+      "productName": "OpenTelemetry Collector",
+      "category": "observability",
+      "kind": "new-version",
+      "message": "Latest 0.161.0 → 0.162.0",
+      "from": "0.161.0",
+      "to": "0.162.0"
+    },
+    {
+      "at": "2026-09-28T14:43:36.514Z",
+      "productId": "otel-collector",
+      "productName": "OpenTelemetry Collector",
+      "category": "observability",
+      "kind": "verdict-down",
+      "message": "Verdict HOLD → NO-GO",
+      "from": "HOLD",
+      "to": "NO-GO"
+    },
     {
       "at": "2026-09-27T12:35:31.821Z",
       "productId": "cisco-ios-xe",
@@ -3974,26 +3994,6 @@
       "message": "Verdict HOLD → GO",
       "from": "HOLD",
       "to": "GO"
-    },
-    {
-      "at": "2026-08-19T07:30:59.428Z",
-      "productId": "rabbitmq",
-      "productName": "RabbitMQ",
-      "category": "runtime",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-19T07:30:59.428Z",
-      "productId": "electron",
-      "productName": "Electron",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 43.4.0 → 43.4.1",
-      "from": "43.4.0",
-      "to": "43.4.1"
     }
   ]
 }
