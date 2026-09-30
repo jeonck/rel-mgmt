@@ -1,6 +1,146 @@
 {
-  "updatedAt": "2026-09-29T13:33:35.840Z",
+  "updatedAt": "2026-09-30T13:11:47.146Z",
   "events": [
+    {
+      "at": "2026-09-30T13:11:47.146Z",
+      "productId": "podman",
+      "productName": "Podman",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 6.1.2 → 6.1.3",
+      "from": "6.1.2",
+      "to": "6.1.3"
+    },
+    {
+      "at": "2026-09-30T13:11:47.146Z",
+      "productId": "podman",
+      "productName": "Podman",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-30T13:11:47.146Z",
+      "productId": "rook",
+      "productName": "Rook",
+      "category": "storage",
+      "kind": "new-version",
+      "message": "Latest 1.20.7 → 1.20.8",
+      "from": "1.20.7",
+      "to": "1.20.8"
+    },
+    {
+      "at": "2026-09-30T13:11:47.146Z",
+      "productId": "rook",
+      "productName": "Rook",
+      "category": "storage",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-09-30T13:11:47.146Z",
+      "productId": "jenkins",
+      "productName": "Jenkins",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 2.583 → 2.584",
+      "from": "2.583",
+      "to": "2.584"
+    },
+    {
+      "at": "2026-09-30T13:11:47.146Z",
+      "productId": "gitea",
+      "productName": "Gitea",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 1.27.3 → 28.0.0",
+      "from": "1.27.3",
+      "to": "28.0.0"
+    },
+    {
+      "at": "2026-09-30T13:11:47.146Z",
+      "productId": "gitea",
+      "productName": "Gitea",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-09-30T13:11:47.146Z",
+      "productId": "nexus",
+      "productName": "Sonatype Nexus Repository",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 3.96.3-01 → 3.96.4",
+      "from": "3.96.3-01",
+      "to": "3.96.4"
+    },
+    {
+      "at": "2026-09-30T13:11:47.146Z",
+      "productId": "opensearch",
+      "productName": "OpenSearch",
+      "category": "observability",
+      "kind": "new-version",
+      "message": "Latest 3.8.0 → 3.9.0",
+      "from": "3.8.0",
+      "to": "3.9.0"
+    },
+    {
+      "at": "2026-09-30T13:11:47.146Z",
+      "productId": "opensearch",
+      "productName": "OpenSearch",
+      "category": "observability",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-09-30T13:11:47.146Z",
+      "productId": "electron",
+      "productName": "Electron",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 44.4.5 → 44.5.1",
+      "from": "44.4.5",
+      "to": "44.5.1"
+    },
+    {
+      "at": "2026-09-30T13:11:47.146Z",
+      "productId": "qt",
+      "productName": "Qt",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 6.11.2 → 6.12.0",
+      "from": "6.11.2",
+      "to": "6.12.0"
+    },
+    {
+      "at": "2026-09-30T13:11:47.146Z",
+      "productId": "fastapi",
+      "productName": "FastAPI",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 0.141.1 → 0.142.2",
+      "from": "0.141.1",
+      "to": "0.142.2"
+    },
+    {
+      "at": "2026-09-30T13:11:47.146Z",
+      "productId": "fastapi",
+      "productName": "FastAPI",
+      "category": "framework",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
     {
       "at": "2026-09-29T13:33:35.840Z",
       "productId": "longhorn",
@@ -3854,146 +3994,6 @@
       "message": "Latest 1.31.3 → 1.31.4",
       "from": "1.31.3",
       "to": "1.31.4"
-    },
-    {
-      "at": "2026-08-20T07:33:13.829Z",
-      "productId": "nginx",
-      "productName": "nginx",
-      "category": "runtime",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-20T07:33:13.829Z",
-      "productId": "flutter",
-      "productName": "Flutter",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 3.47.0 → 3.47.1",
-      "from": "3.47.0",
-      "to": "3.47.1"
-    },
-    {
-      "at": "2026-08-20T07:33:13.829Z",
-      "productId": "flutter",
-      "productName": "Flutter",
-      "category": "framework",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-20T07:33:13.829Z",
-      "productId": "ionic",
-      "productName": "Ionic Framework",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 8.8.18 → 9.0.0",
-      "from": "8.8.18",
-      "to": "9.0.0"
-    },
-    {
-      "at": "2026-08-20T07:33:13.829Z",
-      "productId": "ionic",
-      "productName": "Ionic Framework",
-      "category": "framework",
-      "kind": "verdict-down",
-      "message": "Verdict GO → NO-GO",
-      "from": "GO",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-08-19T07:30:59.428Z",
-      "productId": "proxmox-ve",
-      "productName": "Proxmox VE",
-      "category": "platform",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-19T07:30:59.428Z",
-      "productId": "traefik",
-      "productName": "Traefik",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 3.7.10 → 3.7.11",
-      "from": "3.7.10",
-      "to": "3.7.11"
-    },
-    {
-      "at": "2026-08-19T07:30:59.428Z",
-      "productId": "traefik",
-      "productName": "Traefik",
-      "category": "container",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-19T07:30:59.428Z",
-      "productId": "podman",
-      "productName": "Podman",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-19T07:30:59.428Z",
-      "productId": "cilium",
-      "productName": "Cilium",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 1.20.0 → 1.20.1",
-      "from": "1.20.0",
-      "to": "1.20.1"
-    },
-    {
-      "at": "2026-08-19T07:30:59.428Z",
-      "productId": "jenkins",
-      "productName": "Jenkins",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 2.577 → 2.578",
-      "from": "2.577",
-      "to": "2.578"
-    },
-    {
-      "at": "2026-08-19T07:30:59.428Z",
-      "productId": "keycloak",
-      "productName": "Keycloak",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 26.7.1 → 26.7.2",
-      "from": "26.7.1",
-      "to": "26.7.2"
-    },
-    {
-      "at": "2026-08-19T07:30:59.428Z",
-      "productId": "keycloak",
-      "productName": "Keycloak",
-      "category": "iac-cicd",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-19T07:30:59.428Z",
-      "productId": "prometheus",
-      "productName": "Prometheus",
-      "category": "observability",
-      "kind": "new-version",
-      "message": "Latest 3.13.2 → 3.14.0",
-      "from": "3.13.2",
-      "to": "3.14.0"
     }
   ]
 }
