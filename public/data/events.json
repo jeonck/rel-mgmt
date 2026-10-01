@@ -1,6 +1,236 @@
 {
-  "updatedAt": "2026-09-30T13:11:47.146Z",
+  "updatedAt": "2026-10-01T14:01:36.547Z",
   "events": [
+    {
+      "at": "2026-10-01T14:01:36.547Z",
+      "productId": "nutanix-aos",
+      "productName": "Nutanix AOS",
+      "category": "platform",
+      "kind": "new-version",
+      "message": "Latest 7.6.0.6 → 7.6.0.8",
+      "from": "7.6.0.6",
+      "to": "7.6.0.8"
+    },
+    {
+      "at": "2026-10-01T14:01:36.547Z",
+      "productId": "nutanix-aos",
+      "productName": "Nutanix AOS",
+      "category": "platform",
+      "kind": "verdict-down",
+      "message": "Verdict HOLD → NO-GO",
+      "from": "HOLD",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-10-01T14:01:36.547Z",
+      "productId": "docker-engine",
+      "productName": "Docker Engine",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 29.8.1 → 29.8.2",
+      "from": "29.8.1",
+      "to": "29.8.2"
+    },
+    {
+      "at": "2026-10-01T14:01:36.547Z",
+      "productId": "docker-engine",
+      "productName": "Docker Engine",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-01T14:01:36.547Z",
+      "productId": "istio",
+      "productName": "Istio",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-01T14:01:36.547Z",
+      "productId": "flux",
+      "productName": "Flux CD",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 2.9.5 → 2.9.6",
+      "from": "2.9.5",
+      "to": "2.9.6"
+    },
+    {
+      "at": "2026-10-01T14:01:36.547Z",
+      "productId": "flux",
+      "productName": "Flux CD",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-01T14:01:36.547Z",
+      "productId": "opentofu",
+      "productName": "OpenTofu",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 1.12.6 → 1.13.0",
+      "from": "1.12.6",
+      "to": "1.13.0"
+    },
+    {
+      "at": "2026-10-01T14:01:36.547Z",
+      "productId": "opentofu",
+      "productName": "OpenTofu",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-10-01T14:01:36.547Z",
+      "productId": "keycloak",
+      "productName": "Keycloak",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 26.7.4 → 26.8.0",
+      "from": "26.7.4",
+      "to": "26.8.0"
+    },
+    {
+      "at": "2026-10-01T14:01:36.547Z",
+      "productId": "keycloak",
+      "productName": "Keycloak",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-10-01T14:01:36.547Z",
+      "productId": "tekton",
+      "productName": "Tekton Pipelines",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 1.16.0 → 1.17.0",
+      "from": "1.16.0",
+      "to": "1.17.0"
+    },
+    {
+      "at": "2026-10-01T14:01:36.547Z",
+      "productId": "tekton",
+      "productName": "Tekton Pipelines",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict HOLD → NO-GO",
+      "from": "HOLD",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-10-01T14:01:36.547Z",
+      "productId": "nexus",
+      "productName": "Sonatype Nexus Repository",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 3.96.4 → 3.96.4-01",
+      "from": "3.96.4",
+      "to": "3.96.4-01"
+    },
+    {
+      "at": "2026-10-01T14:01:36.547Z",
+      "productId": "fluent-bit",
+      "productName": "Fluent Bit",
+      "category": "observability",
+      "kind": "new-version",
+      "message": "Latest 5.1.2 → 5.1.3",
+      "from": "5.1.2",
+      "to": "5.1.3"
+    },
+    {
+      "at": "2026-10-01T14:01:36.547Z",
+      "productId": "fluent-bit",
+      "productName": "Fluent Bit",
+      "category": "observability",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-01T14:01:36.547Z",
+      "productId": "python",
+      "productName": "Python",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 3.14.7 → 3.14.8",
+      "from": "3.14.7",
+      "to": "3.14.8"
+    },
+    {
+      "at": "2026-10-01T14:01:36.547Z",
+      "productId": "mongodb",
+      "productName": "MongoDB",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 8.3.11 → 9.0.2",
+      "from": "8.3.11",
+      "to": "9.0.2"
+    },
+    {
+      "at": "2026-10-01T14:01:36.547Z",
+      "productId": "haproxy",
+      "productName": "HAProxy",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 3.5-dev7 → 3.5-dev8",
+      "from": "3.5-dev7",
+      "to": "3.5-dev8"
+    },
+    {
+      "at": "2026-10-01T14:01:36.547Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 9.0.5 → 9.0.6",
+      "from": "9.0.5",
+      "to": "9.0.6"
+    },
+    {
+      "at": "2026-10-01T14:01:36.547Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-01T14:01:36.547Z",
+      "productId": "tauri",
+      "productName": "Tauri",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 2.12.0 → 2.12.1",
+      "from": "2.12.0",
+      "to": "2.12.1"
+    },
+    {
+      "at": "2026-10-01T14:01:36.547Z",
+      "productId": "tauri",
+      "productName": "Tauri",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
     {
       "at": "2026-09-30T13:11:47.146Z",
       "productId": "podman",
@@ -3766,234 +3996,6 @@
       "message": "Verdict GO → HOLD",
       "from": "GO",
       "to": "HOLD"
-    },
-    {
-      "at": "2026-08-21T07:34:58.832Z",
-      "productId": "splunk",
-      "productName": "Splunk Enterprise",
-      "category": "observability",
-      "kind": "new-cve",
-      "message": "28 new CVEs recorded against 10.4.0"
-    },
-    {
-      "at": "2026-08-21T07:34:58.832Z",
-      "productId": "python",
-      "productName": "Python",
-      "category": "runtime",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-21T07:34:58.832Z",
-      "productId": "go",
-      "productName": "Go",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 1.26.7 → 1.27.0",
-      "from": "1.26.7",
-      "to": "1.27.0"
-    },
-    {
-      "at": "2026-08-21T07:34:58.832Z",
-      "productId": "go",
-      "productName": "Go",
-      "category": "runtime",
-      "kind": "verdict-down",
-      "message": "Verdict HOLD → NO-GO",
-      "from": "HOLD",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-08-21T07:34:58.832Z",
-      "productId": "spring-boot",
-      "productName": "Spring Boot",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 4.1.0 → 4.1.1",
-      "from": "4.1.0",
-      "to": "4.1.1"
-    },
-    {
-      "at": "2026-08-21T07:34:58.832Z",
-      "productId": "spring-boot",
-      "productName": "Spring Boot",
-      "category": "runtime",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-21T07:34:58.832Z",
-      "productId": "maui",
-      "productName": ".NET MAUI",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 10.0.90 → 10.0.100",
-      "from": "10.0.90",
-      "to": "10.0.100"
-    },
-    {
-      "at": "2026-08-21T07:34:58.832Z",
-      "productId": "maui",
-      "productName": ".NET MAUI",
-      "category": "framework",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-21T07:34:58.832Z",
-      "productId": "qt",
-      "productName": "Qt",
-      "category": "framework",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-20T07:33:13.829Z",
-      "productId": "ceph",
-      "productName": "Ceph",
-      "category": "storage",
-      "kind": "new-version",
-      "message": "Latest 20.2.3 → 20.2.4",
-      "from": "20.2.3",
-      "to": "20.2.4"
-    },
-    {
-      "at": "2026-08-20T07:33:13.829Z",
-      "productId": "ceph",
-      "productName": "Ceph",
-      "category": "storage",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-20T07:33:13.829Z",
-      "productId": "rook",
-      "productName": "Rook",
-      "category": "storage",
-      "kind": "new-version",
-      "message": "Latest 1.20.4 → 1.20.5",
-      "from": "1.20.4",
-      "to": "1.20.5"
-    },
-    {
-      "at": "2026-08-20T07:33:13.829Z",
-      "productId": "rook",
-      "productName": "Rook",
-      "category": "storage",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-20T07:33:13.829Z",
-      "productId": "terraform",
-      "productName": "Terraform",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 1.15.8 → 1.15.9",
-      "from": "1.15.8",
-      "to": "1.15.9"
-    },
-    {
-      "at": "2026-08-20T07:33:13.829Z",
-      "productId": "terraform",
-      "productName": "Terraform",
-      "category": "iac-cicd",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-20T07:33:13.829Z",
-      "productId": "opentofu",
-      "productName": "OpenTofu",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 1.12.5 → 1.12.6",
-      "from": "1.12.5",
-      "to": "1.12.6"
-    },
-    {
-      "at": "2026-08-20T07:33:13.829Z",
-      "productId": "opentofu",
-      "productName": "OpenTofu",
-      "category": "iac-cicd",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-20T07:33:13.829Z",
-      "productId": "actions-runner",
-      "productName": "GitHub Actions Runner",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-20T07:33:13.829Z",
-      "productId": "zabbix",
-      "productName": "Zabbix",
-      "category": "observability",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-20T07:33:13.829Z",
-      "productId": "go",
-      "productName": "Go",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 1.26.6 → 1.26.7",
-      "from": "1.26.6",
-      "to": "1.26.7"
-    },
-    {
-      "at": "2026-08-20T07:33:13.829Z",
-      "productId": "go",
-      "productName": "Go",
-      "category": "runtime",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-20T07:33:13.829Z",
-      "productId": "redis",
-      "productName": "Redis",
-      "category": "runtime",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-20T07:33:13.829Z",
-      "productId": "nginx",
-      "productName": "nginx",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 1.31.3 → 1.31.4",
-      "from": "1.31.3",
-      "to": "1.31.4"
     }
   ]
 }
