@@ -1,6 +1,154 @@
 {
-  "updatedAt": "2026-10-01T14:01:36.547Z",
+  "updatedAt": "2026-10-02T13:22:38.419Z",
   "events": [
+    {
+      "at": "2026-10-02T13:22:38.419Z",
+      "productId": "envoy",
+      "productName": "Envoy",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 1.39.1 → 1.39.2",
+      "from": "1.39.1",
+      "to": "1.39.2"
+    },
+    {
+      "at": "2026-10-02T13:22:38.419Z",
+      "productId": "envoy",
+      "productName": "Envoy",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-02T13:22:38.419Z",
+      "productId": "podman",
+      "productName": "Podman",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-02T13:22:38.419Z",
+      "productId": "calico",
+      "productName": "Calico",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 3.32.2 → 3.33.0",
+      "from": "3.32.2",
+      "to": "3.33.0"
+    },
+    {
+      "at": "2026-10-02T13:22:38.419Z",
+      "productId": "calico",
+      "productName": "Calico",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-10-02T13:22:38.419Z",
+      "productId": "terraform",
+      "productName": "Terraform",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 1.16.4 → 1.16.5",
+      "from": "1.16.4",
+      "to": "1.16.5"
+    },
+    {
+      "at": "2026-10-02T13:22:38.419Z",
+      "productId": "terraform",
+      "productName": "Terraform",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-02T13:22:38.419Z",
+      "productId": "opentofu",
+      "productName": "OpenTofu",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 1.13.0 → 1.13.1",
+      "from": "1.13.0",
+      "to": "1.13.1"
+    },
+    {
+      "at": "2026-10-02T13:22:38.419Z",
+      "productId": "opentofu",
+      "productName": "OpenTofu",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-02T13:22:38.419Z",
+      "productId": "sonarqube",
+      "productName": "SonarQube Community",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-02T13:22:38.419Z",
+      "productId": "grafana",
+      "productName": "Grafana",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-02T13:22:38.419Z",
+      "productId": "mariadb",
+      "productName": "MariaDB",
+      "category": "runtime",
+      "kind": "eol-soon",
+      "message": "90 days of support left — plan the upgrade"
+    },
+    {
+      "at": "2026-10-02T13:22:38.419Z",
+      "productId": "jboss-eap",
+      "productName": "Red Hat JBoss EAP",
+      "category": "runtime",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-02T13:22:38.419Z",
+      "productId": "flutter",
+      "productName": "Flutter",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 3.47.5 → 3.47.6",
+      "from": "3.47.5",
+      "to": "3.47.6"
+    },
+    {
+      "at": "2026-10-02T13:22:38.419Z",
+      "productId": "flutter",
+      "productName": "Flutter",
+      "category": "framework",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
     {
       "at": "2026-10-01T14:01:36.547Z",
       "productId": "nutanix-aos",
@@ -3846,156 +3994,6 @@
       "category": "observability",
       "kind": "new-cve",
       "message": "31 new CVEs recorded against 10.4.0"
-    },
-    {
-      "at": "2026-08-22T07:23:40.223Z",
-      "productId": "nginx",
-      "productName": "nginx",
-      "category": "runtime",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-22T07:23:40.223Z",
-      "productId": "haproxy",
-      "productName": "HAProxy",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 3.5-dev4 → 3.5-dev5",
-      "from": "3.5-dev4",
-      "to": "3.5-dev5"
-    },
-    {
-      "at": "2026-08-22T07:23:40.223Z",
-      "productId": "cordova-android",
-      "productName": "Apache Cordova (Android)",
-      "category": "framework",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-21T07:34:58.832Z",
-      "productId": "kubernetes",
-      "productName": "Kubernetes",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 1.36.3 → 1.36.4",
-      "from": "1.36.3",
-      "to": "1.36.4"
-    },
-    {
-      "at": "2026-08-21T07:34:58.832Z",
-      "productId": "kubernetes",
-      "productName": "Kubernetes",
-      "category": "container",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-21T07:34:58.832Z",
-      "productId": "traefik",
-      "productName": "Traefik",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-21T07:34:58.832Z",
-      "productId": "cilium",
-      "productName": "Cilium",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-21T07:34:58.832Z",
-      "productId": "ceph",
-      "productName": "Ceph",
-      "category": "storage",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-21T07:34:58.832Z",
-      "productId": "rook",
-      "productName": "Rook",
-      "category": "storage",
-      "kind": "new-version",
-      "message": "Latest 1.20.5 → 1.20.6",
-      "from": "1.20.5",
-      "to": "1.20.6"
-    },
-    {
-      "at": "2026-08-21T07:34:58.832Z",
-      "productId": "gitlab",
-      "productName": "GitLab",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 19.2.4 → 19.3.0",
-      "from": "19.2.4",
-      "to": "19.3.0"
-    },
-    {
-      "at": "2026-08-21T07:34:58.832Z",
-      "productId": "gitlab",
-      "productName": "GitLab",
-      "category": "iac-cicd",
-      "kind": "verdict-down",
-      "message": "Verdict HOLD → NO-GO",
-      "from": "HOLD",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-08-21T07:34:58.832Z",
-      "productId": "gitlab-runner",
-      "productName": "GitLab Runner",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 19.2.2 → 19.3.0",
-      "from": "19.2.2",
-      "to": "19.3.0"
-    },
-    {
-      "at": "2026-08-21T07:34:58.832Z",
-      "productId": "gitlab-runner",
-      "productName": "GitLab Runner",
-      "category": "iac-cicd",
-      "kind": "verdict-down",
-      "message": "Verdict HOLD → NO-GO",
-      "from": "HOLD",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-08-21T07:34:58.832Z",
-      "productId": "elasticsearch",
-      "productName": "Elasticsearch",
-      "category": "observability",
-      "kind": "new-version",
-      "message": "Latest 9.5.1 → 9.5.2",
-      "from": "9.5.1",
-      "to": "9.5.2"
-    },
-    {
-      "at": "2026-08-21T07:34:58.832Z",
-      "productId": "elasticsearch",
-      "productName": "Elasticsearch",
-      "category": "observability",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
     }
   ]
 }
