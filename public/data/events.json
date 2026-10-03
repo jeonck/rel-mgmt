@@ -1,6 +1,94 @@
 {
-  "updatedAt": "2026-10-02T13:22:38.419Z",
+  "updatedAt": "2026-10-03T12:08:38.452Z",
   "events": [
+    {
+      "at": "2026-10-03T12:08:38.452Z",
+      "productId": "docker-engine",
+      "productName": "Docker Engine",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-03T12:08:38.452Z",
+      "productId": "rook",
+      "productName": "Rook",
+      "category": "storage",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-03T12:08:38.452Z",
+      "productId": "terraform",
+      "productName": "Terraform",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-03T12:08:38.452Z",
+      "productId": "mariadb",
+      "productName": "MariaDB",
+      "category": "runtime",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-03T12:08:38.452Z",
+      "productId": "apache-http-server",
+      "productName": "Apache HTTP Server",
+      "category": "runtime",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-03T12:08:38.452Z",
+      "productId": "apache-http-server",
+      "productName": "Apache HTTP Server",
+      "category": "runtime",
+      "kind": "new-cve",
+      "message": "6 new CVEs recorded against 2.4.68"
+    },
+    {
+      "at": "2026-10-03T12:08:38.452Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-03T12:08:38.452Z",
+      "productId": "qt",
+      "productName": "Qt",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-03T12:08:38.452Z",
+      "productId": "fastapi",
+      "productName": "FastAPI",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
     {
       "at": "2026-10-02T13:22:38.419Z",
       "productId": "envoy",
@@ -3906,94 +3994,6 @@
       "message": "Latest 3.95.2 → 3.95.2-01",
       "from": "3.95.2",
       "to": "3.95.2-01"
-    },
-    {
-      "at": "2026-08-23T07:25:52.077Z",
-      "productId": "elasticsearch",
-      "productName": "Elasticsearch",
-      "category": "observability",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-23T07:25:52.077Z",
-      "productId": "spring-boot",
-      "productName": "Spring Boot",
-      "category": "runtime",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-23T07:25:52.077Z",
-      "productId": "flutter",
-      "productName": "Flutter",
-      "category": "framework",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-22T07:23:40.223Z",
-      "productId": "argo-workflows",
-      "productName": "Argo Workflows",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 4.1.1 → 4.1.2",
-      "from": "4.1.1",
-      "to": "4.1.2"
-    },
-    {
-      "at": "2026-08-22T07:23:40.223Z",
-      "productId": "argo-workflows",
-      "productName": "Argo Workflows",
-      "category": "container",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-22T07:23:40.223Z",
-      "productId": "terraform",
-      "productName": "Terraform",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-22T07:23:40.223Z",
-      "productId": "keycloak",
-      "productName": "Keycloak",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-22T07:23:40.223Z",
-      "productId": "nexus",
-      "productName": "Sonatype Nexus Repository",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 3.95.1-01 → 3.95.2",
-      "from": "3.95.1-01",
-      "to": "3.95.2"
-    },
-    {
-      "at": "2026-08-22T07:23:40.223Z",
-      "productId": "splunk",
-      "productName": "Splunk Enterprise",
-      "category": "observability",
-      "kind": "new-cve",
-      "message": "31 new CVEs recorded against 10.4.0"
     }
   ]
 }
