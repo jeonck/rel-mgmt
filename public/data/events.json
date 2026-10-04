@@ -1,6 +1,86 @@
 {
-  "updatedAt": "2026-10-03T12:08:38.452Z",
+  "updatedAt": "2026-10-04T12:57:15.877Z",
   "events": [
+    {
+      "at": "2026-10-04T12:57:15.877Z",
+      "productId": "envoy",
+      "productName": "Envoy",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-04T12:57:15.877Z",
+      "productId": "flux",
+      "productName": "Flux CD",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-04T12:57:15.877Z",
+      "productId": "opentofu",
+      "productName": "OpenTofu",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-04T12:57:15.877Z",
+      "productId": "fluent-bit",
+      "productName": "Fluent Bit",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-04T12:57:15.877Z",
+      "productId": "apache-http-server",
+      "productName": "Apache HTTP Server",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 2.4.68 → 2.4.69",
+      "from": "2.4.68",
+      "to": "2.4.69"
+    },
+    {
+      "at": "2026-10-04T12:57:15.877Z",
+      "productId": "apache-http-server",
+      "productName": "Apache HTTP Server",
+      "category": "runtime",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-04T12:57:15.877Z",
+      "productId": "tauri",
+      "productName": "Tauri",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-04T12:57:15.877Z",
+      "productId": "qt",
+      "productName": "Qt",
+      "category": "framework",
+      "kind": "verdict-down",
+      "message": "Verdict HOLD → NO-GO",
+      "from": "HOLD",
+      "to": "NO-GO"
+    },
     {
       "at": "2026-10-03T12:08:38.452Z",
       "productId": "docker-engine",
@@ -3914,86 +3994,6 @@
       "message": "Latest 43.4.1 → 44.0.0",
       "from": "43.4.1",
       "to": "44.0.0"
-    },
-    {
-      "at": "2026-08-25T07:36:24.387Z",
-      "productId": "electron",
-      "productName": "Electron",
-      "category": "framework",
-      "kind": "verdict-down",
-      "message": "Verdict HOLD → NO-GO",
-      "from": "HOLD",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-08-24T07:50:34.059Z",
-      "productId": "argo-workflows",
-      "productName": "Argo Workflows",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-24T07:50:34.059Z",
-      "productId": "rook",
-      "productName": "Rook",
-      "category": "storage",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-24T07:50:34.059Z",
-      "productId": "maui",
-      "productName": ".NET MAUI",
-      "category": "framework",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-24T07:50:34.059Z",
-      "productId": "qt",
-      "productName": "Qt",
-      "category": "framework",
-      "kind": "verdict-down",
-      "message": "Verdict HOLD → NO-GO",
-      "from": "HOLD",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-08-23T07:25:52.077Z",
-      "productId": "kubernetes",
-      "productName": "Kubernetes",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-23T07:25:52.077Z",
-      "productId": "packer",
-      "productName": "Packer",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-23T07:25:52.077Z",
-      "productId": "nexus",
-      "productName": "Sonatype Nexus Repository",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 3.95.2 → 3.95.2-01",
-      "from": "3.95.2",
-      "to": "3.95.2-01"
     }
   ]
 }
