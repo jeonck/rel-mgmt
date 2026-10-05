@@ -1,6 +1,56 @@
 {
-  "updatedAt": "2026-10-04T12:57:15.877Z",
+  "updatedAt": "2026-10-05T15:25:05.581Z",
   "events": [
+    {
+      "at": "2026-10-05T15:25:05.581Z",
+      "productId": "ansible-core",
+      "productName": "Ansible Core",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 2.21.4 → 2.21.5",
+      "from": "2.21.4",
+      "to": "2.21.5"
+    },
+    {
+      "at": "2026-10-05T15:25:05.581Z",
+      "productId": "sonarqube",
+      "productName": "SonarQube Community",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 26.9.0.129388 → 26.10.0.132816",
+      "from": "26.9.0.129388",
+      "to": "26.10.0.132816"
+    },
+    {
+      "at": "2026-10-05T15:25:05.581Z",
+      "productId": "sonarqube",
+      "productName": "SonarQube Community",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-10-05T15:25:05.581Z",
+      "productId": "otel-collector",
+      "productName": "OpenTelemetry Collector",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-05T15:25:05.581Z",
+      "productId": "flutter",
+      "productName": "Flutter",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
     {
       "at": "2026-10-04T12:57:15.877Z",
       "productId": "envoy",
@@ -3944,56 +3994,6 @@
       "message": "Latest 2.578 → 2.579",
       "from": "2.578",
       "to": "2.579"
-    },
-    {
-      "at": "2026-08-25T07:36:24.387Z",
-      "productId": "gitlab-runner",
-      "productName": "GitLab Runner",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 19.3.0 → 19.3.1",
-      "from": "19.3.0",
-      "to": "19.3.1"
-    },
-    {
-      "at": "2026-08-25T07:36:24.387Z",
-      "productId": "grafana",
-      "productName": "Grafana",
-      "category": "observability",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-25T07:36:24.387Z",
-      "productId": "otel-collector",
-      "productName": "OpenTelemetry Collector",
-      "category": "observability",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-25T07:36:24.387Z",
-      "productId": "mariadb",
-      "productName": "MariaDB",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 12.3.2 → 12.3.3",
-      "from": "12.3.2",
-      "to": "12.3.3"
-    },
-    {
-      "at": "2026-08-25T07:36:24.387Z",
-      "productId": "electron",
-      "productName": "Electron",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 43.4.1 → 44.0.0",
-      "from": "43.4.1",
-      "to": "44.0.0"
     }
   ]
 }
