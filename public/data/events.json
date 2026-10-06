@@ -1,6 +1,116 @@
 {
-  "updatedAt": "2026-10-05T15:25:05.581Z",
+  "updatedAt": "2026-10-06T13:47:23.997Z",
   "events": [
+    {
+      "at": "2026-10-06T13:47:23.997Z",
+      "productId": "harbor",
+      "productName": "Harbor",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 2.15.2 → 2.15.3",
+      "from": "2.15.2",
+      "to": "2.15.3"
+    },
+    {
+      "at": "2026-10-06T13:47:23.997Z",
+      "productId": "harbor",
+      "productName": "Harbor",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-06T13:47:23.997Z",
+      "productId": "traefik",
+      "productName": "Traefik",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 3.7.13 → 3.7.14",
+      "from": "3.7.13",
+      "to": "3.7.14"
+    },
+    {
+      "at": "2026-10-06T13:47:23.997Z",
+      "productId": "traefik",
+      "productName": "Traefik",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-06T13:47:23.997Z",
+      "productId": "longhorn",
+      "productName": "Longhorn",
+      "category": "storage",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-06T13:47:23.997Z",
+      "productId": "jenkins",
+      "productName": "Jenkins",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 2.584 → 2.585",
+      "from": "2.584",
+      "to": "2.585"
+    },
+    {
+      "at": "2026-10-06T13:47:23.997Z",
+      "productId": "sonarqube",
+      "productName": "SonarQube Community",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 26.10.0.132816 → 26.9.0.129388",
+      "from": "26.10.0.132816",
+      "to": "26.9.0.129388"
+    },
+    {
+      "at": "2026-10-06T13:47:23.997Z",
+      "productId": "sonarqube",
+      "productName": "SonarQube Community",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → GO",
+      "from": "NO-GO",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-06T13:47:23.997Z",
+      "productId": "opensearch",
+      "productName": "OpenSearch",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-06T13:47:23.997Z",
+      "productId": "jira-software",
+      "productName": "Jira Software (Data Center)",
+      "category": "enterprise",
+      "kind": "new-version",
+      "message": "Latest 11.3.11 → 11.3.12",
+      "from": "11.3.11",
+      "to": "11.3.12"
+    },
+    {
+      "at": "2026-10-06T13:47:23.997Z",
+      "productId": "confluence",
+      "productName": "Confluence (Data Center)",
+      "category": "enterprise",
+      "kind": "new-version",
+      "message": "Latest 10.2.18 → 10.2.19",
+      "from": "10.2.18",
+      "to": "10.2.19"
+    },
     {
       "at": "2026-10-05T15:25:05.581Z",
       "productId": "ansible-core",
@@ -3884,116 +3994,6 @@
       "message": "Verdict GO → NO-GO",
       "from": "GO",
       "to": "NO-GO"
-    },
-    {
-      "at": "2026-08-27T17:58:57.476Z",
-      "productId": "nodejs",
-      "productName": "Node.js",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 26.7.0 → 26.8.1",
-      "from": "26.7.0",
-      "to": "26.8.1"
-    },
-    {
-      "at": "2026-08-27T17:58:57.476Z",
-      "productId": "react-native",
-      "productName": "React Native",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 0.87.0 → 0.87.1",
-      "from": "0.87.0",
-      "to": "0.87.1"
-    },
-    {
-      "at": "2026-08-27T17:58:57.476Z",
-      "productId": "flutter",
-      "productName": "Flutter",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 3.47.1 → 3.47.2",
-      "from": "3.47.1",
-      "to": "3.47.2"
-    },
-    {
-      "at": "2026-08-27T17:58:57.476Z",
-      "productId": "flutter",
-      "productName": "Flutter",
-      "category": "framework",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-27T17:58:57.476Z",
-      "productId": "ionic",
-      "productName": "Ionic Framework",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 9.0.0 → 9.0.1",
-      "from": "9.0.0",
-      "to": "9.0.1"
-    },
-    {
-      "at": "2026-08-26T07:38:18.991Z",
-      "productId": "zabbix",
-      "productName": "Zabbix",
-      "category": "observability",
-      "kind": "new-version",
-      "message": "Latest 7.4.13 → 7.4.14",
-      "from": "7.4.13",
-      "to": "7.4.14"
-    },
-    {
-      "at": "2026-08-26T07:38:18.991Z",
-      "productId": "zabbix",
-      "productName": "Zabbix",
-      "category": "observability",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-26T07:38:18.991Z",
-      "productId": "go",
-      "productName": "Go",
-      "category": "runtime",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-26T07:38:18.991Z",
-      "productId": "temurin",
-      "productName": "Eclipse Temurin (JDK)",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 26.0.2+10 → 26.0.2.1+1",
-      "from": "26.0.2+10",
-      "to": "26.0.2.1+1"
-    },
-    {
-      "at": "2026-08-26T07:38:18.991Z",
-      "productId": "ionic",
-      "productName": "Ionic Framework",
-      "category": "framework",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-25T07:36:24.387Z",
-      "productId": "jenkins",
-      "productName": "Jenkins",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 2.578 → 2.579",
-      "from": "2.578",
-      "to": "2.579"
     }
   ]
 }
