@@ -1,6 +1,194 @@
 {
-  "updatedAt": "2026-10-08T14:13:35.554Z",
+  "updatedAt": "2026-10-09T14:00:14.613Z",
   "events": [
+    {
+      "at": "2026-10-09T14:00:14.613Z",
+      "productId": "docker-engine",
+      "productName": "Docker Engine",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 29.8.2 → 29.9.0",
+      "from": "29.8.2",
+      "to": "29.9.0"
+    },
+    {
+      "at": "2026-10-09T14:00:14.613Z",
+      "productId": "docker-engine",
+      "productName": "Docker Engine",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-10-09T14:00:14.613Z",
+      "productId": "argo-cd",
+      "productName": "Argo CD",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-09T14:00:14.613Z",
+      "productId": "argo-workflows",
+      "productName": "Argo Workflows",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 4.1.4 → 4.1.5",
+      "from": "4.1.4",
+      "to": "4.1.5"
+    },
+    {
+      "at": "2026-10-09T14:00:14.613Z",
+      "productId": "argo-workflows",
+      "productName": "Argo Workflows",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-09T14:00:14.613Z",
+      "productId": "harbor",
+      "productName": "Harbor",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 2.15.3 → 2.15.4",
+      "from": "2.15.3",
+      "to": "2.15.4"
+    },
+    {
+      "at": "2026-10-09T14:00:14.613Z",
+      "productId": "envoy",
+      "productName": "Envoy",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-09T14:00:14.613Z",
+      "productId": "vault",
+      "productName": "HashiCorp Vault",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-09T14:00:14.613Z",
+      "productId": "elasticsearch",
+      "productName": "Elasticsearch",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-09T14:00:14.613Z",
+      "productId": "python",
+      "productName": "Python",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 3.14.8 → 3.15.0",
+      "from": "3.14.8",
+      "to": "3.15.0"
+    },
+    {
+      "at": "2026-10-09T14:00:14.613Z",
+      "productId": "python",
+      "productName": "Python",
+      "category": "runtime",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-10-09T14:00:14.613Z",
+      "productId": "python",
+      "productName": "Python",
+      "category": "runtime",
+      "kind": "new-cve",
+      "message": "14 new CVEs recorded against 3.15.0"
+    },
+    {
+      "at": "2026-10-09T14:00:14.613Z",
+      "productId": "go",
+      "productName": "Go",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 1.27.1 → 1.27.2",
+      "from": "1.27.1",
+      "to": "1.27.2"
+    },
+    {
+      "at": "2026-10-09T14:00:14.613Z",
+      "productId": "go",
+      "productName": "Go",
+      "category": "runtime",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-09T14:00:14.613Z",
+      "productId": "tomcat",
+      "productName": "Apache Tomcat",
+      "category": "runtime",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-09T14:00:14.613Z",
+      "productId": "flutter",
+      "productName": "Flutter",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 3.47.6 → 3.47.7",
+      "from": "3.47.6",
+      "to": "3.47.7"
+    },
+    {
+      "at": "2026-10-09T14:00:14.613Z",
+      "productId": "flutter",
+      "productName": "Flutter",
+      "category": "framework",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-09T14:00:14.613Z",
+      "productId": "tauri",
+      "productName": "Tauri",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 2.12.1 → 2.12.2",
+      "from": "2.12.1",
+      "to": "2.12.2"
+    },
+    {
+      "at": "2026-10-09T14:00:14.613Z",
+      "productId": "tauri",
+      "productName": "Tauri",
+      "category": "framework",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
     {
       "at": "2026-10-08T14:13:35.554Z",
       "productId": "traefik",
@@ -3804,196 +3992,6 @@
       "message": "Verdict NO-GO → HOLD",
       "from": "NO-GO",
       "to": "HOLD"
-    },
-    {
-      "at": "2026-09-02T11:52:45.785Z",
-      "productId": "confluence",
-      "productName": "Confluence (Data Center)",
-      "category": "enterprise",
-      "kind": "new-version",
-      "message": "Latest 10.2.15 → 10.2.16",
-      "from": "10.2.15",
-      "to": "10.2.16"
-    },
-    {
-      "at": "2026-09-01T12:14:21.868Z",
-      "productId": "nutanix-aos",
-      "productName": "Nutanix AOS",
-      "category": "platform",
-      "kind": "new-version",
-      "message": "Latest 7.6 → 7.6.0.6",
-      "from": "7.6",
-      "to": "7.6.0.6"
-    },
-    {
-      "at": "2026-09-01T12:14:21.868Z",
-      "productId": "nutanix-aos",
-      "productName": "Nutanix AOS",
-      "category": "platform",
-      "kind": "verdict-down",
-      "message": "Verdict GO → NO-GO",
-      "from": "GO",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-09-01T12:14:21.868Z",
-      "productId": "istio",
-      "productName": "Istio",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 1.30.4 → 1.31.0",
-      "from": "1.30.4",
-      "to": "1.31.0"
-    },
-    {
-      "at": "2026-09-01T12:14:21.868Z",
-      "productId": "istio",
-      "productName": "Istio",
-      "category": "container",
-      "kind": "verdict-down",
-      "message": "Verdict HOLD → NO-GO",
-      "from": "HOLD",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-09-01T12:14:21.868Z",
-      "productId": "flux",
-      "productName": "Flux CD",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 2.9.4 → 2.9.5",
-      "from": "2.9.4",
-      "to": "2.9.5"
-    },
-    {
-      "at": "2026-09-01T12:14:21.868Z",
-      "productId": "flux",
-      "productName": "Flux CD",
-      "category": "container",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-09-01T12:14:21.868Z",
-      "productId": "valkey",
-      "productName": "Valkey",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 9.1.1 → 9.1.2",
-      "from": "9.1.1",
-      "to": "9.1.2"
-    },
-    {
-      "at": "2026-09-01T12:14:21.868Z",
-      "productId": "valkey",
-      "productName": "Valkey",
-      "category": "runtime",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-09-01T12:14:21.868Z",
-      "productId": "capacitor",
-      "productName": "Capacitor",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 8.5.0 → 8.5.1",
-      "from": "8.5.0",
-      "to": "8.5.1"
-    },
-    {
-      "at": "2026-09-01T12:14:21.868Z",
-      "productId": "capacitor",
-      "productName": "Capacitor",
-      "category": "framework",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-31T14:37:31.904Z",
-      "productId": "keycloak",
-      "productName": "Keycloak",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 26.7.2 → 26.7.3",
-      "from": "26.7.2",
-      "to": "26.7.3"
-    },
-    {
-      "at": "2026-08-31T14:37:31.904Z",
-      "productId": "keycloak",
-      "productName": "Keycloak",
-      "category": "iac-cicd",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-08-31T14:37:31.904Z",
-      "productId": "tekton",
-      "productName": "Tekton Pipelines",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 1.15.1 → 1.16.0",
-      "from": "1.15.1",
-      "to": "1.16.0"
-    },
-    {
-      "at": "2026-08-31T14:37:31.904Z",
-      "productId": "tekton",
-      "productName": "Tekton Pipelines",
-      "category": "iac-cicd",
-      "kind": "verdict-down",
-      "message": "Verdict GO → NO-GO",
-      "from": "GO",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-08-31T14:37:31.904Z",
-      "productId": "electron",
-      "productName": "Electron",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 44.0.0 → 44.1.0",
-      "from": "44.0.0",
-      "to": "44.1.0"
-    },
-    {
-      "at": "2026-08-31T14:37:31.904Z",
-      "productId": "flutter",
-      "productName": "Flutter",
-      "category": "framework",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-31T14:37:31.904Z",
-      "productId": "capacitor",
-      "productName": "Capacitor",
-      "category": "framework",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-08-30T12:27:12.809Z",
-      "productId": "envoy",
-      "productName": "Envoy",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
     }
   ]
 }
