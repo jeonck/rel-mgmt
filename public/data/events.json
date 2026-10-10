@@ -1,6 +1,36 @@
 {
-  "updatedAt": "2026-10-09T14:00:14.613Z",
+  "updatedAt": "2026-10-10T13:09:45.583Z",
   "events": [
+    {
+      "at": "2026-10-10T13:09:45.583Z",
+      "productId": "helm",
+      "productName": "Helm",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-10T13:09:45.583Z",
+      "productId": "openebs",
+      "productName": "OpenEBS",
+      "category": "storage",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-10T13:09:45.583Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
     {
       "at": "2026-10-09T14:00:14.613Z",
       "productId": "docker-engine",
@@ -3962,36 +3992,6 @@
       "message": "Latest 13.2.0 → 13.2.1",
       "from": "13.2.0",
       "to": "13.2.1"
-    },
-    {
-      "at": "2026-09-02T11:52:45.785Z",
-      "productId": "go",
-      "productName": "Go",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 1.27.0 → 1.27.1",
-      "from": "1.27.0",
-      "to": "1.27.1"
-    },
-    {
-      "at": "2026-09-02T11:52:45.785Z",
-      "productId": "electron",
-      "productName": "Electron",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 44.1.0 → 44.1.1",
-      "from": "44.1.0",
-      "to": "44.1.1"
-    },
-    {
-      "at": "2026-09-02T11:52:45.785Z",
-      "productId": "electron",
-      "productName": "Electron",
-      "category": "framework",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
     }
   ]
 }
