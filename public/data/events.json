@@ -1,6 +1,36 @@
 {
-  "updatedAt": "2026-10-10T13:09:45.583Z",
+  "updatedAt": "2026-10-11T13:38:56.766Z",
   "events": [
+    {
+      "at": "2026-10-11T13:38:56.766Z",
+      "productId": "go",
+      "productName": "Go",
+      "category": "runtime",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-11T13:38:56.766Z",
+      "productId": "capacitor",
+      "productName": "Capacitor",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-11T13:38:56.766Z",
+      "productId": "tauri",
+      "productName": "Tauri",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 2.12.2 → 2.12.3",
+      "from": "2.12.2",
+      "to": "2.12.3"
+    },
     {
       "at": "2026-10-10T13:09:45.583Z",
       "productId": "helm",
@@ -3962,36 +3992,6 @@
       "message": "Verdict HOLD → GO",
       "from": "HOLD",
       "to": "GO"
-    },
-    {
-      "at": "2026-09-02T11:52:45.785Z",
-      "productId": "nexus",
-      "productName": "Sonatype Nexus Repository",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 3.95.3-02 → 3.96.0",
-      "from": "3.95.3-02",
-      "to": "3.96.0"
-    },
-    {
-      "at": "2026-09-02T11:52:45.785Z",
-      "productId": "nexus",
-      "productName": "Sonatype Nexus Repository",
-      "category": "iac-cicd",
-      "kind": "verdict-down",
-      "message": "Verdict GO → NO-GO",
-      "from": "GO",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-09-02T11:52:45.785Z",
-      "productId": "grafana",
-      "productName": "Grafana",
-      "category": "observability",
-      "kind": "new-version",
-      "message": "Latest 13.2.0 → 13.2.1",
-      "from": "13.2.0",
-      "to": "13.2.1"
     }
   ]
 }
