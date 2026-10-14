@@ -1,6 +1,154 @@
 {
-  "updatedAt": "2026-10-13T14:41:50.165Z",
+  "updatedAt": "2026-10-14T12:34:05.574Z",
   "events": [
+    {
+      "at": "2026-10-14T12:34:05.574Z",
+      "productId": "containerd",
+      "productName": "containerd",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 2.4.1 → 2.4.2",
+      "from": "2.4.1",
+      "to": "2.4.2"
+    },
+    {
+      "at": "2026-10-14T12:34:05.574Z",
+      "productId": "containerd",
+      "productName": "containerd",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-14T12:34:05.574Z",
+      "productId": "envoy",
+      "productName": "Envoy",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 1.39.4 → 1.40.0",
+      "from": "1.39.4",
+      "to": "1.40.0"
+    },
+    {
+      "at": "2026-10-14T12:34:05.574Z",
+      "productId": "envoy",
+      "productName": "Envoy",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict HOLD → NO-GO",
+      "from": "HOLD",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-10-14T12:34:05.574Z",
+      "productId": "rook",
+      "productName": "Rook",
+      "category": "storage",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-14T12:34:05.574Z",
+      "productId": "terraform",
+      "productName": "Terraform",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 1.16.5 → 1.16.6",
+      "from": "1.16.5",
+      "to": "1.16.6"
+    },
+    {
+      "at": "2026-10-14T12:34:05.574Z",
+      "productId": "terraform",
+      "productName": "Terraform",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-14T12:34:05.574Z",
+      "productId": "jenkins",
+      "productName": "Jenkins",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 2.585 → 2.586",
+      "from": "2.585",
+      "to": "2.586"
+    },
+    {
+      "at": "2026-10-14T12:34:05.574Z",
+      "productId": "gitea",
+      "productName": "Gitea",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-14T12:34:05.574Z",
+      "productId": "otel-collector",
+      "productName": "OpenTelemetry Collector",
+      "category": "observability",
+      "kind": "new-version",
+      "message": "Latest 0.162.0 → 0.163.0",
+      "from": "0.162.0",
+      "to": "0.163.0"
+    },
+    {
+      "at": "2026-10-14T12:34:05.574Z",
+      "productId": "otel-collector",
+      "productName": "OpenTelemetry Collector",
+      "category": "observability",
+      "kind": "verdict-down",
+      "message": "Verdict HOLD → NO-GO",
+      "from": "HOLD",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-10-14T12:34:05.574Z",
+      "productId": "splunk",
+      "productName": "Splunk Enterprise",
+      "category": "observability",
+      "kind": "new-cve",
+      "message": "22 new CVEs recorded against 10.4.0"
+    },
+    {
+      "at": "2026-10-14T12:34:05.574Z",
+      "productId": "electron",
+      "productName": "Electron",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 44.7.0 → 44.7.2",
+      "from": "44.7.0",
+      "to": "44.7.2"
+    },
+    {
+      "at": "2026-10-14T12:34:05.574Z",
+      "productId": "electron",
+      "productName": "Electron",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-14T12:34:05.574Z",
+      "productId": "tauri",
+      "productName": "Tauri",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
     {
       "at": "2026-10-13T14:41:50.165Z",
       "productId": "envoy",
@@ -3842,156 +3990,6 @@
       "message": "Verdict HOLD → GO",
       "from": "HOLD",
       "to": "GO"
-    },
-    {
-      "at": "2026-09-04T11:59:42.370Z",
-      "productId": "grafana",
-      "productName": "Grafana",
-      "category": "observability",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-04T11:59:42.370Z",
-      "productId": "opensearch",
-      "productName": "OpenSearch",
-      "category": "observability",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-04T11:59:42.370Z",
-      "productId": "zabbix",
-      "productName": "Zabbix",
-      "category": "observability",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-04T11:59:42.370Z",
-      "productId": "go",
-      "productName": "Go",
-      "category": "runtime",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-04T11:59:42.370Z",
-      "productId": "haproxy",
-      "productName": "HAProxy",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 3.5-dev5 → 3.5-dev6",
-      "from": "3.5-dev5",
-      "to": "3.5-dev6"
-    },
-    {
-      "at": "2026-09-04T11:59:42.370Z",
-      "productId": "electron",
-      "productName": "Electron",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 44.1.1 → 44.2.0",
-      "from": "44.1.1",
-      "to": "44.2.0"
-    },
-    {
-      "at": "2026-09-04T11:59:42.370Z",
-      "productId": "electron",
-      "productName": "Electron",
-      "category": "framework",
-      "kind": "verdict-down",
-      "message": "Verdict HOLD → NO-GO",
-      "from": "HOLD",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-09-04T11:59:42.370Z",
-      "productId": "capacitor",
-      "productName": "Capacitor",
-      "category": "framework",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-03T11:51:20.321Z",
-      "productId": "podman",
-      "productName": "Podman",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 6.1.0 → 6.1.1",
-      "from": "6.1.0",
-      "to": "6.1.1"
-    },
-    {
-      "at": "2026-09-03T11:51:20.321Z",
-      "productId": "flux",
-      "productName": "Flux CD",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-03T11:51:20.321Z",
-      "productId": "rook",
-      "productName": "Rook",
-      "category": "storage",
-      "kind": "new-version",
-      "message": "Latest 1.20.6 → 1.20.7",
-      "from": "1.20.6",
-      "to": "1.20.7"
-    },
-    {
-      "at": "2026-09-03T11:51:20.321Z",
-      "productId": "rook",
-      "productName": "Rook",
-      "category": "storage",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-09-03T11:51:20.321Z",
-      "productId": "openebs",
-      "productName": "OpenEBS",
-      "category": "storage",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-09-03T11:51:20.321Z",
-      "productId": "terraform",
-      "productName": "Terraform",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 1.16.0 → 1.16.1",
-      "from": "1.16.0",
-      "to": "1.16.1"
-    },
-    {
-      "at": "2026-09-03T11:51:20.321Z",
-      "productId": "jenkins",
-      "productName": "Jenkins",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 2.579 → 2.580",
-      "from": "2.579",
-      "to": "2.580"
     }
   ]
 }
