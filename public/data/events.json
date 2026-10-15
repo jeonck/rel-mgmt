@@ -1,6 +1,216 @@
 {
-  "updatedAt": "2026-10-14T12:34:05.574Z",
+  "updatedAt": "2026-10-15T12:18:12.232Z",
   "events": [
+    {
+      "at": "2026-10-15T12:18:12.232Z",
+      "productId": "docker-engine",
+      "productName": "Docker Engine",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 29.9.0 → 29.9.1",
+      "from": "29.9.0",
+      "to": "29.9.1"
+    },
+    {
+      "at": "2026-10-15T12:18:12.232Z",
+      "productId": "docker-engine",
+      "productName": "Docker Engine",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-15T12:18:12.232Z",
+      "productId": "helm",
+      "productName": "Helm",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 4.3.0 → 4.3.1",
+      "from": "4.3.0",
+      "to": "4.3.1"
+    },
+    {
+      "at": "2026-10-15T12:18:12.232Z",
+      "productId": "helm",
+      "productName": "Helm",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-15T12:18:12.232Z",
+      "productId": "argo-cd",
+      "productName": "Argo CD",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-15T12:18:12.232Z",
+      "productId": "podman",
+      "productName": "Podman",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-15T12:18:12.232Z",
+      "productId": "nexus",
+      "productName": "Sonatype Nexus Repository",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 3.96.4-01 → 3.97.0",
+      "from": "3.96.4-01",
+      "to": "3.97.0"
+    },
+    {
+      "at": "2026-10-15T12:18:12.232Z",
+      "productId": "nexus",
+      "productName": "Sonatype Nexus Repository",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-10-15T12:18:12.232Z",
+      "productId": "nodejs",
+      "productName": "Node.js",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 26.11.1 → 26.12.0",
+      "from": "26.11.1",
+      "to": "26.12.0"
+    },
+    {
+      "at": "2026-10-15T12:18:12.232Z",
+      "productId": "nodejs",
+      "productName": "Node.js",
+      "category": "runtime",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-10-15T12:18:12.232Z",
+      "productId": "mongodb",
+      "productName": "MongoDB",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 9.0.2 → 9.0.4",
+      "from": "9.0.2",
+      "to": "9.0.4"
+    },
+    {
+      "at": "2026-10-15T12:18:12.232Z",
+      "productId": "nginx",
+      "productName": "nginx",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 1.31.6 → 1.31.7",
+      "from": "1.31.6",
+      "to": "1.31.7"
+    },
+    {
+      "at": "2026-10-15T12:18:12.232Z",
+      "productId": "nginx",
+      "productName": "nginx",
+      "category": "runtime",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-15T12:18:12.232Z",
+      "productId": "haproxy",
+      "productName": "HAProxy",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 3.5-dev8 → 3.5-dev9",
+      "from": "3.5-dev8",
+      "to": "3.5-dev9"
+    },
+    {
+      "at": "2026-10-15T12:18:12.232Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 9.0.7 → 9.0.8",
+      "from": "9.0.7",
+      "to": "9.0.8"
+    },
+    {
+      "at": "2026-10-15T12:18:12.232Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-15T12:18:12.232Z",
+      "productId": "tauri",
+      "productName": "Tauri",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 2.12.3 → 2.12.4",
+      "from": "2.12.3",
+      "to": "2.12.4"
+    },
+    {
+      "at": "2026-10-15T12:18:12.232Z",
+      "productId": "tauri",
+      "productName": "Tauri",
+      "category": "framework",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-15T12:18:12.232Z",
+      "productId": "fastapi",
+      "productName": "FastAPI",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 0.143.0 → 0.143.1",
+      "from": "0.143.0",
+      "to": "0.143.1"
+    },
+    {
+      "at": "2026-10-15T12:18:12.232Z",
+      "productId": "fastapi",
+      "productName": "FastAPI",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-15T12:18:12.232Z",
+      "productId": "confluence",
+      "productName": "Confluence (Data Center)",
+      "category": "enterprise",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
     {
       "at": "2026-10-14T12:34:05.574Z",
       "productId": "containerd",
@@ -3776,216 +3986,6 @@
       "productId": "traefik",
       "productName": "Traefik",
       "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-07T13:09:46.152Z",
-      "productId": "vault",
-      "productName": "HashiCorp Vault",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-09-07T13:09:46.152Z",
-      "productId": "tekton",
-      "productName": "Tekton Pipelines",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-09-07T13:09:46.152Z",
-      "productId": "confluence",
-      "productName": "Confluence (Data Center)",
-      "category": "enterprise",
-      "kind": "new-version",
-      "message": "Latest 10.2.16 → 10.2.17",
-      "from": "10.2.16",
-      "to": "10.2.17"
-    },
-    {
-      "at": "2026-09-06T11:26:49.420Z",
-      "productId": "citrix-vad",
-      "productName": "Citrix Virtual Apps and Desktops",
-      "category": "platform",
-      "kind": "new-version",
-      "message": "Latest 2603 → 2607",
-      "from": "2603",
-      "to": "2607"
-    },
-    {
-      "at": "2026-09-06T11:26:49.420Z",
-      "productId": "rook",
-      "productName": "Rook",
-      "category": "storage",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-06T11:26:49.420Z",
-      "productId": "elasticsearch",
-      "productName": "Elasticsearch",
-      "category": "observability",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-05T11:03:11.111Z",
-      "productId": "esxi",
-      "productName": "VMware ESXi",
-      "category": "platform",
-      "kind": "new-version",
-      "message": "Latest 9.1.0.0200 → 9.1.1.0",
-      "from": "9.1.0.0200",
-      "to": "9.1.1.0"
-    },
-    {
-      "at": "2026-09-05T11:03:11.111Z",
-      "productId": "esxi",
-      "productName": "VMware ESXi",
-      "category": "platform",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-05T11:03:11.111Z",
-      "productId": "vmware-cloud-foundation",
-      "productName": "VMware Cloud Foundation",
-      "category": "platform",
-      "kind": "new-version",
-      "message": "Latest 9.1.0.0 → 9.1.1.0",
-      "from": "9.1.0.0",
-      "to": "9.1.1.0"
-    },
-    {
-      "at": "2026-09-05T11:03:11.111Z",
-      "productId": "containerd",
-      "productName": "containerd",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 2.3.4 → 2.3.5",
-      "from": "2.3.4",
-      "to": "2.3.5"
-    },
-    {
-      "at": "2026-09-05T11:03:11.111Z",
-      "productId": "docker-engine",
-      "productName": "Docker Engine",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 29.7.2 → 29.8.0",
-      "from": "29.7.2",
-      "to": "29.8.0"
-    },
-    {
-      "at": "2026-09-05T11:03:11.111Z",
-      "productId": "docker-engine",
-      "productName": "Docker Engine",
-      "category": "container",
-      "kind": "verdict-down",
-      "message": "Verdict GO → NO-GO",
-      "from": "GO",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-09-05T11:03:11.111Z",
-      "productId": "traefik",
-      "productName": "Traefik",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 3.7.12 → 3.7.13",
-      "from": "3.7.12",
-      "to": "3.7.13"
-    },
-    {
-      "at": "2026-09-05T11:03:11.111Z",
-      "productId": "traefik",
-      "productName": "Traefik",
-      "category": "container",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-09-05T11:03:11.111Z",
-      "productId": "podman",
-      "productName": "Podman",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-05T11:03:11.111Z",
-      "productId": "terraform",
-      "productName": "Terraform",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-05T11:03:11.111Z",
-      "productId": "nexus",
-      "productName": "Sonatype Nexus Repository",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 3.96.0 → 3.96.0-09",
-      "from": "3.96.0",
-      "to": "3.96.0-09"
-    },
-    {
-      "at": "2026-09-05T11:03:11.111Z",
-      "productId": "fluent-bit",
-      "productName": "Fluent Bit",
-      "category": "observability",
-      "kind": "new-version",
-      "message": "Latest 5.1.1 → 5.1.2",
-      "from": "5.1.1",
-      "to": "5.1.2"
-    },
-    {
-      "at": "2026-09-05T11:03:11.111Z",
-      "productId": "fluent-bit",
-      "productName": "Fluent Bit",
-      "category": "observability",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-09-05T11:03:11.111Z",
-      "productId": "nginx",
-      "productName": "nginx",
-      "category": "runtime",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-05T11:03:11.111Z",
-      "productId": "ionic",
-      "productName": "Ionic Framework",
-      "category": "framework",
       "kind": "verdict-up",
       "message": "Verdict HOLD → GO",
       "from": "HOLD",
