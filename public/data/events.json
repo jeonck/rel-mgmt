@@ -1,6 +1,66 @@
 {
-  "updatedAt": "2026-10-16T12:00:23.801Z",
+  "updatedAt": "2026-10-17T11:16:25.028Z",
   "events": [
+    {
+      "at": "2026-10-17T11:16:25.028Z",
+      "productId": "docker-engine",
+      "productName": "Docker Engine",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-17T11:16:25.028Z",
+      "productId": "terraform",
+      "productName": "Terraform",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-17T11:16:25.028Z",
+      "productId": "nginx",
+      "productName": "nginx",
+      "category": "runtime",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-17T11:16:25.028Z",
+      "productId": "electron",
+      "productName": "Electron",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 44.8.0 → 44.9.0",
+      "from": "44.8.0",
+      "to": "44.9.0"
+    },
+    {
+      "at": "2026-10-17T11:16:25.028Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-17T11:16:25.028Z",
+      "productId": "fastapi",
+      "productName": "FastAPI",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 0.143.2 → 0.143.3",
+      "from": "0.143.2",
+      "to": "0.143.3"
+    },
     {
       "at": "2026-10-16T12:00:23.801Z",
       "productId": "containerd",
@@ -3930,66 +3990,6 @@
       "message": "Latest 4.2.4 → 4.3.0",
       "from": "4.2.4",
       "to": "4.3.0"
-    },
-    {
-      "at": "2026-09-10T11:58:13.479Z",
-      "productId": "helm",
-      "productName": "Helm",
-      "category": "container",
-      "kind": "verdict-down",
-      "message": "Verdict GO → NO-GO",
-      "from": "GO",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-09-10T11:58:13.479Z",
-      "productId": "terraform",
-      "productName": "Terraform",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 1.16.1 → 1.16.2",
-      "from": "1.16.1",
-      "to": "1.16.2"
-    },
-    {
-      "at": "2026-09-10T11:58:13.479Z",
-      "productId": "terraform",
-      "productName": "Terraform",
-      "category": "iac-cicd",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-09-10T11:58:13.479Z",
-      "productId": "consul",
-      "productName": "Consul",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 2.0.3 → 2.0.4",
-      "from": "2.0.3",
-      "to": "2.0.4"
-    },
-    {
-      "at": "2026-09-10T11:58:13.479Z",
-      "productId": "consul",
-      "productName": "Consul",
-      "category": "iac-cicd",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-09-10T11:58:13.479Z",
-      "productId": "nomad",
-      "productName": "Nomad",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 2.0.5 → 2.0.6",
-      "from": "2.0.5",
-      "to": "2.0.6"
     }
   ]
 }
