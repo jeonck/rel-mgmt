@@ -1,6 +1,56 @@
 {
-  "updatedAt": "2026-10-17T11:16:25.028Z",
+  "updatedAt": "2026-10-18T11:53:06.962Z",
   "events": [
+    {
+      "at": "2026-10-18T11:53:06.962Z",
+      "productId": "helm",
+      "productName": "Helm",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-18T11:53:06.962Z",
+      "productId": "traefik",
+      "productName": "Traefik",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-18T11:53:06.962Z",
+      "productId": "cilium",
+      "productName": "Cilium",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-18T11:53:06.962Z",
+      "productId": "tauri",
+      "productName": "Tauri",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-18T11:53:06.962Z",
+      "productId": "fastapi",
+      "productName": "FastAPI",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 0.143.3 → 0.143.5",
+      "from": "0.143.3",
+      "to": "0.143.5"
+    },
     {
       "at": "2026-10-17T11:16:25.028Z",
       "productId": "docker-engine",
@@ -3940,56 +3990,6 @@
       "message": "Verdict HOLD → NO-GO",
       "from": "HOLD",
       "to": "NO-GO"
-    },
-    {
-      "at": "2026-09-11T11:56:57.575Z",
-      "productId": "maui",
-      "productName": ".NET MAUI",
-      "category": "framework",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-11T11:56:57.575Z",
-      "productId": "msexchange",
-      "productName": "Microsoft Exchange Server",
-      "category": "enterprise",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-11T11:56:57.575Z",
-      "productId": "sharepoint",
-      "productName": "Microsoft SharePoint",
-      "category": "enterprise",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-10T11:58:13.479Z",
-      "productId": "docker-engine",
-      "productName": "Docker Engine",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-09-10T11:58:13.479Z",
-      "productId": "helm",
-      "productName": "Helm",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 4.2.4 → 4.3.0",
-      "from": "4.2.4",
-      "to": "4.3.0"
     }
   ]
 }
