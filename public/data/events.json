@@ -1,6 +1,116 @@
 {
-  "updatedAt": "2026-10-19T14:11:04.994Z",
+  "updatedAt": "2026-10-20T12:24:22.062Z",
   "events": [
+    {
+      "at": "2026-10-20T12:24:22.062Z",
+      "productId": "envoy",
+      "productName": "Envoy",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-20T12:24:22.062Z",
+      "productId": "vector",
+      "productName": "Vector",
+      "category": "observability",
+      "kind": "new-version",
+      "message": "Latest 0.59.0 → 0.60.0",
+      "from": "0.59.0",
+      "to": "0.60.0"
+    },
+    {
+      "at": "2026-10-20T12:24:22.062Z",
+      "productId": "vector",
+      "productName": "Vector",
+      "category": "observability",
+      "kind": "verdict-down",
+      "message": "Verdict HOLD → NO-GO",
+      "from": "HOLD",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-10-20T12:24:22.062Z",
+      "productId": "go",
+      "productName": "Go",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 1.27.2 → 1.27.3",
+      "from": "1.27.2",
+      "to": "1.27.3"
+    },
+    {
+      "at": "2026-10-20T12:24:22.062Z",
+      "productId": "go",
+      "productName": "Go",
+      "category": "runtime",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-20T12:24:22.062Z",
+      "productId": "mysql",
+      "productName": "MySQL",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 9.7.2 → 26.7.0",
+      "from": "9.7.2",
+      "to": "26.7.0"
+    },
+    {
+      "at": "2026-10-20T12:24:22.062Z",
+      "productId": "mysql",
+      "productName": "MySQL",
+      "category": "runtime",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-20T12:24:22.062Z",
+      "productId": "kafka",
+      "productName": "Apache Kafka",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 4.3.1 → 4.3.2",
+      "from": "4.3.1",
+      "to": "4.3.2"
+    },
+    {
+      "at": "2026-10-20T12:24:22.062Z",
+      "productId": "electron",
+      "productName": "Electron",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 44.9.0 → 44.9.1",
+      "from": "44.9.0",
+      "to": "44.9.1"
+    },
+    {
+      "at": "2026-10-20T12:24:22.062Z",
+      "productId": "electron",
+      "productName": "Electron",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-20T12:24:22.062Z",
+      "productId": "fastapi",
+      "productName": "FastAPI",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 0.148.0 → 0.152.0",
+      "from": "0.148.0",
+      "to": "0.152.0"
+    },
     {
       "at": "2026-10-19T14:11:04.994Z",
       "productId": "ubuntu",
@@ -3876,116 +3986,6 @@
       "productId": "cert-manager",
       "productName": "cert-manager",
       "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-13T12:27:11.251Z",
-      "productId": "gitlab",
-      "productName": "GitLab",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-09-13T12:27:11.251Z",
-      "productId": "gitlab-runner",
-      "productName": "GitLab Runner",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-09-13T12:27:11.251Z",
-      "productId": "nexus",
-      "productName": "Sonatype Nexus Repository",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 3.96.0-09 → 3.96.1-01",
-      "from": "3.96.0-09",
-      "to": "3.96.1-01"
-    },
-    {
-      "at": "2026-09-13T12:27:11.251Z",
-      "productId": "nexus",
-      "productName": "Sonatype Nexus Repository",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-12T11:23:22.635Z",
-      "productId": "terraform",
-      "productName": "Terraform",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-12T11:23:22.635Z",
-      "productId": "consul",
-      "productName": "Consul",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-12T11:23:22.635Z",
-      "productId": "nomad",
-      "productName": "Nomad",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-12T11:23:22.635Z",
-      "productId": "tomcat",
-      "productName": "Apache Tomcat",
-      "category": "runtime",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-12T11:23:22.635Z",
-      "productId": "mongodb",
-      "productName": "MongoDB",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 8.3.9 → 8.3.11",
-      "from": "8.3.9",
-      "to": "8.3.11"
-    },
-    {
-      "at": "2026-09-12T11:23:22.635Z",
-      "productId": "flutter",
-      "productName": "Flutter",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 3.47.3 → 3.47.4",
-      "from": "3.47.3",
-      "to": "3.47.4"
-    },
-    {
-      "at": "2026-09-12T11:23:22.635Z",
-      "productId": "ionic",
-      "productName": "Ionic Framework",
-      "category": "framework",
       "kind": "verdict-up",
       "message": "Verdict HOLD → GO",
       "from": "HOLD",
