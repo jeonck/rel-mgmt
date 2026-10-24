@@ -1,6 +1,146 @@
 {
-  "updatedAt": "2026-10-23T12:17:43.008Z",
+  "updatedAt": "2026-10-24T11:43:23.937Z",
   "events": [
+    {
+      "at": "2026-10-24T11:43:23.937Z",
+      "productId": "cert-manager",
+      "productName": "cert-manager",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 1.21.2 → 1.21.3",
+      "from": "1.21.2",
+      "to": "1.21.3"
+    },
+    {
+      "at": "2026-10-24T11:43:23.937Z",
+      "productId": "cert-manager",
+      "productName": "cert-manager",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-24T11:43:23.937Z",
+      "productId": "cilium",
+      "productName": "Cilium",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 1.20.3 → 1.20.4",
+      "from": "1.20.3",
+      "to": "1.20.4"
+    },
+    {
+      "at": "2026-10-24T11:43:23.937Z",
+      "productId": "cilium",
+      "productName": "Cilium",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-24T11:43:23.937Z",
+      "productId": "opentofu",
+      "productName": "OpenTofu",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-24T11:43:23.937Z",
+      "productId": "gitlab-runner",
+      "productName": "GitLab Runner",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict HOLD → NO-GO",
+      "from": "HOLD",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-10-24T11:43:23.937Z",
+      "productId": "nexus",
+      "productName": "Sonatype Nexus Repository",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 3.97.2 → 3.97.2-02",
+      "from": "3.97.2",
+      "to": "3.97.2-02"
+    },
+    {
+      "at": "2026-10-24T11:43:23.937Z",
+      "productId": "fluent-bit",
+      "productName": "Fluent Bit",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-24T11:43:23.937Z",
+      "productId": "nginx",
+      "productName": "nginx",
+      "category": "runtime",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-24T11:43:23.937Z",
+      "productId": "flutter",
+      "productName": "Flutter",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 3.47.7 → 3.47.8",
+      "from": "3.47.7",
+      "to": "3.47.8"
+    },
+    {
+      "at": "2026-10-24T11:43:23.937Z",
+      "productId": "flutter",
+      "productName": "Flutter",
+      "category": "framework",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-24T11:43:23.937Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-24T11:43:23.937Z",
+      "productId": "fastapi",
+      "productName": "FastAPI",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 0.161.1 → 0.162.0",
+      "from": "0.161.1",
+      "to": "0.162.0"
+    },
+    {
+      "at": "2026-10-24T11:43:23.937Z",
+      "productId": "fastapi",
+      "productName": "FastAPI",
+      "category": "framework",
+      "kind": "verdict-down",
+      "message": "Verdict HOLD → NO-GO",
+      "from": "HOLD",
+      "to": "NO-GO"
+    },
     {
       "at": "2026-10-23T12:17:43.008Z",
       "productId": "docker-engine",
@@ -3846,146 +3986,6 @@
       "message": "Verdict NO-GO → HOLD",
       "from": "NO-GO",
       "to": "HOLD"
-    },
-    {
-      "at": "2026-09-22T12:13:31.966Z",
-      "productId": "nodejs",
-      "productName": "Node.js",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 26.9.0 → 26.10.0",
-      "from": "26.9.0",
-      "to": "26.10.0"
-    },
-    {
-      "at": "2026-09-22T12:13:31.966Z",
-      "productId": "flutter",
-      "productName": "Flutter",
-      "category": "framework",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-21T13:29:06.050Z",
-      "productId": "argo-workflows",
-      "productName": "Argo Workflows",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-21T13:29:06.050Z",
-      "productId": "packer",
-      "productName": "Packer",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-20T11:55:08.699Z",
-      "productId": "nomad",
-      "productName": "Nomad",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-20T11:55:08.699Z",
-      "productId": "loki",
-      "productName": "Grafana Loki",
-      "category": "observability",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-20T11:55:08.699Z",
-      "productId": "redis",
-      "productName": "Redis",
-      "category": "runtime",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-20T11:55:08.699Z",
-      "productId": "tauri",
-      "productName": "Tauri",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 2.11.5 → 2.11.6",
-      "from": "2.11.5",
-      "to": "2.11.6"
-    },
-    {
-      "at": "2026-09-20T11:55:08.699Z",
-      "productId": "tauri",
-      "productName": "Tauri",
-      "category": "framework",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-09-19T11:43:02.267Z",
-      "productId": "debian",
-      "productName": "Debian",
-      "category": "platform",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-19T11:43:02.267Z",
-      "productId": "terraform",
-      "productName": "Terraform",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-19T11:43:02.267Z",
-      "productId": "nomad",
-      "productName": "Nomad",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 2.0.6 → 2.0.7",
-      "from": "2.0.6",
-      "to": "2.0.7"
-    },
-    {
-      "at": "2026-09-19T11:43:02.267Z",
-      "productId": "nomad",
-      "productName": "Nomad",
-      "category": "iac-cicd",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-09-19T11:43:02.267Z",
-      "productId": "packer",
-      "productName": "Packer",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 1.16.0 → 1.16.1",
-      "from": "1.16.0",
-      "to": "1.16.1"
     }
   ]
 }
