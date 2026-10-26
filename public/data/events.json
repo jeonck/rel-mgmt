@@ -1,6 +1,116 @@
 {
-  "updatedAt": "2026-10-25T12:13:03.840Z",
+  "updatedAt": "2026-10-26T13:44:45.184Z",
   "events": [
+    {
+      "at": "2026-10-26T13:44:45.184Z",
+      "productId": "cert-manager",
+      "productName": "cert-manager",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-26T13:44:45.184Z",
+      "productId": "cilium",
+      "productName": "Cilium",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-26T13:44:45.184Z",
+      "productId": "actions-runner",
+      "productName": "GitHub Actions Runner",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-26T13:44:45.184Z",
+      "productId": "vault",
+      "productName": "HashiCorp Vault",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-26T13:44:45.184Z",
+      "productId": "tekton",
+      "productName": "Tekton Pipelines",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-26T13:44:45.184Z",
+      "productId": "gitea",
+      "productName": "Gitea",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-26T13:44:45.184Z",
+      "productId": "python",
+      "productName": "Python",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 3.15.1 → 3.15.2",
+      "from": "3.15.1",
+      "to": "3.15.2"
+    },
+    {
+      "at": "2026-10-26T13:44:45.184Z",
+      "productId": "mysql",
+      "productName": "MySQL",
+      "category": "runtime",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-26T13:44:45.184Z",
+      "productId": "redis",
+      "productName": "Redis",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 8.10.2 → 8.10.3",
+      "from": "8.10.2",
+      "to": "8.10.3"
+    },
+    {
+      "at": "2026-10-26T13:44:45.184Z",
+      "productId": "redis",
+      "productName": "Redis",
+      "category": "runtime",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-26T13:44:45.184Z",
+      "productId": "rabbitmq",
+      "productName": "RabbitMQ",
+      "category": "runtime",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
     {
       "at": "2026-10-25T12:13:03.840Z",
       "productId": "argo-workflows",
@@ -3874,114 +3984,6 @@
       "productId": "zabbix",
       "productName": "Zabbix",
       "category": "observability",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-09-24T12:26:10.358Z",
-      "productId": "mariadb",
-      "productName": "MariaDB",
-      "category": "runtime",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-09-24T12:26:10.358Z",
-      "productId": "ionic",
-      "productName": "Ionic Framework",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 9.0.4 → 9.0.5",
-      "from": "9.0.4",
-      "to": "9.0.5"
-    },
-    {
-      "at": "2026-09-24T12:26:10.358Z",
-      "productId": "ionic",
-      "productName": "Ionic Framework",
-      "category": "framework",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-09-23T12:26:39.416Z",
-      "productId": "rhel",
-      "productName": "Red Hat Enterprise Linux",
-      "category": "platform",
-      "kind": "new-cve",
-      "message": "3 new CVEs recorded against 10.2"
-    },
-    {
-      "at": "2026-09-23T12:26:39.416Z",
-      "productId": "containerd",
-      "productName": "containerd",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-09-23T12:26:39.416Z",
-      "productId": "etcd",
-      "productName": "etcd",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 3.7.1 → 3.7.2",
-      "from": "3.7.1",
-      "to": "3.7.2"
-    },
-    {
-      "at": "2026-09-23T12:26:39.416Z",
-      "productId": "etcd",
-      "productName": "etcd",
-      "category": "container",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-09-23T12:26:39.416Z",
-      "productId": "jenkins",
-      "productName": "Jenkins",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 2.582 → 2.583",
-      "from": "2.582",
-      "to": "2.583"
-    },
-    {
-      "at": "2026-09-23T12:26:39.416Z",
-      "productId": "nexus",
-      "productName": "Sonatype Nexus Repository",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 3.96.3 → 3.96.3-01",
-      "from": "3.96.3",
-      "to": "3.96.3-01"
-    },
-    {
-      "at": "2026-09-23T12:26:39.416Z",
-      "productId": "jboss-eap",
-      "productName": "Red Hat JBoss EAP",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 8.1.7 → 8.1.8",
-      "from": "8.1.7",
-      "to": "8.1.8"
-    },
-    {
-      "at": "2026-09-23T12:26:39.416Z",
-      "productId": "jboss-eap",
-      "productName": "Red Hat JBoss EAP",
-      "category": "runtime",
       "kind": "verdict-down",
       "message": "Verdict GO → HOLD",
       "from": "GO",
