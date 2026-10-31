@@ -1,6 +1,94 @@
 {
-  "updatedAt": "2026-10-30T13:43:06.409Z",
+  "updatedAt": "2026-10-31T13:12:18.701Z",
   "events": [
+    {
+      "at": "2026-10-31T13:12:18.701Z",
+      "productId": "calico",
+      "productName": "Calico",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-31T13:12:18.701Z",
+      "productId": "terraform",
+      "productName": "Terraform",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-31T13:12:18.701Z",
+      "productId": "gitlab",
+      "productName": "GitLab",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-31T13:12:18.701Z",
+      "productId": "gitlab-runner",
+      "productName": "GitLab Runner",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-31T13:12:18.701Z",
+      "productId": "splunk",
+      "productName": "Splunk Enterprise",
+      "category": "observability",
+      "kind": "new-cve",
+      "message": "12 new CVEs recorded against 10.4.0"
+    },
+    {
+      "at": "2026-10-31T13:12:18.701Z",
+      "productId": "electron",
+      "productName": "Electron",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 45.1.0 → 45.2.1",
+      "from": "45.1.0",
+      "to": "45.2.1"
+    },
+    {
+      "at": "2026-10-31T13:12:18.701Z",
+      "productId": "electron",
+      "productName": "Electron",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-10-31T13:12:18.701Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-10-31T13:12:18.701Z",
+      "productId": "fastapi",
+      "productName": "FastAPI",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
     {
       "at": "2026-10-30T13:43:06.409Z",
       "productId": "rhel",
@@ -3898,96 +3986,6 @@
       "message": "Verdict NO-GO → HOLD",
       "from": "NO-GO",
       "to": "HOLD"
-    },
-    {
-      "at": "2026-10-03T12:08:38.452Z",
-      "productId": "fastapi",
-      "productName": "FastAPI",
-      "category": "framework",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-10-02T13:22:38.419Z",
-      "productId": "envoy",
-      "productName": "Envoy",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 1.39.1 → 1.39.2",
-      "from": "1.39.1",
-      "to": "1.39.2"
-    },
-    {
-      "at": "2026-10-02T13:22:38.419Z",
-      "productId": "envoy",
-      "productName": "Envoy",
-      "category": "container",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-02T13:22:38.419Z",
-      "productId": "podman",
-      "productName": "Podman",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-10-02T13:22:38.419Z",
-      "productId": "calico",
-      "productName": "Calico",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 3.32.2 → 3.33.0",
-      "from": "3.32.2",
-      "to": "3.33.0"
-    },
-    {
-      "at": "2026-10-02T13:22:38.419Z",
-      "productId": "calico",
-      "productName": "Calico",
-      "category": "container",
-      "kind": "verdict-down",
-      "message": "Verdict GO → NO-GO",
-      "from": "GO",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-10-02T13:22:38.419Z",
-      "productId": "terraform",
-      "productName": "Terraform",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 1.16.4 → 1.16.5",
-      "from": "1.16.4",
-      "to": "1.16.5"
-    },
-    {
-      "at": "2026-10-02T13:22:38.419Z",
-      "productId": "terraform",
-      "productName": "Terraform",
-      "category": "iac-cicd",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-02T13:22:38.419Z",
-      "productId": "opentofu",
-      "productName": "OpenTofu",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 1.13.0 → 1.13.1",
-      "from": "1.13.0",
-      "to": "1.13.1"
     }
   ]
 }
