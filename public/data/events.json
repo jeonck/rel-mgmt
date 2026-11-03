@@ -1,6 +1,86 @@
 {
-  "updatedAt": "2026-11-02T16:41:29.282Z",
+  "updatedAt": "2026-11-03T14:45:33.101Z",
   "events": [
+    {
+      "at": "2026-11-03T14:45:33.101Z",
+      "productId": "nutanix-aos",
+      "productName": "Nutanix AOS",
+      "category": "platform",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-03T14:45:33.101Z",
+      "productId": "argo-cd",
+      "productName": "Argo CD",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 3.5.6 → 3.5.7",
+      "from": "3.5.6",
+      "to": "3.5.7"
+    },
+    {
+      "at": "2026-11-03T14:45:33.101Z",
+      "productId": "argo-cd",
+      "productName": "Argo CD",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-03T14:45:33.101Z",
+      "productId": "ceph",
+      "productName": "Ceph",
+      "category": "storage",
+      "kind": "new-version",
+      "message": "Latest 20.2.4 → 20.2.5",
+      "from": "20.2.4",
+      "to": "20.2.5"
+    },
+    {
+      "at": "2026-11-03T14:45:33.101Z",
+      "productId": "ansible-core",
+      "productName": "Ansible Core",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 2.21.5 → 2.22.0",
+      "from": "2.21.5",
+      "to": "2.22.0"
+    },
+    {
+      "at": "2026-11-03T14:45:33.101Z",
+      "productId": "ansible-core",
+      "productName": "Ansible Core",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-11-03T14:45:33.101Z",
+      "productId": "grafana",
+      "productName": "Grafana",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-03T14:45:33.101Z",
+      "productId": "temurin",
+      "productName": "Eclipse Temurin (JDK)",
+      "category": "runtime",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
     {
       "at": "2026-11-02T16:41:29.282Z",
       "productId": "flux",
@@ -3906,86 +3986,6 @@
       "message": "Latest 2.21.4 → 2.21.5",
       "from": "2.21.4",
       "to": "2.21.5"
-    },
-    {
-      "at": "2026-10-05T15:25:05.581Z",
-      "productId": "sonarqube",
-      "productName": "SonarQube Community",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 26.9.0.129388 → 26.10.0.132816",
-      "from": "26.9.0.129388",
-      "to": "26.10.0.132816"
-    },
-    {
-      "at": "2026-10-05T15:25:05.581Z",
-      "productId": "sonarqube",
-      "productName": "SonarQube Community",
-      "category": "iac-cicd",
-      "kind": "verdict-down",
-      "message": "Verdict GO → NO-GO",
-      "from": "GO",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-10-05T15:25:05.581Z",
-      "productId": "otel-collector",
-      "productName": "OpenTelemetry Collector",
-      "category": "observability",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-05T15:25:05.581Z",
-      "productId": "flutter",
-      "productName": "Flutter",
-      "category": "framework",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-10-04T12:57:15.877Z",
-      "productId": "envoy",
-      "productName": "Envoy",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-10-04T12:57:15.877Z",
-      "productId": "flux",
-      "productName": "Flux CD",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-10-04T12:57:15.877Z",
-      "productId": "opentofu",
-      "productName": "OpenTofu",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-10-04T12:57:15.877Z",
-      "productId": "fluent-bit",
-      "productName": "Fluent Bit",
-      "category": "observability",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
     }
   ]
 }
