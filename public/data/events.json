@@ -1,6 +1,126 @@
 {
-  "updatedAt": "2026-11-03T14:45:33.101Z",
+  "updatedAt": "2026-11-04T14:58:03.156Z",
   "events": [
+    {
+      "at": "2026-11-04T14:58:03.156Z",
+      "productId": "docker-engine",
+      "productName": "Docker Engine",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 29.9.2 → 29.9.3",
+      "from": "29.9.2",
+      "to": "29.9.3"
+    },
+    {
+      "at": "2026-11-04T14:58:03.156Z",
+      "productId": "docker-engine",
+      "productName": "Docker Engine",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-04T14:58:03.156Z",
+      "productId": "argo-cd",
+      "productName": "Argo CD",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 3.5.7 → 3.6.1",
+      "from": "3.5.7",
+      "to": "3.6.1"
+    },
+    {
+      "at": "2026-11-04T14:58:03.156Z",
+      "productId": "ceph",
+      "productName": "Ceph",
+      "category": "storage",
+      "kind": "new-version",
+      "message": "Latest 20.2.5 → 21.2.0",
+      "from": "20.2.5",
+      "to": "21.2.0"
+    },
+    {
+      "at": "2026-11-04T14:58:03.156Z",
+      "productId": "ceph",
+      "productName": "Ceph",
+      "category": "storage",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-04T14:58:03.156Z",
+      "productId": "jenkins",
+      "productName": "Jenkins",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 2.588 → 2.589",
+      "from": "2.588",
+      "to": "2.589"
+    },
+    {
+      "at": "2026-11-04T14:58:03.156Z",
+      "productId": "nexus",
+      "productName": "Sonatype Nexus Repository",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 3.97.2-02 → 3.98.0",
+      "from": "3.97.2-02",
+      "to": "3.98.0"
+    },
+    {
+      "at": "2026-11-04T14:58:03.156Z",
+      "productId": "nexus",
+      "productName": "Sonatype Nexus Repository",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-11-04T14:58:03.156Z",
+      "productId": "nodejs",
+      "productName": "Node.js",
+      "category": "runtime",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-04T14:58:03.156Z",
+      "productId": "electron",
+      "productName": "Electron",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 45.2.1 → 45.2.2",
+      "from": "45.2.1",
+      "to": "45.2.2"
+    },
+    {
+      "at": "2026-11-04T14:58:03.156Z",
+      "productId": "confluence",
+      "productName": "Confluence (Data Center)",
+      "category": "enterprise",
+      "kind": "new-version",
+      "message": "Latest 11.0.0 → 11.0.1",
+      "from": "11.0.0",
+      "to": "11.0.1"
+    },
+    {
+      "at": "2026-11-04T14:58:03.156Z",
+      "productId": "confluence",
+      "productName": "Confluence (Data Center)",
+      "category": "enterprise",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
     {
       "at": "2026-11-03T14:45:33.101Z",
       "productId": "nutanix-aos",
@@ -3866,126 +3986,6 @@
       "message": "Verdict HOLD → NO-GO",
       "from": "HOLD",
       "to": "NO-GO"
-    },
-    {
-      "at": "2026-10-06T13:47:23.997Z",
-      "productId": "harbor",
-      "productName": "Harbor",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 2.15.2 → 2.15.3",
-      "from": "2.15.2",
-      "to": "2.15.3"
-    },
-    {
-      "at": "2026-10-06T13:47:23.997Z",
-      "productId": "harbor",
-      "productName": "Harbor",
-      "category": "container",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-06T13:47:23.997Z",
-      "productId": "traefik",
-      "productName": "Traefik",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 3.7.13 → 3.7.14",
-      "from": "3.7.13",
-      "to": "3.7.14"
-    },
-    {
-      "at": "2026-10-06T13:47:23.997Z",
-      "productId": "traefik",
-      "productName": "Traefik",
-      "category": "container",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-06T13:47:23.997Z",
-      "productId": "longhorn",
-      "productName": "Longhorn",
-      "category": "storage",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-06T13:47:23.997Z",
-      "productId": "jenkins",
-      "productName": "Jenkins",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 2.584 → 2.585",
-      "from": "2.584",
-      "to": "2.585"
-    },
-    {
-      "at": "2026-10-06T13:47:23.997Z",
-      "productId": "sonarqube",
-      "productName": "SonarQube Community",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 26.10.0.132816 → 26.9.0.129388",
-      "from": "26.10.0.132816",
-      "to": "26.9.0.129388"
-    },
-    {
-      "at": "2026-10-06T13:47:23.997Z",
-      "productId": "sonarqube",
-      "productName": "SonarQube Community",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → GO",
-      "from": "NO-GO",
-      "to": "GO"
-    },
-    {
-      "at": "2026-10-06T13:47:23.997Z",
-      "productId": "opensearch",
-      "productName": "OpenSearch",
-      "category": "observability",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-06T13:47:23.997Z",
-      "productId": "jira-software",
-      "productName": "Jira Software (Data Center)",
-      "category": "enterprise",
-      "kind": "new-version",
-      "message": "Latest 11.3.11 → 11.3.12",
-      "from": "11.3.11",
-      "to": "11.3.12"
-    },
-    {
-      "at": "2026-10-06T13:47:23.997Z",
-      "productId": "confluence",
-      "productName": "Confluence (Data Center)",
-      "category": "enterprise",
-      "kind": "new-version",
-      "message": "Latest 10.2.18 → 10.2.19",
-      "from": "10.2.18",
-      "to": "10.2.19"
-    },
-    {
-      "at": "2026-10-05T15:25:05.581Z",
-      "productId": "ansible-core",
-      "productName": "Ansible Core",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 2.21.4 → 2.21.5",
-      "from": "2.21.4",
-      "to": "2.21.5"
     }
   ]
 }
