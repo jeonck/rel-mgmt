@@ -1,6 +1,106 @@
 {
-  "updatedAt": "2026-11-04T14:58:03.156Z",
+  "updatedAt": "2026-11-05T15:02:45.201Z",
   "events": [
+    {
+      "at": "2026-11-05T15:02:45.201Z",
+      "productId": "opentofu",
+      "productName": "OpenTofu",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 1.13.5 → 1.13.8",
+      "from": "1.13.5",
+      "to": "1.13.8"
+    },
+    {
+      "at": "2026-11-05T15:02:45.201Z",
+      "productId": "opentofu",
+      "productName": "OpenTofu",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-05T15:02:45.201Z",
+      "productId": "sonarqube",
+      "productName": "SonarQube Community",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 26.10.0.133078 → 26.11.0.134175",
+      "from": "26.10.0.133078",
+      "to": "26.11.0.134175"
+    },
+    {
+      "at": "2026-11-05T15:02:45.201Z",
+      "productId": "sonarqube",
+      "productName": "SonarQube Community",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict HOLD → NO-GO",
+      "from": "HOLD",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-11-05T15:02:45.201Z",
+      "productId": "elasticsearch",
+      "productName": "Elasticsearch",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-11-05T15:02:45.201Z",
+      "productId": "jaeger",
+      "productName": "Jaeger",
+      "category": "observability",
+      "kind": "new-version",
+      "message": "Latest 2.22.0 → 2.23.0",
+      "from": "2.22.0",
+      "to": "2.23.0"
+    },
+    {
+      "at": "2026-11-05T15:02:45.201Z",
+      "productId": "jaeger",
+      "productName": "Jaeger",
+      "category": "observability",
+      "kind": "verdict-down",
+      "message": "Verdict HOLD → NO-GO",
+      "from": "HOLD",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-11-05T15:02:45.201Z",
+      "productId": "haproxy",
+      "productName": "HAProxy",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 3.5-dev10 → 3.5-dev11",
+      "from": "3.5-dev10",
+      "to": "3.5-dev11"
+    },
+    {
+      "at": "2026-11-05T15:02:45.201Z",
+      "productId": "electron",
+      "productName": "Electron",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 45.2.2 → 45.2.3",
+      "from": "45.2.2",
+      "to": "45.2.3"
+    },
+    {
+      "at": "2026-11-05T15:02:45.201Z",
+      "productId": "capacitor",
+      "productName": "Capacitor",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
     {
       "at": "2026-11-04T14:58:03.156Z",
       "productId": "docker-engine",
@@ -3886,106 +3986,6 @@
       "message": "Latest 28.0.0 → 28.1.0",
       "from": "28.0.0",
       "to": "28.1.0"
-    },
-    {
-      "at": "2026-10-07T14:04:08.888Z",
-      "productId": "elasticsearch",
-      "productName": "Elasticsearch",
-      "category": "observability",
-      "kind": "new-version",
-      "message": "Latest 9.5.4 → 9.5.5",
-      "from": "9.5.4",
-      "to": "9.5.5"
-    },
-    {
-      "at": "2026-10-07T14:04:08.888Z",
-      "productId": "elasticsearch",
-      "productName": "Elasticsearch",
-      "category": "observability",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-07T14:04:08.888Z",
-      "productId": "vector",
-      "productName": "Vector",
-      "category": "observability",
-      "kind": "new-version",
-      "message": "Latest 0.58.0 → 0.59.0",
-      "from": "0.58.0",
-      "to": "0.59.0"
-    },
-    {
-      "at": "2026-10-07T14:04:08.888Z",
-      "productId": "vector",
-      "productName": "Vector",
-      "category": "observability",
-      "kind": "verdict-down",
-      "message": "Verdict GO → NO-GO",
-      "from": "GO",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-10-07T14:04:08.888Z",
-      "productId": "jaeger",
-      "productName": "Jaeger",
-      "category": "observability",
-      "kind": "new-version",
-      "message": "Latest 2.21.0 → 2.22.0",
-      "from": "2.21.0",
-      "to": "2.22.0"
-    },
-    {
-      "at": "2026-10-07T14:04:08.888Z",
-      "productId": "jaeger",
-      "productName": "Jaeger",
-      "category": "observability",
-      "kind": "verdict-down",
-      "message": "Verdict HOLD → NO-GO",
-      "from": "HOLD",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-10-07T14:04:08.888Z",
-      "productId": "tomcat",
-      "productName": "Apache Tomcat",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 11.0.26 → 11.0.27",
-      "from": "11.0.26",
-      "to": "11.0.27"
-    },
-    {
-      "at": "2026-10-07T14:04:08.888Z",
-      "productId": "tomcat",
-      "productName": "Apache Tomcat",
-      "category": "runtime",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-07T14:04:08.888Z",
-      "productId": "electron",
-      "productName": "Electron",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 44.5.1 → 44.6.0",
-      "from": "44.5.1",
-      "to": "44.6.0"
-    },
-    {
-      "at": "2026-10-07T14:04:08.888Z",
-      "productId": "electron",
-      "productName": "Electron",
-      "category": "framework",
-      "kind": "verdict-down",
-      "message": "Verdict HOLD → NO-GO",
-      "from": "HOLD",
-      "to": "NO-GO"
     }
   ]
 }
