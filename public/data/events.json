@@ -1,6 +1,164 @@
 {
-  "updatedAt": "2026-11-05T15:02:45.201Z",
+  "updatedAt": "2026-11-06T14:42:07.973Z",
   "events": [
+    {
+      "at": "2026-11-06T14:42:07.973Z",
+      "productId": "rhel",
+      "productName": "Red Hat Enterprise Linux",
+      "category": "platform",
+      "kind": "new-cve",
+      "message": "1 new CVE recorded against 10.2"
+    },
+    {
+      "at": "2026-11-06T14:42:07.973Z",
+      "productId": "kubernetes",
+      "productName": "Kubernetes",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-11-06T14:42:07.973Z",
+      "productId": "docker-engine",
+      "productName": "Docker Engine",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-11-06T14:42:07.973Z",
+      "productId": "rook",
+      "productName": "Rook",
+      "category": "storage",
+      "kind": "new-version",
+      "message": "Latest 1.21.1 → 1.21.2",
+      "from": "1.21.1",
+      "to": "1.21.2"
+    },
+    {
+      "at": "2026-11-06T14:42:07.973Z",
+      "productId": "rook",
+      "productName": "Rook",
+      "category": "storage",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-06T14:42:07.973Z",
+      "productId": "opentofu",
+      "productName": "OpenTofu",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 1.13.8 → 1.13.9",
+      "from": "1.13.8",
+      "to": "1.13.9"
+    },
+    {
+      "at": "2026-11-06T14:42:07.973Z",
+      "productId": "gitlab-runner",
+      "productName": "GitLab Runner",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 19.5.2 → 19.5.3",
+      "from": "19.5.2",
+      "to": "19.5.3"
+    },
+    {
+      "at": "2026-11-06T14:42:07.973Z",
+      "productId": "gitlab-runner",
+      "productName": "GitLab Runner",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict HOLD → NO-GO",
+      "from": "HOLD",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-11-06T14:42:07.973Z",
+      "productId": "keycloak",
+      "productName": "Keycloak",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 26.8.1 → 26.8.2",
+      "from": "26.8.1",
+      "to": "26.8.2"
+    },
+    {
+      "at": "2026-11-06T14:42:07.973Z",
+      "productId": "keycloak",
+      "productName": "Keycloak",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-06T14:42:07.973Z",
+      "productId": "tekton",
+      "productName": "Tekton Pipelines",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-06T14:42:07.973Z",
+      "productId": "nexus",
+      "productName": "Sonatype Nexus Repository",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 3.98.0 → 3.98.1",
+      "from": "3.98.0",
+      "to": "3.98.1"
+    },
+    {
+      "at": "2026-11-06T14:42:07.973Z",
+      "productId": "nexus",
+      "productName": "Sonatype Nexus Repository",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-06T14:42:07.973Z",
+      "productId": "prometheus",
+      "productName": "Prometheus",
+      "category": "observability",
+      "kind": "new-version",
+      "message": "Latest 3.15.1 → 3.16.0",
+      "from": "3.15.1",
+      "to": "3.16.0"
+    },
+    {
+      "at": "2026-11-06T14:42:07.973Z",
+      "productId": "vector",
+      "productName": "Vector",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-06T14:42:07.973Z",
+      "productId": "jira-software",
+      "productName": "Jira Software (Data Center)",
+      "category": "enterprise",
+      "kind": "new-version",
+      "message": "Latest 11.3.12 → 11.3.13",
+      "from": "11.3.12",
+      "to": "11.3.13"
+    },
     {
       "at": "2026-11-05T15:02:45.201Z",
       "productId": "opentofu",
@@ -3826,166 +3984,6 @@
       "message": "Latest 8.5.2 → 8.5.3",
       "from": "8.5.2",
       "to": "8.5.3"
-    },
-    {
-      "at": "2026-10-08T14:13:35.554Z",
-      "productId": "capacitor",
-      "productName": "Capacitor",
-      "category": "framework",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-08T14:13:35.554Z",
-      "productId": "fastapi",
-      "productName": "FastAPI",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 0.142.2 → 0.143.0",
-      "from": "0.142.2",
-      "to": "0.143.0"
-    },
-    {
-      "at": "2026-10-08T14:13:35.554Z",
-      "productId": "fastapi",
-      "productName": "FastAPI",
-      "category": "framework",
-      "kind": "verdict-down",
-      "message": "Verdict GO → NO-GO",
-      "from": "GO",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-10-07T14:04:08.888Z",
-      "productId": "argo-cd",
-      "productName": "Argo CD",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 3.5.3 → 3.5.4",
-      "from": "3.5.3",
-      "to": "3.5.4"
-    },
-    {
-      "at": "2026-10-07T14:04:08.888Z",
-      "productId": "argo-cd",
-      "productName": "Argo CD",
-      "category": "container",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-07T14:04:08.888Z",
-      "productId": "envoy",
-      "productName": "Envoy",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 1.39.2 → 1.39.3",
-      "from": "1.39.2",
-      "to": "1.39.3"
-    },
-    {
-      "at": "2026-10-07T14:04:08.888Z",
-      "productId": "envoy",
-      "productName": "Envoy",
-      "category": "container",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-07T14:04:08.888Z",
-      "productId": "rook",
-      "productName": "Rook",
-      "category": "storage",
-      "kind": "new-version",
-      "message": "Latest 1.20.8 → 1.21.0",
-      "from": "1.20.8",
-      "to": "1.21.0"
-    },
-    {
-      "at": "2026-10-07T14:04:08.888Z",
-      "productId": "rook",
-      "productName": "Rook",
-      "category": "storage",
-      "kind": "verdict-down",
-      "message": "Verdict GO → NO-GO",
-      "from": "GO",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-10-07T14:04:08.888Z",
-      "productId": "openebs",
-      "productName": "OpenEBS",
-      "category": "storage",
-      "kind": "new-version",
-      "message": "Latest 4.6.1 → 4.6.2",
-      "from": "4.6.1",
-      "to": "4.6.2"
-    },
-    {
-      "at": "2026-10-07T14:04:08.888Z",
-      "productId": "openebs",
-      "productName": "OpenEBS",
-      "category": "storage",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-07T14:04:08.888Z",
-      "productId": "actions-runner",
-      "productName": "GitHub Actions Runner",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 2.337.0 → 2.338.0",
-      "from": "2.337.0",
-      "to": "2.338.0"
-    },
-    {
-      "at": "2026-10-07T14:04:08.888Z",
-      "productId": "actions-runner",
-      "productName": "GitHub Actions Runner",
-      "category": "iac-cicd",
-      "kind": "verdict-down",
-      "message": "Verdict GO → NO-GO",
-      "from": "GO",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-10-07T14:04:08.888Z",
-      "productId": "vault",
-      "productName": "HashiCorp Vault",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 2.1.1 → 2.1.2",
-      "from": "2.1.1",
-      "to": "2.1.2"
-    },
-    {
-      "at": "2026-10-07T14:04:08.888Z",
-      "productId": "vault",
-      "productName": "HashiCorp Vault",
-      "category": "iac-cicd",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-07T14:04:08.888Z",
-      "productId": "gitea",
-      "productName": "Gitea",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 28.0.0 → 28.1.0",
-      "from": "28.0.0",
-      "to": "28.1.0"
     }
   ]
 }
