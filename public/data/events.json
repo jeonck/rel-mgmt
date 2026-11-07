@@ -1,6 +1,96 @@
 {
-  "updatedAt": "2026-11-06T14:42:07.973Z",
+  "updatedAt": "2026-11-07T13:39:31.322Z",
   "events": [
+    {
+      "at": "2026-11-07T13:39:31.322Z",
+      "productId": "argo-cd",
+      "productName": "Argo CD",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-11-07T13:39:31.322Z",
+      "productId": "istio",
+      "productName": "Istio",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 1.31.3 → 1.31.4",
+      "from": "1.31.3",
+      "to": "1.31.4"
+    },
+    {
+      "at": "2026-11-07T13:39:31.322Z",
+      "productId": "istio",
+      "productName": "Istio",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-07T13:39:31.322Z",
+      "productId": "otel-collector",
+      "productName": "OpenTelemetry Collector",
+      "category": "observability",
+      "kind": "new-version",
+      "message": "Latest 0.164.0 → 0.165.0",
+      "from": "0.164.0",
+      "to": "0.165.0"
+    },
+    {
+      "at": "2026-11-07T13:39:31.322Z",
+      "productId": "otel-collector",
+      "productName": "OpenTelemetry Collector",
+      "category": "observability",
+      "kind": "verdict-down",
+      "message": "Verdict HOLD → NO-GO",
+      "from": "HOLD",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-11-07T13:39:31.322Z",
+      "productId": "zabbix",
+      "productName": "Zabbix",
+      "category": "observability",
+      "kind": "new-version",
+      "message": "Latest 7.4.16 → 8.0.0",
+      "from": "7.4.16",
+      "to": "8.0.0"
+    },
+    {
+      "at": "2026-11-07T13:39:31.322Z",
+      "productId": "zabbix",
+      "productName": "Zabbix",
+      "category": "observability",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-11-07T13:39:31.322Z",
+      "productId": "jboss-eap",
+      "productName": "Red Hat JBoss EAP",
+      "category": "runtime",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-11-07T13:39:31.322Z",
+      "productId": "fastapi",
+      "productName": "FastAPI",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 0.162.0 → 0.162.1",
+      "from": "0.162.0",
+      "to": "0.162.1"
+    },
     {
       "at": "2026-11-06T14:42:07.973Z",
       "productId": "rhel",
@@ -3894,96 +3984,6 @@
       "message": "Verdict NO-GO → HOLD",
       "from": "NO-GO",
       "to": "HOLD"
-    },
-    {
-      "at": "2026-10-08T14:13:35.554Z",
-      "productId": "tekton",
-      "productName": "Tekton Pipelines",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-08T14:13:35.554Z",
-      "productId": "nodejs",
-      "productName": "Node.js",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 26.10.0 → 26.11.1",
-      "from": "26.10.0",
-      "to": "26.11.1"
-    },
-    {
-      "at": "2026-10-08T14:13:35.554Z",
-      "productId": "nodejs",
-      "productName": "Node.js",
-      "category": "runtime",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-10-08T14:13:35.554Z",
-      "productId": "temurin",
-      "productName": "Eclipse Temurin (JDK)",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 26.0.2.1+1 → 27+35",
-      "from": "26.0.2.1+1",
-      "to": "27+35"
-    },
-    {
-      "at": "2026-10-08T14:13:35.554Z",
-      "productId": "temurin",
-      "productName": "Eclipse Temurin (JDK)",
-      "category": "runtime",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-08T14:13:35.554Z",
-      "productId": "electron",
-      "productName": "Electron",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 44.6.0 → 44.7.0",
-      "from": "44.6.0",
-      "to": "44.7.0"
-    },
-    {
-      "at": "2026-10-08T14:13:35.554Z",
-      "productId": "ionic",
-      "productName": "Ionic Framework",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 9.0.6 → 9.0.7",
-      "from": "9.0.6",
-      "to": "9.0.7"
-    },
-    {
-      "at": "2026-10-08T14:13:35.554Z",
-      "productId": "ionic",
-      "productName": "Ionic Framework",
-      "category": "framework",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-08T14:13:35.554Z",
-      "productId": "capacitor",
-      "productName": "Capacitor",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 8.5.2 → 8.5.3",
-      "from": "8.5.2",
-      "to": "8.5.3"
     }
   ]
 }
