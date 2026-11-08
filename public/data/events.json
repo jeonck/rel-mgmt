@@ -1,6 +1,76 @@
 {
-  "updatedAt": "2026-11-07T13:39:31.322Z",
+  "updatedAt": "2026-11-08T13:58:10.222Z",
   "events": [
+    {
+      "at": "2026-11-08T13:58:10.222Z",
+      "productId": "opentofu",
+      "productName": "OpenTofu",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-11-08T13:58:10.222Z",
+      "productId": "gitlab-runner",
+      "productName": "GitLab Runner",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-08T13:58:10.222Z",
+      "productId": "keycloak",
+      "productName": "Keycloak",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-11-08T13:58:10.222Z",
+      "productId": "gitea",
+      "productName": "Gitea",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-08T13:58:10.222Z",
+      "productId": "apache-http-server",
+      "productName": "Apache HTTP Server",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 2.4.69 → 2.4.70",
+      "from": "2.4.69",
+      "to": "2.4.70"
+    },
+    {
+      "at": "2026-11-08T13:58:10.222Z",
+      "productId": "apache-http-server",
+      "productName": "Apache HTTP Server",
+      "category": "runtime",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-08T13:58:10.222Z",
+      "productId": "fastapi",
+      "productName": "FastAPI",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 0.162.1 → 0.162.2",
+      "from": "0.162.1",
+      "to": "0.162.2"
+    },
     {
       "at": "2026-11-07T13:39:31.322Z",
       "productId": "argo-cd",
@@ -3914,76 +3984,6 @@
       "message": "Verdict HOLD → GO",
       "from": "HOLD",
       "to": "GO"
-    },
-    {
-      "at": "2026-10-09T14:00:14.613Z",
-      "productId": "flutter",
-      "productName": "Flutter",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 3.47.6 → 3.47.7",
-      "from": "3.47.6",
-      "to": "3.47.7"
-    },
-    {
-      "at": "2026-10-09T14:00:14.613Z",
-      "productId": "flutter",
-      "productName": "Flutter",
-      "category": "framework",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-09T14:00:14.613Z",
-      "productId": "tauri",
-      "productName": "Tauri",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 2.12.1 → 2.12.2",
-      "from": "2.12.1",
-      "to": "2.12.2"
-    },
-    {
-      "at": "2026-10-09T14:00:14.613Z",
-      "productId": "tauri",
-      "productName": "Tauri",
-      "category": "framework",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-08T14:13:35.554Z",
-      "productId": "traefik",
-      "productName": "Traefik",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-10-08T14:13:35.554Z",
-      "productId": "calico",
-      "productName": "Calico",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-08T14:13:35.554Z",
-      "productId": "keycloak",
-      "productName": "Keycloak",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
     }
   ]
 }
