@@ -1,6 +1,86 @@
 {
-  "updatedAt": "2026-11-08T13:58:10.222Z",
+  "updatedAt": "2026-11-09T16:59:23.718Z",
   "events": [
+    {
+      "at": "2026-11-09T16:59:23.718Z",
+      "productId": "harbor",
+      "productName": "Harbor",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 2.15.4 → 2.16.0",
+      "from": "2.15.4",
+      "to": "2.16.0"
+    },
+    {
+      "at": "2026-11-09T16:59:23.718Z",
+      "productId": "harbor",
+      "productName": "Harbor",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-11-09T16:59:23.718Z",
+      "productId": "rook",
+      "productName": "Rook",
+      "category": "storage",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-11-09T16:59:23.718Z",
+      "productId": "ansible-core",
+      "productName": "Ansible Core",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-09T16:59:23.718Z",
+      "productId": "nexus",
+      "productName": "Sonatype Nexus Repository",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-11-09T16:59:23.718Z",
+      "productId": "fluent-bit",
+      "productName": "Fluent Bit",
+      "category": "observability",
+      "kind": "new-version",
+      "message": "Latest 5.1.5 → 5.2.0",
+      "from": "5.1.5",
+      "to": "5.2.0"
+    },
+    {
+      "at": "2026-11-09T16:59:23.718Z",
+      "productId": "fluent-bit",
+      "productName": "Fluent Bit",
+      "category": "observability",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-11-09T16:59:23.718Z",
+      "productId": "apache-http-server",
+      "productName": "Apache HTTP Server",
+      "category": "runtime",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
     {
       "at": "2026-11-08T13:58:10.222Z",
       "productId": "opentofu",
@@ -3902,84 +3982,6 @@
       "productId": "envoy",
       "productName": "Envoy",
       "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-10-09T14:00:14.613Z",
-      "productId": "vault",
-      "productName": "HashiCorp Vault",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-10-09T14:00:14.613Z",
-      "productId": "elasticsearch",
-      "productName": "Elasticsearch",
-      "category": "observability",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-10-09T14:00:14.613Z",
-      "productId": "python",
-      "productName": "Python",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 3.14.8 → 3.15.0",
-      "from": "3.14.8",
-      "to": "3.15.0"
-    },
-    {
-      "at": "2026-10-09T14:00:14.613Z",
-      "productId": "python",
-      "productName": "Python",
-      "category": "runtime",
-      "kind": "verdict-down",
-      "message": "Verdict GO → NO-GO",
-      "from": "GO",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-10-09T14:00:14.613Z",
-      "productId": "python",
-      "productName": "Python",
-      "category": "runtime",
-      "kind": "new-cve",
-      "message": "14 new CVEs recorded against 3.15.0"
-    },
-    {
-      "at": "2026-10-09T14:00:14.613Z",
-      "productId": "go",
-      "productName": "Go",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 1.27.1 → 1.27.2",
-      "from": "1.27.1",
-      "to": "1.27.2"
-    },
-    {
-      "at": "2026-10-09T14:00:14.613Z",
-      "productId": "go",
-      "productName": "Go",
-      "category": "runtime",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-09T14:00:14.613Z",
-      "productId": "tomcat",
-      "productName": "Apache Tomcat",
-      "category": "runtime",
       "kind": "verdict-up",
       "message": "Verdict HOLD → GO",
       "from": "HOLD",
