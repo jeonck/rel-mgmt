@@ -1,6 +1,96 @@
 {
-  "updatedAt": "2026-11-09T16:59:23.718Z",
+  "updatedAt": "2026-11-10T15:19:13.924Z",
   "events": [
+    {
+      "at": "2026-11-10T15:19:13.924Z",
+      "productId": "istio",
+      "productName": "Istio",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 1.31.4 → 1.32.0",
+      "from": "1.31.4",
+      "to": "1.32.0"
+    },
+    {
+      "at": "2026-11-10T15:19:13.924Z",
+      "productId": "istio",
+      "productName": "Istio",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict HOLD → NO-GO",
+      "from": "HOLD",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-11-10T15:19:13.924Z",
+      "productId": "traefik",
+      "productName": "Traefik",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 3.7.17 → 3.7.18",
+      "from": "3.7.17",
+      "to": "3.7.18"
+    },
+    {
+      "at": "2026-11-10T15:19:13.924Z",
+      "productId": "traefik",
+      "productName": "Traefik",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-10T15:19:13.924Z",
+      "productId": "tomcat",
+      "productName": "Apache Tomcat",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 11.0.27 → 11.0.29",
+      "from": "11.0.27",
+      "to": "11.0.29"
+    },
+    {
+      "at": "2026-11-10T15:19:13.924Z",
+      "productId": "tomcat",
+      "productName": "Apache Tomcat",
+      "category": "runtime",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-10T15:19:13.924Z",
+      "productId": "maui",
+      "productName": ".NET MAUI",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 10.0.120 → 10.0.130",
+      "from": "10.0.120",
+      "to": "10.0.130"
+    },
+    {
+      "at": "2026-11-10T15:19:13.924Z",
+      "productId": "maui",
+      "productName": ".NET MAUI",
+      "category": "framework",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-10T15:19:13.924Z",
+      "productId": "fastapi",
+      "productName": "FastAPI",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 0.162.2 → 0.162.3",
+      "from": "0.162.2",
+      "to": "0.162.3"
+    },
     {
       "at": "2026-11-09T16:59:23.718Z",
       "productId": "harbor",
@@ -3891,96 +3981,6 @@
       "at": "2026-10-10T13:09:45.583Z",
       "productId": "helm",
       "productName": "Helm",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-10-10T13:09:45.583Z",
-      "productId": "openebs",
-      "productName": "OpenEBS",
-      "category": "storage",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-10-10T13:09:45.583Z",
-      "productId": "ionic",
-      "productName": "Ionic Framework",
-      "category": "framework",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-10-09T14:00:14.613Z",
-      "productId": "docker-engine",
-      "productName": "Docker Engine",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 29.8.2 → 29.9.0",
-      "from": "29.8.2",
-      "to": "29.9.0"
-    },
-    {
-      "at": "2026-10-09T14:00:14.613Z",
-      "productId": "docker-engine",
-      "productName": "Docker Engine",
-      "category": "container",
-      "kind": "verdict-down",
-      "message": "Verdict GO → NO-GO",
-      "from": "GO",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-10-09T14:00:14.613Z",
-      "productId": "argo-cd",
-      "productName": "Argo CD",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-10-09T14:00:14.613Z",
-      "productId": "argo-workflows",
-      "productName": "Argo Workflows",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 4.1.4 → 4.1.5",
-      "from": "4.1.4",
-      "to": "4.1.5"
-    },
-    {
-      "at": "2026-10-09T14:00:14.613Z",
-      "productId": "argo-workflows",
-      "productName": "Argo Workflows",
-      "category": "container",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-09T14:00:14.613Z",
-      "productId": "harbor",
-      "productName": "Harbor",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 2.15.3 → 2.15.4",
-      "from": "2.15.3",
-      "to": "2.15.4"
-    },
-    {
-      "at": "2026-10-09T14:00:14.613Z",
-      "productId": "envoy",
-      "productName": "Envoy",
       "category": "container",
       "kind": "verdict-up",
       "message": "Verdict HOLD → GO",
