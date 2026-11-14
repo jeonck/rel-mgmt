@@ -1,6 +1,94 @@
 {
-  "updatedAt": "2026-11-13T14:59:43.236Z",
+  "updatedAt": "2026-11-14T13:52:06.421Z",
   "events": [
+    {
+      "at": "2026-11-14T13:52:06.421Z",
+      "productId": "terraform",
+      "productName": "Terraform",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-11-14T13:52:06.421Z",
+      "productId": "gitlab",
+      "productName": "GitLab",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-14T13:52:06.421Z",
+      "productId": "vault",
+      "productName": "HashiCorp Vault",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-11-14T13:52:06.421Z",
+      "productId": "otel-collector",
+      "productName": "OpenTelemetry Collector",
+      "category": "observability",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-14T13:52:06.421Z",
+      "productId": "apache-http-server",
+      "productName": "Apache HTTP Server",
+      "category": "runtime",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-11-14T13:52:06.421Z",
+      "productId": "apache-http-server",
+      "productName": "Apache HTTP Server",
+      "category": "runtime",
+      "kind": "new-cve",
+      "message": "1 new CVE recorded against 2.4.70"
+    },
+    {
+      "at": "2026-11-14T13:52:06.421Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-11-14T13:52:06.421Z",
+      "productId": "maui",
+      "productName": ".NET MAUI",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-11-14T13:52:06.421Z",
+      "productId": "fastapi",
+      "productName": "FastAPI",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 0.162.6 → 0.162.7",
+      "from": "0.162.6",
+      "to": "0.162.7"
+    },
     {
       "at": "2026-11-13T14:59:43.236Z",
       "productId": "rhel",
@@ -3898,96 +3986,6 @@
       "message": "Latest 0.143.1 → 0.143.2",
       "from": "0.143.1",
       "to": "0.143.2"
-    },
-    {
-      "at": "2026-10-16T12:00:23.801Z",
-      "productId": "msexchange",
-      "productName": "Microsoft Exchange Server",
-      "category": "enterprise",
-      "kind": "new-version",
-      "message": "Latest 15.2.2562.49 → 15.2.2562.56",
-      "from": "15.2.2562.49",
-      "to": "15.2.2562.56"
-    },
-    {
-      "at": "2026-10-16T12:00:23.801Z",
-      "productId": "sharepoint",
-      "productName": "Microsoft SharePoint",
-      "category": "enterprise",
-      "kind": "new-version",
-      "message": "Latest 16.0.20326.20136 → 16.0.20326.20190",
-      "from": "16.0.20326.20136",
-      "to": "16.0.20326.20190"
-    },
-    {
-      "at": "2026-10-15T12:18:12.232Z",
-      "productId": "docker-engine",
-      "productName": "Docker Engine",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 29.9.0 → 29.9.1",
-      "from": "29.9.0",
-      "to": "29.9.1"
-    },
-    {
-      "at": "2026-10-15T12:18:12.232Z",
-      "productId": "docker-engine",
-      "productName": "Docker Engine",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-15T12:18:12.232Z",
-      "productId": "helm",
-      "productName": "Helm",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 4.3.0 → 4.3.1",
-      "from": "4.3.0",
-      "to": "4.3.1"
-    },
-    {
-      "at": "2026-10-15T12:18:12.232Z",
-      "productId": "helm",
-      "productName": "Helm",
-      "category": "container",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-15T12:18:12.232Z",
-      "productId": "argo-cd",
-      "productName": "Argo CD",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-10-15T12:18:12.232Z",
-      "productId": "podman",
-      "productName": "Podman",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-10-15T12:18:12.232Z",
-      "productId": "nexus",
-      "productName": "Sonatype Nexus Repository",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 3.96.4-01 → 3.97.0",
-      "from": "3.96.4-01",
-      "to": "3.97.0"
     }
   ]
 }
