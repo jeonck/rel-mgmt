@@ -1,6 +1,106 @@
 {
-  "updatedAt": "2026-11-16T16:37:18.466Z",
+  "updatedAt": "2026-11-17T16:35:06.942Z",
   "events": [
+    {
+      "at": "2026-11-17T16:35:06.942Z",
+      "productId": "rocky-linux",
+      "productName": "Rocky Linux",
+      "category": "platform",
+      "kind": "new-version",
+      "message": "Latest 10.2 → 10.3",
+      "from": "10.2",
+      "to": "10.3"
+    },
+    {
+      "at": "2026-11-17T16:35:06.942Z",
+      "productId": "rocky-linux",
+      "productName": "Rocky Linux",
+      "category": "platform",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-17T16:35:06.942Z",
+      "productId": "istio",
+      "productName": "Istio",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-17T16:35:06.942Z",
+      "productId": "harbor",
+      "productName": "Harbor",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-17T16:35:06.942Z",
+      "productId": "cilium",
+      "productName": "Cilium",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 1.20.4 → 1.20.5",
+      "from": "1.20.4",
+      "to": "1.20.5"
+    },
+    {
+      "at": "2026-11-17T16:35:06.942Z",
+      "productId": "cilium",
+      "productName": "Cilium",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-17T16:35:06.942Z",
+      "productId": "vector",
+      "productName": "Vector",
+      "category": "observability",
+      "kind": "new-version",
+      "message": "Latest 0.61.0 → 0.62.0",
+      "from": "0.61.0",
+      "to": "0.62.0"
+    },
+    {
+      "at": "2026-11-17T16:35:06.942Z",
+      "productId": "vector",
+      "productName": "Vector",
+      "category": "observability",
+      "kind": "verdict-down",
+      "message": "Verdict HOLD → NO-GO",
+      "from": "HOLD",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-11-17T16:35:06.942Z",
+      "productId": "rabbitmq",
+      "productName": "RabbitMQ",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 4.4.0 → 4.4.1",
+      "from": "4.4.0",
+      "to": "4.4.1"
+    },
+    {
+      "at": "2026-11-17T16:35:06.942Z",
+      "productId": "rabbitmq",
+      "productName": "RabbitMQ",
+      "category": "runtime",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
     {
       "at": "2026-11-16T16:37:18.466Z",
       "productId": "docker-engine",
@@ -3886,106 +3986,6 @@
       "message": "Verdict HOLD → GO",
       "from": "HOLD",
       "to": "GO"
-    },
-    {
-      "at": "2026-10-18T11:53:06.962Z",
-      "productId": "fastapi",
-      "productName": "FastAPI",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 0.143.3 → 0.143.5",
-      "from": "0.143.3",
-      "to": "0.143.5"
-    },
-    {
-      "at": "2026-10-17T11:16:25.028Z",
-      "productId": "docker-engine",
-      "productName": "Docker Engine",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-10-17T11:16:25.028Z",
-      "productId": "terraform",
-      "productName": "Terraform",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-10-17T11:16:25.028Z",
-      "productId": "nginx",
-      "productName": "nginx",
-      "category": "runtime",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-10-17T11:16:25.028Z",
-      "productId": "electron",
-      "productName": "Electron",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 44.8.0 → 44.9.0",
-      "from": "44.8.0",
-      "to": "44.9.0"
-    },
-    {
-      "at": "2026-10-17T11:16:25.028Z",
-      "productId": "ionic",
-      "productName": "Ionic Framework",
-      "category": "framework",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-10-17T11:16:25.028Z",
-      "productId": "fastapi",
-      "productName": "FastAPI",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 0.143.2 → 0.143.3",
-      "from": "0.143.2",
-      "to": "0.143.3"
-    },
-    {
-      "at": "2026-10-16T12:00:23.801Z",
-      "productId": "containerd",
-      "productName": "containerd",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict HOLD → GO",
-      "from": "HOLD",
-      "to": "GO"
-    },
-    {
-      "at": "2026-10-16T12:00:23.801Z",
-      "productId": "istio",
-      "productName": "Istio",
-      "category": "container",
-      "kind": "new-version",
-      "message": "Latest 1.31.1 → 1.31.2",
-      "from": "1.31.1",
-      "to": "1.31.2"
-    },
-    {
-      "at": "2026-10-16T12:00:23.801Z",
-      "productId": "istio",
-      "productName": "Istio",
-      "category": "container",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
     }
   ]
 }
