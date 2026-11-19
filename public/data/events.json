@@ -1,6 +1,116 @@
 {
-  "updatedAt": "2026-11-18T16:03:36.164Z",
+  "updatedAt": "2026-11-19T16:10:41.162Z",
   "events": [
+    {
+      "at": "2026-11-19T16:10:41.162Z",
+      "productId": "argo-cd",
+      "productName": "Argo CD",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 3.6.1 → 3.6.2",
+      "from": "3.6.1",
+      "to": "3.6.2"
+    },
+    {
+      "at": "2026-11-19T16:10:41.162Z",
+      "productId": "argo-cd",
+      "productName": "Argo CD",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-19T16:10:41.162Z",
+      "productId": "etcd",
+      "productName": "etcd",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 3.7.3 → 3.7.4",
+      "from": "3.7.3",
+      "to": "3.7.4"
+    },
+    {
+      "at": "2026-11-19T16:10:41.162Z",
+      "productId": "etcd",
+      "productName": "etcd",
+      "category": "container",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-19T16:10:41.162Z",
+      "productId": "gitlab",
+      "productName": "GitLab",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-19T16:10:41.162Z",
+      "productId": "valkey",
+      "productName": "Valkey",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 9.1.3 → 9.2.0",
+      "from": "9.1.3",
+      "to": "9.2.0"
+    },
+    {
+      "at": "2026-11-19T16:10:41.162Z",
+      "productId": "valkey",
+      "productName": "Valkey",
+      "category": "runtime",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-11-19T16:10:41.162Z",
+      "productId": "rabbitmq",
+      "productName": "RabbitMQ",
+      "category": "runtime",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-11-19T16:10:41.162Z",
+      "productId": "electron",
+      "productName": "Electron",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 45.3.4 → 45.4.1",
+      "from": "45.3.4",
+      "to": "45.4.1"
+    },
+    {
+      "at": "2026-11-19T16:10:41.162Z",
+      "productId": "flutter",
+      "productName": "Flutter",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-19T16:10:41.162Z",
+      "productId": "fastapi",
+      "productName": "FastAPI",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 0.164.0 → 0.165.0",
+      "from": "0.164.0",
+      "to": "0.165.0"
+    },
     {
       "at": "2026-11-18T16:03:36.164Z",
       "productId": "rhel",
@@ -3876,116 +3986,6 @@
       "message": "Verdict NO-GO → HOLD",
       "from": "NO-GO",
       "to": "HOLD"
-    },
-    {
-      "at": "2026-10-20T12:24:22.062Z",
-      "productId": "envoy",
-      "productName": "Envoy",
-      "category": "container",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-20T12:24:22.062Z",
-      "productId": "vector",
-      "productName": "Vector",
-      "category": "observability",
-      "kind": "new-version",
-      "message": "Latest 0.59.0 → 0.60.0",
-      "from": "0.59.0",
-      "to": "0.60.0"
-    },
-    {
-      "at": "2026-10-20T12:24:22.062Z",
-      "productId": "vector",
-      "productName": "Vector",
-      "category": "observability",
-      "kind": "verdict-down",
-      "message": "Verdict HOLD → NO-GO",
-      "from": "HOLD",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-10-20T12:24:22.062Z",
-      "productId": "go",
-      "productName": "Go",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 1.27.2 → 1.27.3",
-      "from": "1.27.2",
-      "to": "1.27.3"
-    },
-    {
-      "at": "2026-10-20T12:24:22.062Z",
-      "productId": "go",
-      "productName": "Go",
-      "category": "runtime",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-20T12:24:22.062Z",
-      "productId": "mysql",
-      "productName": "MySQL",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 9.7.2 → 26.7.0",
-      "from": "9.7.2",
-      "to": "26.7.0"
-    },
-    {
-      "at": "2026-10-20T12:24:22.062Z",
-      "productId": "mysql",
-      "productName": "MySQL",
-      "category": "runtime",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-20T12:24:22.062Z",
-      "productId": "kafka",
-      "productName": "Apache Kafka",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 4.3.1 → 4.3.2",
-      "from": "4.3.1",
-      "to": "4.3.2"
-    },
-    {
-      "at": "2026-10-20T12:24:22.062Z",
-      "productId": "electron",
-      "productName": "Electron",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 44.9.0 → 44.9.1",
-      "from": "44.9.0",
-      "to": "44.9.1"
-    },
-    {
-      "at": "2026-10-20T12:24:22.062Z",
-      "productId": "electron",
-      "productName": "Electron",
-      "category": "framework",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-20T12:24:22.062Z",
-      "productId": "fastapi",
-      "productName": "FastAPI",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 0.148.0 → 0.152.0",
-      "from": "0.148.0",
-      "to": "0.152.0"
     }
   ]
 }
