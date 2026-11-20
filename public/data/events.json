@@ -1,6 +1,176 @@
 {
-  "updatedAt": "2026-11-19T16:10:41.162Z",
+  "updatedAt": "2026-11-20T15:50:29.232Z",
   "events": [
+    {
+      "at": "2026-11-20T15:50:29.232Z",
+      "productId": "docker-engine",
+      "productName": "Docker Engine",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict NO-GO → HOLD",
+      "from": "NO-GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-20T15:50:29.232Z",
+      "productId": "flux",
+      "productName": "Flux CD",
+      "category": "container",
+      "kind": "new-version",
+      "message": "Latest 2.10.0 → 2.10.1",
+      "from": "2.10.0",
+      "to": "2.10.1"
+    },
+    {
+      "at": "2026-11-20T15:50:29.232Z",
+      "productId": "cilium",
+      "productName": "Cilium",
+      "category": "container",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-11-20T15:50:29.232Z",
+      "productId": "gitlab",
+      "productName": "GitLab",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 19.5.6 → 19.6.1",
+      "from": "19.5.6",
+      "to": "19.6.1"
+    },
+    {
+      "at": "2026-11-20T15:50:29.232Z",
+      "productId": "gitlab-runner",
+      "productName": "GitLab Runner",
+      "category": "iac-cicd",
+      "kind": "new-version",
+      "message": "Latest 19.5.3 → 19.6.0",
+      "from": "19.5.3",
+      "to": "19.6.0"
+    },
+    {
+      "at": "2026-11-20T15:50:29.232Z",
+      "productId": "gitlab-runner",
+      "productName": "GitLab Runner",
+      "category": "iac-cicd",
+      "kind": "verdict-down",
+      "message": "Verdict HOLD → NO-GO",
+      "from": "HOLD",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-11-20T15:50:29.232Z",
+      "productId": "consul",
+      "productName": "Consul",
+      "category": "iac-cicd",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
+    {
+      "at": "2026-11-20T15:50:29.232Z",
+      "productId": "temurin",
+      "productName": "Eclipse Temurin (JDK)",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 27.0.1.0.2+1 → 27.0.1.1+4",
+      "from": "27.0.1.0.2+1",
+      "to": "27.0.1.1+4"
+    },
+    {
+      "at": "2026-11-20T15:50:29.232Z",
+      "productId": "temurin",
+      "productName": "Eclipse Temurin (JDK)",
+      "category": "runtime",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-20T15:50:29.232Z",
+      "productId": "spring-boot",
+      "productName": "Spring Boot",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 4.1.2 → 4.2.0",
+      "from": "4.1.2",
+      "to": "4.2.0"
+    },
+    {
+      "at": "2026-11-20T15:50:29.232Z",
+      "productId": "spring-boot",
+      "productName": "Spring Boot",
+      "category": "runtime",
+      "kind": "verdict-down",
+      "message": "Verdict GO → NO-GO",
+      "from": "GO",
+      "to": "NO-GO"
+    },
+    {
+      "at": "2026-11-20T15:50:29.232Z",
+      "productId": "postgresql",
+      "productName": "PostgreSQL",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 18.7 → 19.0",
+      "from": "18.7",
+      "to": "19.0"
+    },
+    {
+      "at": "2026-11-20T15:50:29.232Z",
+      "productId": "postgresql",
+      "productName": "PostgreSQL",
+      "category": "runtime",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-20T15:50:29.232Z",
+      "productId": "nginx",
+      "productName": "nginx",
+      "category": "runtime",
+      "kind": "new-version",
+      "message": "Latest 1.31.8 → 1.31.9",
+      "from": "1.31.8",
+      "to": "1.31.9"
+    },
+    {
+      "at": "2026-11-20T15:50:29.232Z",
+      "productId": "nginx",
+      "productName": "nginx",
+      "category": "runtime",
+      "kind": "verdict-down",
+      "message": "Verdict GO → HOLD",
+      "from": "GO",
+      "to": "HOLD"
+    },
+    {
+      "at": "2026-11-20T15:50:29.232Z",
+      "productId": "flutter",
+      "productName": "Flutter",
+      "category": "framework",
+      "kind": "new-version",
+      "message": "Latest 3.50.0 → 3.50.1",
+      "from": "3.50.0",
+      "to": "3.50.1"
+    },
+    {
+      "at": "2026-11-20T15:50:29.232Z",
+      "productId": "ionic",
+      "productName": "Ionic Framework",
+      "category": "framework",
+      "kind": "verdict-up",
+      "message": "Verdict HOLD → GO",
+      "from": "HOLD",
+      "to": "GO"
+    },
     {
       "at": "2026-11-19T16:10:41.162Z",
       "productId": "argo-cd",
@@ -3815,176 +3985,6 @@
       "kind": "verdict-down",
       "message": "Verdict GO → HOLD",
       "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-21T12:35:41.052Z",
-      "productId": "jenkins",
-      "productName": "Jenkins",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 2.586 → 2.587",
-      "from": "2.586",
-      "to": "2.587"
-    },
-    {
-      "at": "2026-10-21T12:35:41.052Z",
-      "productId": "nexus",
-      "productName": "Sonatype Nexus Repository",
-      "category": "iac-cicd",
-      "kind": "new-version",
-      "message": "Latest 3.97.0-13 → 3.97.1-02",
-      "from": "3.97.0-13",
-      "to": "3.97.1-02"
-    },
-    {
-      "at": "2026-10-21T12:35:41.052Z",
-      "productId": "nexus",
-      "productName": "Sonatype Nexus Repository",
-      "category": "iac-cicd",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → GO",
-      "from": "NO-GO",
-      "to": "GO"
-    },
-    {
-      "at": "2026-10-21T12:35:41.052Z",
-      "productId": "loki",
-      "productName": "Grafana Loki",
-      "category": "observability",
-      "kind": "new-version",
-      "message": "Latest 3.7.8 → 3.7.9",
-      "from": "3.7.8",
-      "to": "3.7.9"
-    },
-    {
-      "at": "2026-10-21T12:35:41.052Z",
-      "productId": "loki",
-      "productName": "Grafana Loki",
-      "category": "observability",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-21T12:35:41.052Z",
-      "productId": "otel-collector",
-      "productName": "OpenTelemetry Collector",
-      "category": "observability",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-21T12:35:41.052Z",
-      "productId": "zabbix",
-      "productName": "Zabbix",
-      "category": "observability",
-      "kind": "new-version",
-      "message": "Latest 7.4.15 → 7.4.16",
-      "from": "7.4.15",
-      "to": "7.4.16"
-    },
-    {
-      "at": "2026-10-21T12:35:41.052Z",
-      "productId": "zabbix",
-      "productName": "Zabbix",
-      "category": "observability",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-21T12:35:41.052Z",
-      "productId": "nodejs",
-      "productName": "Node.js",
-      "category": "runtime",
-      "kind": "new-version",
-      "message": "Latest 26.12.0 → 26.12.1",
-      "from": "26.12.0",
-      "to": "26.12.1"
-    },
-    {
-      "at": "2026-10-21T12:35:41.052Z",
-      "productId": "nodejs",
-      "productName": "Node.js",
-      "category": "runtime",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-21T12:35:41.052Z",
-      "productId": "kafka",
-      "productName": "Apache Kafka",
-      "category": "runtime",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-21T12:35:41.052Z",
-      "productId": "electron",
-      "productName": "Electron",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 44.9.1 → 45.0.0",
-      "from": "44.9.1",
-      "to": "45.0.0"
-    },
-    {
-      "at": "2026-10-21T12:35:41.052Z",
-      "productId": "electron",
-      "productName": "Electron",
-      "category": "framework",
-      "kind": "verdict-down",
-      "message": "Verdict HOLD → NO-GO",
-      "from": "HOLD",
-      "to": "NO-GO"
-    },
-    {
-      "at": "2026-10-21T12:35:41.052Z",
-      "productId": "tauri",
-      "productName": "Tauri",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 2.12.4 → 2.12.5",
-      "from": "2.12.4",
-      "to": "2.12.5"
-    },
-    {
-      "at": "2026-10-21T12:35:41.052Z",
-      "productId": "tauri",
-      "productName": "Tauri",
-      "category": "framework",
-      "kind": "verdict-down",
-      "message": "Verdict GO → HOLD",
-      "from": "GO",
-      "to": "HOLD"
-    },
-    {
-      "at": "2026-10-21T12:35:41.052Z",
-      "productId": "fastapi",
-      "productName": "FastAPI",
-      "category": "framework",
-      "kind": "new-version",
-      "message": "Latest 0.152.0 → 0.156.8",
-      "from": "0.152.0",
-      "to": "0.156.8"
-    },
-    {
-      "at": "2026-10-21T12:35:41.052Z",
-      "productId": "fastapi",
-      "productName": "FastAPI",
-      "category": "framework",
-      "kind": "verdict-up",
-      "message": "Verdict NO-GO → HOLD",
-      "from": "NO-GO",
       "to": "HOLD"
     }
   ]
