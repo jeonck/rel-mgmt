@@ -1,10 +1,10 @@
 name: Daily collect & deploy
 
 on:
-  schedule:
-    # 매일 07:00 UTC = CDT(여름) 02:00 / CST(겨울) 01:00.
-    # GitHub Actions 크론은 UTC만 받으므로 미국 중부 야간에 고정하려면 UTC로 적는다.
-    - cron: '0 7 * * *'
+  # schedule:
+    # # 매일 07:00 UTC = CDT(여름) 02:00 / CST(겨울) 01:00.
+    # # GitHub Actions 크론은 UTC만 받으므로 미국 중부 야간에 고정하려면 UTC로 적는다.
+    # - cron: '0 7 * * *'
   push:
     branches: [main]
   workflow_dispatch:
